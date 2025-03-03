@@ -3,9 +3,9 @@ using Nova;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
-namespace Tower
+namespace Castle
 {
-    public class TowerUpgradeManager : MonoBehaviour
+    public class CastleUpgradeManager : MonoBehaviour
     {
 //-------Public Variables-------//
 

@@ -13,15 +13,16 @@ namespace QuickTools.Scripts.Utilities
 
 //------Serialized Fields-------//
         [SerializeField] private ExecutionTime RaiseExecutionTime;
-        [SerializeField,HideIf(nameof(RandomDelay))] private bool UseDelayWithRef;
+        [SerializeField, HideIf(nameof(RandomDelay))] private bool UseDelayWithRef;
         [SerializeField, ShowIf(nameof(UseDelayWithRef)), InfoBox("Can not Work With Awake ExecutionTime")]
         private FloatReference DelayRef;
         [SerializeField, HideIf(nameof(UseDelayWithRef))] private bool RandomDelay;
-        [SerializeField, HideIf(nameof(UseDelayWithRef)),HideIf(nameof(RandomDelay))] private float Delay;
-        [SerializeField, HideIf(nameof(UseDelayWithRef)),ShowIf(nameof(RandomDelay))] private Vector2 RandomDelayDurations;
+        [SerializeField, HideIf(nameof(HideDelayValue))] private float Delay;
+        [SerializeField, HideIf(nameof(UseDelayWithRef)), ShowIf(nameof(RandomDelay))]
+        private Vector2 RandomDelayDurations;
         [SerializeField] private bool UseUnScaledTime;
         [SerializeField, EnumToggleButtons] private EventType Type;
-        
+
         [SerializeField, LabelText("Event"), Indent, ShowIf("@Type == EventType.GameEvent")]
         private ScriptableEventNoParam Event;
 
@@ -96,16 +97,18 @@ namespace QuickTools.Scripts.Utilities
             else
                 UnityEvent?.Invoke();
         }
-        
+
         private void StartRaiseCoroutine()
         {
             if (!UseDelayWithRef && RandomDelay)
                 Delay = Random.Range(RandomDelayDurations.x, RandomDelayDurations.y);
             if (Delay > 0)
-               DOVirtual.DelayedCall(Delay, RaiseEvent).SetUpdate(UseUnScaledTime);
+                DOVirtual.DelayedCall(Delay, RaiseEvent).SetUpdate(UseUnScaledTime);
             else
                 RaiseEvent();
         }
+
+        private bool HideDelayValue() => UseDelayWithRef || RandomDelay;
 
 #endregion
     }

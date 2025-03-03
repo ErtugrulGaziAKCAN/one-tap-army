@@ -1,8 +1,9 @@
-using QuickTools.Scripts.HealthSystem;
-namespace Tower
+using UnityEngine;
+namespace UpgradeCards.UI
 {
-    public class TowerHealth : HealthCore
+    public class UpgradableCardsSpawner : MonoBehaviour
     {
+
 //-------Public Variables-------//
 
 
@@ -18,16 +19,12 @@ namespace Tower
 
 #region PUBLIC_METHODS
 
-        protected override void Die()
-        {
-
-        }
-
 #endregion
 
 
 #region PRIVATE_METHODS
 
 #endregion
+        
     }
 }

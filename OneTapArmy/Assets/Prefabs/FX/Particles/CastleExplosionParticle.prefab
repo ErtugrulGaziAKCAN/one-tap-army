@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1596409567578414134}
   - component: {fileID: 1596409567578414137}
   m_Layer: 0
-  m_Name: TowerExplosionParticle
+  m_Name: CastleExplosionParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
