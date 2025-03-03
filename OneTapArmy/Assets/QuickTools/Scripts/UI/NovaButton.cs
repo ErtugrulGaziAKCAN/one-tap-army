@@ -26,7 +26,8 @@ namespace QuickTools.Scripts.UI
         public Color UiColor = QuickColors.Blue;
         [SerializeField] private UnityEvent OnInvoke;
         [SerializeField] private ButtonType TargetButtonType;
-
+        [SerializeField] private bool SetFadeEffect = true;
+        
 //------Private Variables-------//
         private bool _isInitialized;
         private UIBlock _uiBlock;
@@ -129,6 +130,8 @@ namespace QuickTools.Scripts.UI
             if (!Application.isPlaying)
                 return;
             _interactable.enabled = Interactable;
+            if(!SetFadeEffect)
+                return;
             var targetColor = Interactable ? Color.white : new Color(0.5f, 0.5f, 0.5f, 0.75f);
             _clipMaskColorTween.Kill();
             _clipMaskColorTween = DOVirtual.Color(_clipMask.Tint, targetColor, .25f, (c) => _clipMask.Tint = c);

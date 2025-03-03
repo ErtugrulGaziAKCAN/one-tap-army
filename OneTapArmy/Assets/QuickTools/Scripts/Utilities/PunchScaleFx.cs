@@ -41,7 +41,7 @@ namespace QuickTools.Scripts.Utilities
         {
             _scaleTween?.Kill();
             ResetToOriginalScale();
-            _scaleTween = transform.DOPunchScale(Vector3.one * PunchScale, Duration, 7, .4f);
+            _scaleTween = transform.DOPunchScale(Vector3.one * PunchScale, Duration, 7, .4f).SetUpdate(true);
         }
 
 #endregion

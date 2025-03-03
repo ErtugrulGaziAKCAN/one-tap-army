@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UpgradeCards.UI.CardUI.Base;
 namespace UpgradeCards.Data.Base
 {
     public class UpgradeCardSo : ScriptableObject
@@ -13,6 +14,7 @@ namespace UpgradeCards.Data.Base
         [BoxGroup("References"), PreviewField] public List<Sprite> CardImages;
         [BoxGroup("References"), PreviewField] public Sprite BackgroundImage;
         [BoxGroup("References"), PreviewField] public Sprite CardNameSprite;
+        [BoxGroup("References")] public UpgradableCardUIBase CardUI;
         [ReadOnly, BoxGroup("Config")] public int CurrentCardLevel;
 
         public Action OnUpgraded;

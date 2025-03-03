@@ -376,12 +376,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a3dc05ba7a4a040e79a9e8c81a399d22, type: 3}
---- !u!4 &465207516 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2504937542708792735, guid: 456e55c9601124c2ea0815af1ed119d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7167046949616877167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &663242695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6725833840442168081, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
@@ -786,115 +780,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &1502657272
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 465207516}
-    m_Modifications:
-    - target: {fileID: 1686312884225419945, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_Name
-      value: UpgradeCard_Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 1686312884225419945, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025918380596788005, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025918380596788005, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025918380596788005, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: 'm_VertexStreams.Array.data[1]'
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025918380596788005, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: 'm_VertexStreams.Array.data[2]'
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3309171434998060669, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010719164764834536, guid: 8864ed87927734dbe8802fbbb69d8e45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8864ed87927734dbe8802fbbb69d8e45, type: 3}
---- !u!4 &1502657273 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7565364062453400721, guid: 8864ed87927734dbe8802fbbb69d8e45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1502657272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1518450842 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8927295544857397882, guid: e51616204a71e4b2b8b7e9770c7f426f,
@@ -1270,11 +1155,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeCardsPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 2166087120349042243, guid: 456e55c9601124c2ea0815af1ed119d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2336084805669778468, guid: 456e55c9601124c2ea0815af1ed119d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1327,11 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2504937542708792735, guid: 456e55c9601124c2ea0815af1ed119d8,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1502657273}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456e55c9601124c2ea0815af1ed119d8, type: 3}
 --- !u!1001 &7171122929875721527

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Horseman
   m_EditorClassIdentifier: 
   MaxLevel: 5
-  DefaultCardLevel: 1
+  DefaultCardLevel: 0
   CardName: Horseman
   CardImages:
   - {fileID: 21300000, guid: 573875eb18cee4a4eb89ae87a1a943e0, type: 3}
@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 59ce0ac0ff7ab4e6f995c2ce57b858c0, type: 3}
   BackgroundImage: {fileID: 21300000, guid: 96608e9739936479ebfec87c72e66d79, type: 3}
   CardNameSprite: {fileID: 21300000, guid: 03950399bfa5845579f53b02f07d8682, type: 3}
+  CardUI: {fileID: 3372426638001697963, guid: 52a521dcace6540d98e6e19ef21af43b, type: 3}
   CurrentCardLevel: 1
   HealthValue:
     Type: 0

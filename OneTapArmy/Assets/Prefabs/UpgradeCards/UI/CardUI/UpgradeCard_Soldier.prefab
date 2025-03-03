@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 3291533489535867871, guid: f84d20c3cbf634f3bbda69687458b902,
         type: 3}
       propertyPath: m_Name
-      value: UpgradeCard_Castle
+      value: UpgradeCard_Soldier
       objectReference: {fileID: 0}
     - target: {fileID: 5924078966799824359, guid: f84d20c3cbf634f3bbda69687458b902,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3291533489535867871, guid: f84d20c3cbf634f3bbda69687458b902,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5952343751973468783}
+      addedObject: {fileID: 3372426638001697963}
   m_SourcePrefab: {fileID: 100100000, guid: f84d20c3cbf634f3bbda69687458b902, type: 3}
 --- !u!1 &825434710551684290 stripped
 GameObject:
@@ -106,7 +106,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4236511651970281846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5952343751973468783
+--- !u!114 &3372426638001697963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1686312884225419945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d9a39072b248f4b59cc32cc5bfc523, type: 3}
+  m_Script: {fileID: 11500000, guid: 307705a3324945c990a6a89bd7ea5919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CardImage: {fileID: 1642772993782431522}
