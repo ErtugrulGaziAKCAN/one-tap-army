@@ -8,6 +8,7 @@ using QuickTools.Scripts.TimeSystem;
 using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UpgradeCards.Data;
 using UpgradeCards.Data.Base;
 using UpgradeCards.UI.CardUI.Base;
 namespace UpgradeCards.UI
@@ -19,12 +20,15 @@ namespace UpgradeCards.UI
 
 //------Serialized Fields-------//
         [SerializeField] private ScriptableEventNoParam OnUpgradableSelected;
+        [SerializeField] private GameObject InitHeader;
+        [SerializeField] private GameObject Header;
         [SerializeField] private GameObject Visuals;
         [SerializeField] private List<UpgradeCardSo> AllCards;
         [SerializeField] private Transform CardSpawnParent;
 
 //------Private Variables-------//
         private List<UpgradableCardUIBase> _spawnedCards = new List<UpgradableCardUIBase>();
+        private bool _isItFirstTime = true;
 
 #region UNITY_METHODS
 
@@ -48,7 +52,7 @@ namespace UpgradeCards.UI
         public void SpawnNewCardsUI()
         {
             _spawnedCards = new List<UpgradableCardUIBase>();
-            var cards = AllCards.Where((c) => !c.IsReachedMax()).ToList();
+            var cards = AllCards.Where((c) => !c.IsReachedMax() && (!_isItFirstTime || c is SoldierUpgradeCardSo)).ToList();
             cards.Shuffle();
             cards = cards.Take(3).ToList();
             foreach (var card in cards)
@@ -96,7 +100,10 @@ namespace UpgradeCards.UI
         private void ActivateUpgradePanel()
         {
             TimescaleManager.ChangeTimescale(0f, .7f);
+            InitHeader.SetActive(_isItFirstTime);
+            Header.SetActive(!_isItFirstTime);
             Visuals.SetActive(true);
+            _isItFirstTime = false;
         }
 
 #endregion
