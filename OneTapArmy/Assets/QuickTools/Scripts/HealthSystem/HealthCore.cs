@@ -75,6 +75,8 @@ namespace QuickTools.Scripts.HealthSystem
             OnReset?.Invoke(this);
         }
 
+        public void SetMaxHealth(float maxHealth) => MaxHealth = maxHealth;
+
 #endregion
 
 

@@ -5,7 +5,6 @@ using MonKey.Extensions;
 using Obvious.Soap;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.TimeSystem;
-using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UpgradeCards.Data;
@@ -73,7 +72,6 @@ namespace UpgradeCards.UI
         [Button]
         private void DeActivateUpgradePanel()
         {
-            EditorDebug.Log("Worked");
             var delay = 1f;
             _spawnedCards.ForEach((s) =>
             {

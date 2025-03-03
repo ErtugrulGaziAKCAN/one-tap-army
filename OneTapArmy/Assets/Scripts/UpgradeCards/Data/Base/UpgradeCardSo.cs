@@ -10,7 +10,6 @@ namespace UpgradeCards.Data.Base
     {
         [BoxGroup("Design")] public int MaxLevel;
         [BoxGroup("Design")] public int DefaultCardLevel;
-        [BoxGroup("References")] public string CardName;
         [BoxGroup("References"), PreviewField] public List<Sprite> CardImages;
         [BoxGroup("References"), PreviewField] public Sprite BackgroundImage;
         [BoxGroup("References"), PreviewField] public Sprite CardNameSprite;
@@ -34,6 +33,7 @@ namespace UpgradeCards.Data.Base
                 return;
             }
             CurrentCardLevel++;
+            OnUpgraded?.Invoke();
         }
 
         public bool IsReachedMax() => CurrentCardLevel >= MaxLevel;
