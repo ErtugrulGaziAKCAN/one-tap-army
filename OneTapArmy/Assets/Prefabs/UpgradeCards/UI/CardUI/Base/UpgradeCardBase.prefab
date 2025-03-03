@@ -5418,6 +5418,7 @@ Transform:
   m_Children:
   - {fileID: 4850618701665054250}
   - {fileID: 4684403353190926094}
+  - {fileID: 2227586925609890516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2853600795442182466
@@ -5707,6 +5708,77 @@ MonoBehaviour:
   EaseType: 27
   Overshoot: 1.70158
   UnscaledAnimation: 1
+--- !u!1 &6199003917796163005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2227586925609890516}
+  - component: {fileID: 4893970839268830745}
+  m_Layer: 5
+  m_Name: EventRaiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2227586925609890516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199003917796163005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5924078966799824359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4893970839268830745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199003917796163005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46731dbf8db40619ca876266eac1e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaiseExecutionTime: 2
+  UseDelayWithRef: 0
+  DelayRef:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 0}
+  RandomDelay: 0
+  Delay: 0
+  RandomDelayDurations: {x: 0, y: 0}
+  UseUnScaledTime: 0
+  Type: 1
+  Event: {fileID: 0}
+  UnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7922392403273047614}
+        m_TargetAssemblyTypeName: QuickTools.Scripts.UI.NovaButton, Assembly-CSharp
+        m_MethodName: SetInteractable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &6487782089142092784
 GameObject:
   m_ObjectHideFlags: 0
