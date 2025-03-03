@@ -59,6 +59,8 @@ namespace UpgradeCards.UI
                 spawned.InitCard(card);
                 _spawnedCards.Add(spawned);
             }
+            if (cards.All(c => c == null))
+                return;
             ActivateUpgradePanel();
         }
 
