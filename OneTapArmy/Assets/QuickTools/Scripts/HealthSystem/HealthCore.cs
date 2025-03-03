@@ -1,6 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 namespace QuickTools.Scripts.HealthSystem
 {
     public abstract class HealthCore : MonoBehaviour
@@ -8,6 +9,7 @@ namespace QuickTools.Scripts.HealthSystem
 //-------Public Variables-------//
         public Action<float> OnHealthChanged;
         public Action<HealthCore> OnDeath;
+        public UnityEvent OnDeathUnityEvent;
         public Action<HealthCore> OnReset;
         public bool IsDead => CurrentHealth <= 0;
         public float HealthPercentage => CurrentHealth / MaxHealth;
@@ -55,6 +57,7 @@ namespace QuickTools.Scripts.HealthSystem
             CurrentHealth = 0;
             Die();
             OnDeath?.Invoke(this);
+            OnDeathUnityEvent?.Invoke();
         }
 
         [Button]
