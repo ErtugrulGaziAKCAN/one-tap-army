@@ -1,0 +1,14 @@
+{
+    "name": "WanzyeeStudio.Example",
+    "references": [
+        "WanzyeeStudio.Runtime",
+        "WanzyeeStudio.Runtime.Base",
+        "WanzyeeStudio.Runtime.Specific",
+        "WanzyeeStudio.Runtime.Component",
+        "WanzyeeStudio.Runtime.Concrete"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
