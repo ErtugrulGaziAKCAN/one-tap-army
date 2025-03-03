@@ -11,7 +11,10 @@ namespace Tower
 
 
 //------Serialized Fields-------//
+        [SerializeField, BoxGroup("Design"), OnValueChanged(nameof(SetTowerMaterials))]
+        private Material TowerMaterial;
         [SerializeField, BoxGroup("References")] private List<MeshRenderer> TowerMeshes;
+        [SerializeField, BoxGroup("References")] private List<GameObject> Towers;
         [SerializeField, BoxGroup("References")] private TextBlock LevelText;
         [SerializeField, BoxGroup("Events")] private UnityEvent OnUpgraded;
 
@@ -38,6 +41,7 @@ namespace Tower
             if (initializing)
                 return;
             OnUpgraded?.Invoke();
+            ActivateTargetBuild();
         }
 
 #endregion
@@ -45,6 +49,19 @@ namespace Tower
 
 #region PRIVATE_METHODS
 
+        [ExecuteAlways]
+        private void SetTowerMaterials()
+        {
+            if (TowerMaterial == null)
+                return;
+            TowerMeshes.ForEach((t) => t.sharedMaterial = TowerMaterial);
+        }
+
+        private void ActivateTargetBuild()
+        {
+            Towers.ForEach((t)=>t.SetActive(false));
+            Towers[_currentLevel-1].SetActive(true);
+        }
 #endregion
     }
 }
