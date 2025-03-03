@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45eaabd2f1a48339304d538d58374c1, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  MaxLevel: 5
+  CardName: ARCHER
+  CardImages:
+  - {fileID: 21300000, guid: d33ce1d4030814177b843a1b89dd4c98, type: 3}
+  - {fileID: 21300000, guid: 538b85cbb26194b0b888002a3ebea6e6, type: 3}
+  - {fileID: 21300000, guid: 42a17248f79b84f7a998289f124d2f98, type: 3}
+  - {fileID: 21300000, guid: ad6d2670052044a539f85c3d1d8703a6, type: 3}
+  - {fileID: 21300000, guid: d445c8db6149f450e8dc36d531d1bcab, type: 3}
+  BackgroundImage: {fileID: 21300000, guid: ba2e96fdc009c45d4b01cc66b7471eb3, type: 3}
+  CardNameSprite: {fileID: 21300000, guid: d1dbb380c525a480c8ea489991420157, type: 3}
+  CurrentCardLevel: 1
+  HealthValue:
+    Type: 0
+    ManualValues: []
+    BaseValueLinear: 0
+    IncrementLinear: 0
+    BaseValueExpo: 0
+    IncrementExpo: 0
+  AttackValue:
+    Type: 0
+    ManualValues: []
+    BaseValueLinear: 0
+    IncrementLinear: 0
+    BaseValueExpo: 0
+    IncrementExpo: 0
+  SpeedValue:
+    Type: 0
+    ManualValues: []
+    BaseValueLinear: 0
+    IncrementLinear: 0
+    BaseValueExpo: 0
+    IncrementExpo: 0
