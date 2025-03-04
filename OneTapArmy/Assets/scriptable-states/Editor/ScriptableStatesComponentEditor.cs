@@ -1,10 +1,10 @@
-﻿using UnityEditor;
+﻿using scriptable_states.Runtime;
+using UnityEditor;
 using UnityEngine;
-
-namespace loophouse.ScriptableStates
+namespace scriptable_states.Editor
 {
     [CustomEditor(typeof(StateComponent))]
-    public class ScriptableStatesComponentEditor : Editor
+    public class ScriptableStatesComponentEditor : UnityEditor.Editor
     {
         Color _rectColor;
         GUIStyle _richTextStyle;

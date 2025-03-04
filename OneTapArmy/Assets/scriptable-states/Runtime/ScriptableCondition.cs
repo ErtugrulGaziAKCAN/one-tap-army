@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace loophouse.ScriptableStates
+﻿using UnityEngine;
+namespace scriptable_states.Runtime
 {
     public abstract class ScriptableCondition : ScriptableObject
     {

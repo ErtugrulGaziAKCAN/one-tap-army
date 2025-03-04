@@ -1,7 +1,8 @@
+using scriptable_states.Runtime;
 using UnityEngine;
-namespace Soldier.AI_System.Base
+namespace Soldier.AI_System.Actions
 {
-    public abstract class SoldierBrainCore : MonoBehaviour
+    public class SoldierIdleAction : ScriptableAction
     {
 
 //-------Public Variables-------//
@@ -18,13 +19,17 @@ namespace Soldier.AI_System.Base
 
 
 #region PUBLIC_METHODS
-
+        public override void Act(StateComponent statesComponent)
+        {
+           
+        }
 #endregion
 
 
 #region PRIVATE_METHODS
 
 #endregion
-        
+
+       
     }
 }

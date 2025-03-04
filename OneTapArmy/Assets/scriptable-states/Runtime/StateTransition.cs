@@ -1,5 +1,5 @@
 ﻿
-namespace loophouse.ScriptableStates
+namespace scriptable_states.Runtime
 {
     [System.Serializable]
     public struct StateTransition

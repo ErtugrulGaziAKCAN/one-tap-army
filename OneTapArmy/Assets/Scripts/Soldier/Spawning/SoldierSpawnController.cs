@@ -3,8 +3,8 @@ using System.Linq;
 using MonKey.Extensions;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.Utilities;
+using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
-using Soldier.AI_System.Base;
 using UI;
 using UnityEngine;
 using UpgradeCards.Data;
@@ -25,7 +25,7 @@ namespace Soldier.Spawning
         [SerializeField, BoxGroup("Design")] private bool SpawnFromUpgradableList;
         [SerializeField, BoxGroup("Design"),ShowIf(nameof(SpawnFromUpgradableList))] private List<SoldierUpgradeCardSo> SoliderUpgradeCards;
         [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList))]
-        private List<SoldierBrainCore> TargetSoldiers;
+        private List<StateComponent> TargetSoldiers;
         [SerializeField, BoxGroup("References")] private ProgressBarController ProgressBar;
         
 //------Private Variables-------//

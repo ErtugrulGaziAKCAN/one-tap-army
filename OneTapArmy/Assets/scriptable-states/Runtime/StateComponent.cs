@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
-namespace loophouse.ScriptableStates
+namespace scriptable_states.Runtime
 {
     public class StateComponent : MonoBehaviour
     {
@@ -13,7 +12,7 @@ namespace loophouse.ScriptableStates
         /// T1: Previous State, T2: Current State
         /// </summary>
         public Action<ScriptableState, ScriptableState> OnStateChanged;
-
+        
         private void Start()
         {
             if (!_stateMachine.InitialState)

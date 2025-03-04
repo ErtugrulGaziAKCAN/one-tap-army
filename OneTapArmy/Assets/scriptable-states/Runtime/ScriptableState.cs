@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-
-namespace loophouse.ScriptableStates
+namespace scriptable_states.Runtime
 {
     [CreateAssetMenu(menuName = "Scriptable State Machine/State", fileName = "State")]
     public class ScriptableState : ScriptableObject
