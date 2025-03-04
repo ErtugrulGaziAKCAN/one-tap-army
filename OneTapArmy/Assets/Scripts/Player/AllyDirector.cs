@@ -4,7 +4,7 @@ using Touchables;
 using UnityEngine;
 namespace Player
 {
-    public class PlayerAllyDirector : MonoBehaviour, ITouchable
+    public class AllyDirector : MonoBehaviour, ITouchable
     {
 //-------Public Variables-------//
 
