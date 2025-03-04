@@ -192,8 +192,21 @@ MonoBehaviour:
   AITransform: {fileID: 4427339639779559611}
   Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
+  StateComponentAccess: {fileID: 790807468145476608}
   AnimationController: {fileID: 2321723434327497260}
   TargetPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &790807468145476608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7119492671945705153, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7508635200148701889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507993747614755778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e764c36fb780ad408dea0bebbe5a694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2321723434327497260 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5191644072490686701, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,

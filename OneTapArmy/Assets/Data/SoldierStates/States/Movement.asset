@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499f9dc307232184ca30934e3fc72ee2, type: 3}
   m_Name: Movement
   m_EditorClassIdentifier: 
-  _entryActions: []
+  _entryActions:
+  - {fileID: 11400000, guid: e5b068d7eb0804b5b80c520240e270ef, type: 2}
   _exitActions: []
-  _physicsActions: []
+  _physicsActions:
+  - {fileID: 11400000, guid: 467324c26d3054e0280d7d313365a4ca, type: 2}
+  - {fileID: 11400000, guid: 8e60a9b468a284705832e1e337c728f0, type: 2}
   _stateActions: []

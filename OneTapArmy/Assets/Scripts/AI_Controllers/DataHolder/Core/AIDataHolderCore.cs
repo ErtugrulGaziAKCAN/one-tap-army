@@ -1,4 +1,5 @@
 using AnimationControllers;
+using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,6 +12,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public AIHealthController AIHealth;
+        [BoxGroup("References")] public StateComponent StateComponentAccess;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
         

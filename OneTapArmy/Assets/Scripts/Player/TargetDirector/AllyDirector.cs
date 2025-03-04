@@ -2,7 +2,7 @@ using Obvious.Soap;
 using scriptable_states.Runtime;
 using Touchables;
 using UnityEngine;
-namespace Player
+namespace Player.TargetDirector
 {
     public class AllyDirector : MonoBehaviour, ITouchable
     {
@@ -14,8 +14,14 @@ namespace Player
         [SerializeField] private ScriptableEventNoParam OnTouchedToDirectTheAllies;
         [SerializeField] private ScriptableState MovementState;
 //------Private Variables-------//
+        private AllyDirectorVisualizer _directorVisualizer;
 
 #region UNITY_METHODS
+
+        private void Awake()
+        {
+            TryGetComponent(out _directorVisualizer);
+        }
 
 #endregion
 
@@ -26,10 +32,11 @@ namespace Player
         {
             SpawnedAllySoldiers.ForEach((a) =>
             {
-                if (a.GetComponent<StateComponent>().CurrentState == MovementState)
+                if (a.StateComponentAccess.CurrentState == MovementState)
                     a.TargetPosition = touchPoint;
             });
             OnTouchedToDirectTheAllies.Raise();
+            _directorVisualizer.DrawWorldLine(touchPoint);
         }
 
 #endregion
