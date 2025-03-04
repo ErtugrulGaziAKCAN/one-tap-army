@@ -91,4 +91,4 @@ MonoBehaviour:
   MaxDelay: 0
   EaseType: 27
   Overshoot: 1.70158
-  UnscaledAnimation: 0
+  UnscaledAnimation: 1

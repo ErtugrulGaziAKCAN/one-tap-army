@@ -42,6 +42,11 @@ namespace UpgradeCards.UI
             OnUpgradableSelected.OnRaised -= DeActivateUpgradePanel;
         }
 
+        private void Start()
+        {
+            TimescaleManager.ChangeTimescale(1f, 0f);
+        }
+
 #endregion
 
 
@@ -51,7 +56,8 @@ namespace UpgradeCards.UI
         public void SpawnNewCardsUI()
         {
             _spawnedCards = new List<UpgradableCardUIBase>();
-            var cards = AllCards.Where((c) => !c.IsReachedMax() && (!_isItFirstTime || c is SoldierUpgradeCardSo)).ToList();
+            var cards = AllCards.Where((c) => !c.IsReachedMax() && (!_isItFirstTime || c is SoldierUpgradeCardSo))
+                .ToList();
             cards.Shuffle();
             cards = cards.Take(3).ToList();
             foreach (var card in cards)

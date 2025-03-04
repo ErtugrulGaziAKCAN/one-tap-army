@@ -22,7 +22,7 @@ namespace UpgradeCards.UI.CardUI.Base
 //------Private Variables-------//
         private UpgradableCardController _upgradableCardController;
         private NovaButton _novaButton;
-
+        private UpgradeCardSo _targetCard;
 #region UNITY_METHODS
 
 #endregion
@@ -33,19 +33,22 @@ namespace UpgradeCards.UI.CardUI.Base
         [Button]
         public virtual void InitCard(UpgradeCardSo cardSo)
         {
+            _targetCard = cardSo;
             CardImage.SetImage(cardSo.TargetCardImage());
             CardNameImage.SetImage(cardSo.CardNameSprite);
             CardBackground.SetImage(cardSo.BackgroundImage);
-            for (var index = 0; index < Stars.Count; index++)
-            {
-                var star = Stars[index];
-                star.SetActive(index <= (cardSo.CurrentCardLevel - 1));
-            }
+            SetStars(cardSo);
             TryGetComponent(out _novaButton);
             TryGetComponent(out _upgradableCardController);
-            _upgradableCardController.Assign(cardSo, _novaButton);
+            _upgradableCardController.Assign(cardSo, _novaButton, this);
         }
-        
+
+
+        public void OnCardUpgraded()
+        {
+            SetStars(_targetCard);
+        }
+
         public void DeInteractable()
         {
             _novaButton.SetInteractable(false);
@@ -56,6 +59,15 @@ namespace UpgradeCards.UI.CardUI.Base
 
 
 #region PRIVATE_METHODS
+
+        private void SetStars(UpgradeCardSo cardSo)
+        {
+            for (var index = 0; index < Stars.Count; index++)
+            {
+                var star = Stars[index];
+                star.SetActive(index <= (cardSo.CurrentCardLevel - 1));
+            }
+        }
 
 #endregion
     }

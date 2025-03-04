@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1443747773633493295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7954001460856245058}
+  - component: {fileID: 4149200743885097746}
+  m_Layer: 0
+  m_Name: XP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7954001460856245058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443747773633493295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4149200743885097746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443747773633493295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b410343ad12f411a941029b48cac63ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetXpPoints:
+    Type: 1
+    ManualValues: []
+    BaseValueLinear: 3
+    IncrementLinear: 1
+    BaseValueExpo: 0
+    IncrementExpo: 0
+  XpProgress:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: 11e93a9b692454d7c996455cc88171f9, type: 2}
+  OnReachedTargetXp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 68494765de87849e080d9223eb3e66d5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEventNoParam, Obvious.Soap
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CurrentXpStep:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: 18b4ad14214644cec8213e9ddc9ad3bf, type: 2}
+  CollectedXp:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: 3c9b7eff3bec54b0fa482450ae145d9d, type: 2}
+  TargetXp:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: 7a832d30f7e464226bc83c848c343df1, type: 2}

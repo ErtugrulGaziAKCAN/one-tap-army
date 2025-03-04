@@ -1,6 +1,7 @@
 using QuickTools.Scripts.UI;
 using UnityEngine;
 using UpgradeCards.Data.Base;
+using UpgradeCards.UI.CardUI.Base;
 namespace UpgradeCards.UI
 {
     public class UpgradableCardController : MonoBehaviour
@@ -13,7 +14,8 @@ namespace UpgradeCards.UI
 //------Private Variables-------//
         private NovaButton _novaButton;
         private UpgradeCardSo _targetUpgradeCard;
-
+        private UpgradableCardUIBase _cardUI;
+        
 #region UNITY_METHODS
 
         private void OnDisable()
@@ -26,11 +28,12 @@ namespace UpgradeCards.UI
 
 #region PUBLIC_METHODS
 
-        public void Assign(UpgradeCardSo upgradeCardSo, NovaButton novaButton)
+        public void Assign(UpgradeCardSo upgradeCardSo, NovaButton novaButton,UpgradableCardUIBase cardUI)
         {
             _novaButton = novaButton;
             _novaButton.OnClickAction += OnClicked;
             _targetUpgradeCard = upgradeCardSo;
+            _cardUI = cardUI;
         }
         
 #endregion
@@ -41,6 +44,7 @@ namespace UpgradeCards.UI
         private void OnClicked(NovaButton button)
         {
             _targetUpgradeCard.UpgradeCard();
+            _cardUI.OnCardUpgraded();
         }
 
 #endregion
