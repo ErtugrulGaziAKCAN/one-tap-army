@@ -1,5 +1,4 @@
 using DG.Tweening;
-using QuickTools.Scripts.Extensions;
 using UnityEngine;
 namespace Player.TargetDirector
 {
@@ -30,7 +29,7 @@ namespace Player.TargetDirector
 
             var length = Vector3.Distance(aPosition, pointB);
             _lenghtTween.Kill();
-            _lenghtTween = DOVirtual.Float(0f, length -.3f, .1f,
+            _lenghtTween = DOVirtual.Float(0f, length , .1f,
                 (l) => LineSprite.localScale = new Vector3(LineThickness, LineThickness, l)).OnComplete(() =>
             {
                 PointSprite.transform.position = pointB;
