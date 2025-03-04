@@ -8,6 +8,7 @@ namespace QuickTools.Scripts.HealthSystem
     {
 //-------Public Variables-------//
         public Action<float> OnHealthChanged;
+        public UnityEvent OnTakingDamage;
         public Action<HealthCore> OnDeath;
         public UnityEvent OnDeathUnityEvent;
         public Action<HealthCore> OnReset;
@@ -52,8 +53,10 @@ namespace QuickTools.Scripts.HealthSystem
         {
             CurrentHealth -= damage;
             if (CurrentHealth > 0)
+            {
+                OnTakingDamage?.Invoke();
                 return;
-
+            }
             CurrentHealth = 0;
             Die();
             OnDeath?.Invoke(this);
