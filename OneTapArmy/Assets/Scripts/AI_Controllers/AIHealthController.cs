@@ -1,11 +1,10 @@
-using UnityEngine;
-namespace Soldier.AIDataHolder.Base
+using QuickTools.Scripts.HealthSystem;
+namespace AI_Controllers
 {
-    public class AIDataHolderBase : MonoBehaviour
+    public class AIHealthController : HealthCore
     {
-
 //-------Public Variables-------//
-        public Rigidbody AIBody;
+
 
 //------Serialized Fields-------//
 
@@ -19,12 +18,16 @@ namespace Soldier.AIDataHolder.Base
 
 #region PUBLIC_METHODS
 
+        protected override void Die()
+        {
+
+        }
+
 #endregion
 
 
 #region PRIVATE_METHODS
 
 #endregion
-
     }
 }

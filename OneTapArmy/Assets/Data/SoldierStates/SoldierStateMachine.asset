@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718ecb92f024ea14e8d2f2450ca5def2, type: 3}
   m_Name: SoldierStateMachine
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 84e0ad98f73ea40ad9117e6df0de3b53, type: 2}
-  _emptyState: {fileID: 0}
+  _initialState: {fileID: 11400000, guid: e6f01802cdf4f4f0a902dd559cbfcf64, type: 2}
+  _emptyState: {fileID: 11400000, guid: 20352fc7a011e8748b8ba85265763ede, type: 2}
   _transitions: []

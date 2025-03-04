@@ -8,7 +8,7 @@ using Sirenix.OdinInspector;
 using UI;
 using UnityEngine;
 using UpgradeCards.Data;
-namespace Soldier.Spawning
+namespace AI_Controllers.Spawning
 {
     public class SoldierSpawnController : MonoBehaviour
     {
