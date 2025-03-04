@@ -8,6 +8,8 @@ namespace UpgradeCards.Data
     public class CastleUpgradeCardSo : UpgradeCardSo
     {
         [BoxGroup("Design")] public IncrementalValue Health;
-        [BoxGroup("Design")] public IncrementalValue SpawnRate;
+        [BoxGroup("Design")] public IncrementalValue SpawnInterval;
+
+        public float CurrentSpawnInterval => SpawnInterval.GetValueOnLevel(CurrentCardLevel);
     }
 }

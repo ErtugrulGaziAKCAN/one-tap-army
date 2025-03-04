@@ -22,6 +22,7 @@ namespace UpgradeCards.UI
         [SerializeField] private GameObject InitHeader;
         [SerializeField] private GameObject Header;
         [SerializeField] private GameObject Visuals;
+        [SerializeField] private ScriptableEventNoParam LevelStarted;
         [SerializeField] private List<UpgradeCardSo> AllCards;
         [SerializeField] private Transform CardSpawnParent;
 
@@ -107,7 +108,11 @@ namespace UpgradeCards.UI
             InitHeader.SetActive(_isItFirstTime);
             Header.SetActive(!_isItFirstTime);
             Visuals.SetActive(true);
-            _isItFirstTime = false;
+            if (_isItFirstTime)
+            {
+                LevelStarted.Raise();
+                _isItFirstTime = false;
+            }
         }
 
 #endregion

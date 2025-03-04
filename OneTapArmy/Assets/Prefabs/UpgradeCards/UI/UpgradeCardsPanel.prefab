@@ -538,6 +538,7 @@ MonoBehaviour:
   InitHeader: {fileID: 6453979022728430198}
   Header: {fileID: 2678826338043772037}
   Visuals: {fileID: 4445734808328139041}
+  LevelStarted: {fileID: 11400000, guid: 246b2f2838cae4ad9be0e23ea95f787d, type: 2}
   AllCards:
   - {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c, type: 2}
   - {fileID: 11400000, guid: 4ad79de1db4af4dc9a0a57af9e2f9d2e, type: 2}

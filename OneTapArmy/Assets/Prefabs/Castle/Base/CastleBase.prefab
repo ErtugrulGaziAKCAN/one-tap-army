@@ -319,6 +319,70 @@ Transform:
   - {fileID: 4194674745612362045}
   m_Father: {fileID: 5835786285213617931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643699060731790022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984639358453640844}
+  - component: {fileID: 4644742160128128856}
+  m_Layer: 0
+  m_Name: EventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1984639358453640844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643699060731790022}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7693974670234602216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4644742160128128856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643699060731790022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93ba61543949824db31c7cb89b4f009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binding: 0
+  _disableAfterSubscribing: 0
+  _eventResponses:
+  - Delay: 1
+    ScriptableEvent: {fileID: 11400000, guid: 246b2f2838cae4ad9be0e23ea95f787d, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4579396465476900818}
+          m_TargetAssemblyTypeName: Soldier.Spawning.SoldierSpawnController, Assembly-CSharp
+          m_MethodName: SetActivity
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &690344585319498893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1487,60 @@ MonoBehaviour:
   m_WaveDiversity: 0.9
   m_WaveSpeed: 2
   m_WaveSpeedIgnoresTimeScale: 1
+--- !u!1 &2822893227650328323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7693974670234602216}
+  - component: {fileID: 4579396465476900818}
+  m_Layer: 0
+  m_Name: SoldierSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7693974670234602216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822893227650328323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 535404047211197596}
+  - {fileID: 1984639358453640844}
+  m_Father: {fileID: 2045886026131269270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4579396465476900818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822893227650328323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860e0a9ceeb94d15ab7deeb7ea30dcfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 535404047211197596}
+  IsSpawnIntervalDependsOnUpgradable: 0
+  SpawnInterval: 2
+  CastleUpgradeCard: {fileID: 0}
+  SpawnFromUpgradableList: 0
+  SoliderUpgradeCards: []
+  TargetSoldiers: []
+  ProgressBar: {fileID: 3846484868669396559}
 --- !u!1 &2873672962035052668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2754,8 @@ Transform:
   - {fileID: 968902277656316919}
   - {fileID: 6236581753882478557}
   - {fileID: 6943215764308415307}
+  - {fileID: 7693974670234602216}
+  - {fileID: 707529561896534812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1261842223210130647
@@ -2959,6 +3079,87 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5831231715092256494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707529561896534812}
+  - component: {fileID: 8765498709485109470}
+  m_Layer: 0
+  m_Name: EventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707529561896534812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831231715092256494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2045886026131269270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8765498709485109470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831231715092256494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93ba61543949824db31c7cb89b4f009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binding: 0
+  _disableAfterSubscribing: 0
+  _eventResponses:
+  - Delay: 0
+    ScriptableEvent: {fileID: 11400000, guid: e29860ae21cd845e4bfa2e5d5ccc1b1c, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1241480851034683299}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Delay: 0
+    ScriptableEvent: {fileID: 11400000, guid: 2ac1d58ac6c2b455f95a0024f418b729, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1241480851034683299}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6086773730291836223
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,6 +3225,37 @@ Transform:
   - {fileID: 1753563140053303601}
   - {fileID: 1334175506353856364}
   m_Father: {fileID: 5299683316937986496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6443420920805603952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535404047211197596}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535404047211197596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443420920805603952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.937}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7693974670234602216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6681048963415432837
 GameObject:
@@ -3893,7 +4125,7 @@ PrefabInstance:
     - target: {fileID: 752545106611884908, guid: d7ae713f0f2ba4f7c96d3ad94538f205,
         type: 3}
       propertyPath: m_Name
-      value: ProgressBar
+      value: ProgressBar_SpawnInterval
       objectReference: {fileID: 0}
     - target: {fileID: 752545106611884908, guid: d7ae713f0f2ba4f7c96d3ad94538f205,
         type: 3}
@@ -4146,6 +4378,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1488441386142266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3846484868669396559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3847266094161288309, guid: d7ae713f0f2ba4f7c96d3ad94538f205,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488441386142266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3141ff9728d49b3b3127352e76f643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1254244598578202481
 PrefabInstance:
   m_ObjectHideFlags: 0
