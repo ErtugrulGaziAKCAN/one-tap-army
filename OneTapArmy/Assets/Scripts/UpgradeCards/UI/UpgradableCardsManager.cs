@@ -43,7 +43,7 @@ namespace UpgradeCards.UI
         {
             OnUpgradableSelected.OnRaised -= DeActivateUpgradePanel;
         }
-        
+
 #endregion
 
 
@@ -89,9 +89,13 @@ namespace UpgradeCards.UI
             {
                 Visuals.transform.DOScale(Vector3.zero, .3f).SetEase(Ease.OutBack).SetUpdate(true)
                     .OnComplete(() => Visuals.SetActive(false));
+                if (_isItFirstTime)
+                {
+                    LevelStarted.Raise();
+                    _isItFirstTime = false;
+                }
             }).SetUpdate(true);
             TimescaleManager.ChangeTimescale(1f, .2f);
-            EditorDebug.Log("Worked");
         }
 
 #endregion
@@ -105,11 +109,6 @@ namespace UpgradeCards.UI
             InitHeader.SetActive(_isItFirstTime);
             Header.SetActive(!_isItFirstTime);
             Visuals.SetActive(true);
-            if (_isItFirstTime)
-            {
-                LevelStarted.Raise();
-                _isItFirstTime = false;
-            }
         }
 
 #endregion
