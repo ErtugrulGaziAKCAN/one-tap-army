@@ -35,7 +35,7 @@ namespace QuickTools.Scripts.TimeSystem
         {
             var originalTimescale =  Time.timeScale;
             DOVirtual.Float(originalTimescale, targetTimescale, transitionDurationInSeconds, SetTimescale)
-                .SetEase(Ease.OutQuad);
+                .SetEase(Ease.OutQuad).SetUpdate(true);
         }
 
         public static void FrameFreeze(int frameCount)

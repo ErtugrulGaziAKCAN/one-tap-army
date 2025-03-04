@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxLevel: 5
   DefaultCardLevel: 0
-  CardName: GIANT
   CardImages:
   - {fileID: 21300000, guid: 32aeecb07096e478f974d6a311eaa0bc, type: 3}
   - {fileID: 21300000, guid: b551f86bc1fde406b871f48738790ac2, type: 3}
@@ -46,3 +45,5 @@ MonoBehaviour:
     IncrementLinear: 0
     BaseValueExpo: 0
     IncrementExpo: 0
+  SoldierPrefab: {fileID: 8102571336875657052, guid: 13babb1e968c7426c97ec43dea661230,
+    type: 3}

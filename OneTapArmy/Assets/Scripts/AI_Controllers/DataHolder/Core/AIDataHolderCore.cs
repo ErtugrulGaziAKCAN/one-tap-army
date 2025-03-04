@@ -1,15 +1,18 @@
 using AnimationControllers;
 using Sirenix.OdinInspector;
 using UnityEngine;
-namespace AI_Controllers.AIDataHolder
+using UnityEngine.AI;
+namespace AI_Controllers.DataHolder.Core
 {
-    public class AIDataHolder : MonoBehaviour
+    public abstract class AIDataHolderCore : MonoBehaviour
     {
 
 //-------Public Variables-------//
-        [BoxGroup("References")] public Rigidbody AIBody;
+        [BoxGroup("References")] public Transform AITransform;
+        [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public AIHealthController AIHealth;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
+        [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
         
 //------Serialized Fields-------//
 

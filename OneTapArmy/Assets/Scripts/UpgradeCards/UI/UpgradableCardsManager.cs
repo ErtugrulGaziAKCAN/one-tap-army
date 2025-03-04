@@ -5,6 +5,7 @@ using MonKey.Extensions;
 using Obvious.Soap;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.TimeSystem;
+using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UpgradeCards.Data;
@@ -42,12 +43,7 @@ namespace UpgradeCards.UI
         {
             OnUpgradableSelected.OnRaised -= DeActivateUpgradePanel;
         }
-
-        private void Start()
-        {
-            TimescaleManager.ChangeTimescale(1f, 0f);
-        }
-
+        
 #endregion
 
 
@@ -91,10 +87,11 @@ namespace UpgradeCards.UI
             });
             DOVirtual.DelayedCall(delay, () =>
             {
-                TimescaleManager.ChangeTimescale(1f, .7f);
                 Visuals.transform.DOScale(Vector3.zero, .3f).SetEase(Ease.OutBack).SetUpdate(true)
                     .OnComplete(() => Visuals.SetActive(false));
             }).SetUpdate(true);
+            TimescaleManager.ChangeTimescale(1f, .2f);
+            EditorDebug.Log("Worked");
         }
 
 #endregion
@@ -104,7 +101,7 @@ namespace UpgradeCards.UI
 
         private void ActivateUpgradePanel()
         {
-            TimescaleManager.ChangeTimescale(0f, .7f);
+            TimescaleManager.ChangeTimescale(0f, .2f);
             InitHeader.SetActive(_isItFirstTime);
             Header.SetActive(!_isItFirstTime);
             Visuals.SetActive(true);

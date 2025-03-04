@@ -58,6 +58,68 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: IsAllySpawner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: CastleUpgradeCard
+      value: 
+      objectReference: {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: SpawnedAllySoldiers
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b58c641a18764dd8a6fcbefc0fa65d9,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: SpawnFromUpgradableList
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: SoliderUpgradeCards.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SoliderUpgradeCards.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ad79de1db4af4dc9a0a57af9e2f9d2e,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SoliderUpgradeCards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d192c926689fe45f4b2d1c99e9ad2968,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SoliderUpgradeCards.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fcfe0686dbbf4f2f88421f448f556a5,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SoliderUpgradeCards.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: de07e6f9d8cc94fdda5aa82c69c3b3f2,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SoliderUpgradeCards.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fcf376c4ebb514dbebd0f1b13d552e39,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: IsSpawnIntervalDependsOnUpgradable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4887393897324159180, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: m_Name
