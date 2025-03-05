@@ -1,5 +1,6 @@
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
+using QuickTools.Scripts.HealthSystem;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Conditions.Attack
@@ -31,7 +32,7 @@ namespace AI_Controllers.AI_System.Conditions.Attack
                 hits, dataHolder.RivalLayer);
             if (hitCount == 0)
                 return false;
-            var targets = hits.Where((h) =>h!=null && h.GetComponent<AIDataHolderCore>().AI_ID != dataHolder.AI_ID).ToList();
+            var targets = hits.Where((h) =>h!=null && h.GetComponent<HealthCore>().HealthID != dataHolder.AIHealth.HealthID).ToList();
             if (targets.Count == 0)
                 return false;
             var closestDistance = 999f;

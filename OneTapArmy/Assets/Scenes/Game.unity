@@ -526,6 +526,11 @@ PrefabInstance:
       propertyPath: ColorImage
       value: 
       objectReference: {fileID: 144660437}
+    - target: {fileID: 3784476775946970792, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: HealthID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -747,6 +752,11 @@ PrefabInstance:
       propertyPath: UiColor.r
       value: 0.8156863
       objectReference: {fileID: 0}
+    - target: {fileID: 3784476775946970792, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: HealthID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -859,6 +869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UiColor.r
       value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784476775946970792, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: HealthID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}

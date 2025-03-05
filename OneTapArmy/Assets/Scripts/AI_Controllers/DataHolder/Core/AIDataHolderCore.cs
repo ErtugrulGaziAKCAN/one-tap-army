@@ -2,6 +2,7 @@ using System;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
 using QuickTools.Scripts.Collectibles.Core;
+using QuickTools.Scripts.HealthSystem;
 using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,7 +12,6 @@ namespace AI_Controllers.DataHolder.Core
     public abstract class AIDataHolderCore : MonoBehaviour
     {
 //-------Public Variables-------//
-        [BoxGroup("Design")] public int AI_ID;
         [BoxGroup("Design")] public float CollectibleSensorRange;
         [HideInInspector] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
@@ -19,10 +19,10 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("Design")] public float AttackDamage;
         [ReadOnly] public bool IsAttacking;
         [BoxGroup("Design")] public LayerMask RivalLayer;
-        [HideInInspector] public AIHealthController ClosestRivalHealth;
+        [HideInInspector] public HealthCore ClosestRivalHealth;
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
-        [BoxGroup("References")] public AIHealthController AIHealth;
+        [BoxGroup("References")] public HealthCore AIHealth;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
         [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;

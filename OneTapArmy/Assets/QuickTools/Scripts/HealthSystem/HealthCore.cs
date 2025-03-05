@@ -7,6 +7,7 @@ namespace QuickTools.Scripts.HealthSystem
     public abstract class HealthCore : MonoBehaviour
     {
 //-------Public Variables-------//
+        public int HealthID;
         public Action<float> OnHealthChanged;
         public UnityEvent OnTakingDamage;
         public Action<HealthCore> OnDeath;
@@ -15,7 +16,6 @@ namespace QuickTools.Scripts.HealthSystem
         public bool IsDead => CurrentHealth <= 0;
         public float HealthPercentage => CurrentHealth / MaxHealth;
         public float GetMaxHealth => MaxHealth;
-
         public float CurrentHealth
         {
             get => _currentHealth;
