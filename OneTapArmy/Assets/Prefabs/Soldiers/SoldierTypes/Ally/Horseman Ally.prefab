@@ -611,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23d32398f4bc542329dc552ea46f4490,
         type: 3}
       propertyPath: m_Name
-      value: Salute
+      value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 1529763866839775115, guid: 23d32398f4bc542329dc552ea46f4490,
         type: 3}
