@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 1984639358453640844}
   - component: {fileID: 4644742160128128856}
   - component: {fileID: 4644239857200963065}
+  - component: {fileID: 111015016310176626}
   m_Layer: 0
   m_Name: EventListener
   m_TagString: Untagged
@@ -489,6 +490,55 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+--- !u!114 &111015016310176626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643699060731790022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93ba61543949824db31c7cb89b4f009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binding: 0
+  _disableAfterSubscribing: 0
+  _eventResponses:
+  - Delay: 0
+    ScriptableEvent: {fileID: 11400000, guid: e29860ae21cd845e4bfa2e5d5ccc1b1c, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4579396465476900818}
+          m_TargetAssemblyTypeName: AI_Controllers.Spawning.AISpawnController, Assembly-CSharp
+          m_MethodName: SetActivity
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Delay: 0
+    ScriptableEvent: {fileID: 11400000, guid: 2ac1d58ac6c2b455f95a0024f418b729, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4579396465476900818}
+          m_TargetAssemblyTypeName: AI_Controllers.Spawning.AISpawnController, Assembly-CSharp
+          m_MethodName: SetActivity
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &690344585319498893
 GameObject:

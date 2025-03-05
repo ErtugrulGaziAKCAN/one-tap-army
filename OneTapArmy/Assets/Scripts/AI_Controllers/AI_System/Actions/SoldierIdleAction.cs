@@ -25,6 +25,7 @@ namespace AI_Controllers.AI_System.Actions
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking,false);
+            dataHolder.Agent.SetDestination(dataHolder.AITransform.position);
         }
 
 #endregion
