@@ -170,6 +170,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8102571336875657052}
+    - targetCorrespondingSourceObject: {fileID: 8014373728331360515, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8981184898457306580}
   m_SourcePrefab: {fileID: 100100000, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f, type: 3}
 --- !u!1 &507993747614755778 stripped
 GameObject:
@@ -191,7 +195,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectibleSensorRange: 1
   ClosestCollectible: {fileID: 0}
-  RivalSensorRange: 2
+  RivalSensorRange: 3
+  AttackDistance: 1
+  IsAttacking: 0
   RivalLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -200,10 +206,25 @@ MonoBehaviour:
   Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
   StateComponentAccess: {fileID: 790807468145476608}
+  AIAttackController: {fileID: 0}
   AnimationController: {fileID: 2321723434327497260}
   TargetPosition: {x: 0, y: 0, z: 0}
   IsAllyAI: 0
   AgentStoppingDistance: 0
+--- !u!114 &8981184898457306580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507993747614755778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88d523b968f4f63929fd260349ad242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorAccess: {fileID: 2321723434327497260}
+  DataHolder: {fileID: 8102571336875657052}
 --- !u!114 &790807468145476608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7119492671945705153, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,

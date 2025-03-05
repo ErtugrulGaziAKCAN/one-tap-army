@@ -1,4 +1,5 @@
 using System;
+using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
 using QuickTools.Scripts.Collectibles.Core;
 using QuickTools.Scripts.ColliderSystem;
@@ -10,22 +11,24 @@ namespace AI_Controllers.DataHolder.Core
 {
     public abstract class AIDataHolderCore : MonoBehaviour
     {
-
 //-------Public Variables-------//
         [BoxGroup("Design")] public float CollectibleSensorRange;
         [HideInInspector] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
+        [BoxGroup("Design")] public float AttackDistance;
+        [ReadOnly] public bool IsAttacking;
         [BoxGroup("Design")] public LayerMask RivalLayer;
         [HideInInspector] public AIHealthController ClosestRivalHealth;
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public AIHealthController AIHealth;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
+        [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
         [HideInInspector] public bool IsAllyAI;
         [HideInInspector] public float AgentStoppingDistance;
-        
+
 //------Serialized Fields-------//
 
 
@@ -49,6 +52,5 @@ namespace AI_Controllers.DataHolder.Core
 #region PRIVATE_METHODS
 
 #endregion
-
     }
 }
