@@ -45,5 +45,5 @@ MonoBehaviour:
     IncrementLinear: 0
     BaseValueExpo: 0
     IncrementExpo: 0
-  SoldierPrefab: {fileID: 8611944048475804358, guid: 64ff28932764747a3b9a23f119ae8f5a,
+  SoldierPrefab: {fileID: 2171903387745984395, guid: 48aba0059be6d408d981e9a5cec252b5,
     type: 3}
