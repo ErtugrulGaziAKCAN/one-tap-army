@@ -18,3 +18,4 @@ MonoBehaviour:
   _physicsActions: []
   _stateActions:
   - {fileID: 11400000, guid: aa9d3ecfe5a8c48af82d2a205c3135fd, type: 2}
+  - {fileID: 11400000, guid: 3f9ff31c87b0f4816aa3d6f356c7965b, type: 2}

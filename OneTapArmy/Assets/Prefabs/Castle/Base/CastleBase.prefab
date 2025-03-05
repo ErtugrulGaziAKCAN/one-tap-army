@@ -3366,6 +3366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045886026131269270}
   - component: {fileID: 1261842223210130647}
+  - component: {fileID: 3248111861777627153}
   m_Layer: 0
   m_Name: CastleBase
   m_TagString: Untagged
@@ -3491,6 +3492,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!65 &3248111861777627153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887393897324159180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.4680856}
+  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.0029058158}
 --- !u!1 &4941387861750729209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,7 +4017,7 @@ Transform:
   m_GameObject: {fileID: 6826500164797066918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.117}
   m_LocalScale: {x: 1, y: 1, z: 1.561}
   m_ConstrainProportionsScale: 0
   m_Children: []
