@@ -336,7 +336,8 @@ GameObject:
   - component: {fileID: 2240045709675601240}
   - component: {fileID: 5130585327729616391}
   - component: {fileID: 2090904788986404105}
-  m_Layer: 0
+  - component: {fileID: 2385124814013316125}
+  m_Layer: 8
   m_Name: MultiplierWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,6 +385,9 @@ MonoBehaviour:
   HoverDuration: 0
   Rotation: 0
   RotationSpeed: 0
+  MultiplyAmount: {x: 2, y: 5}
+  MultiplyText: {fileID: 865555442006084548}
+  SpawnedAllies: {fileID: 11400000, guid: 8b58c641a18764dd8a6fcbefc0fa65d9, type: 2}
 --- !u!114 &2090904788986404105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +416,27 @@ MonoBehaviour:
   EaseType: 27
   Overshoot: 1.70158
   UnscaledAnimation: 0
+--- !u!65 &2385124814013316125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789964856263153762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8, y: 0.045652032, z: 0.1}
+  m_Center: {x: 0, y: -0.09563744, z: 0}
 --- !u!1 &9185581345715787487
 GameObject:
   m_ObjectHideFlags: 0

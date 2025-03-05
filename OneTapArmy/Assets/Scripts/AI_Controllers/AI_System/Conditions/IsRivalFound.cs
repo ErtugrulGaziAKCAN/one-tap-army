@@ -3,6 +3,7 @@ using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Conditions
 {
+    [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/IsRivalFound", fileName = "new IsRivalFound")]
     public class IsRivalFound : ScriptableCondition
     {
 //-------Public Variables-------//

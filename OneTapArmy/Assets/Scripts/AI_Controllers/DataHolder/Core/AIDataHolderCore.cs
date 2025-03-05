@@ -1,3 +1,4 @@
+using System;
 using AnimationControllers;
 using QuickTools.Scripts.Collectibles.Core;
 using QuickTools.Scripts.ColliderSystem;
@@ -23,6 +24,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
         [HideInInspector] public bool IsAllyAI;
+        [HideInInspector] public float AgentStoppingDistance;
         
 //------Serialized Fields-------//
 
@@ -30,6 +32,11 @@ namespace AI_Controllers.DataHolder.Core
 //------Private Variables-------//
 
 #region UNITY_METHODS
+
+        private void Start()
+        {
+            AgentStoppingDistance = Agent.stoppingDistance;
+        }
 
 #endregion
 

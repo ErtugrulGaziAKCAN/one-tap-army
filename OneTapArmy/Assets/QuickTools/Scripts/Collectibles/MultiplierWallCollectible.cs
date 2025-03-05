@@ -13,25 +13,28 @@ namespace QuickTools.Scripts.Collectibles
 
 
 //------Serialized Fields-------//
-        [SerializeField,BoxGroup("Design"),InfoBox("It randomizes the multiply value")] private Vector2 MultiplyAmount;
+        [SerializeField, BoxGroup("Design"), InfoBox("It randomizes the multiply value")]
+        private Vector2 MultiplyAmount;
         [SerializeField, BoxGroup("References")] private TextBlock MultiplyText;
         [SerializeField, BoxGroup("References")] private ScriptableListAIDataHolderCore SpawnedAllies;
-        
+
 //------Private Variables-------//
+        private int _multiplyValue;
 
 #region UNITY_METHODS
 
         protected override void Start()
         {
             base.Start();
-            MultiplyText.Text = MultiplyAmount + "X";
+            _multiplyValue = Random.Range((int)MultiplyAmount.x, (int)MultiplyAmount.y);
+            MultiplyText.Text = _multiplyValue + "X";
         }
 
 #endregion
 
 
 #region PUBLIC_METHODS
-        
+
 #endregion
 
 
@@ -41,13 +44,12 @@ namespace QuickTools.Scripts.Collectibles
         public override void OnCollide(GameObject collidedObject)
         {
             base.OnCollide(collidedObject);
-            var multiplyCount = Random.Range(MultiplyAmount.x, MultiplyAmount.y);
-            for (var i = 0; i < multiplyCount; i++)
+            for (var i = 0; i < _multiplyValue; i++)
             {
                 var clonedObject = collidedObject.GetComponent<AIDataHolderCore>();
-                var spawned = LeanPool.Spawn(clonedObject, clonedObject.transform.position.WithAddedZ(-.15f * i),
+                var spawned = LeanPool.Spawn(clonedObject, clonedObject.transform.position.WithAddedZ(-.3f * i),
                     Quaternion.identity);
-                if(spawned.IsAllyAI)
+                if (spawned.IsAllyAI)
                     SpawnedAllies.Add(spawned);
             }
         }

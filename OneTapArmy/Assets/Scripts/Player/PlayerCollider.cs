@@ -19,13 +19,13 @@ namespace Player
         private void OnTriggerEnter(Collider other)
         {
             other.TryGetComponent(out ICollidable interactable);
-            interactable?.OnCollide();
+            interactable?.OnCollide(gameObject);
         }
 
         private void OnCollisionEnter(Collision other)
         {
             other.collider.TryGetComponent(out ICollidable interactable);
-            interactable?.OnCollide();
+            interactable?.OnCollide(gameObject);
         }
 
 #endregion

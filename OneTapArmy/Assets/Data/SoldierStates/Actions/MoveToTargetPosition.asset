@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9525c8b418294150a0005eb976e33f58, type: 3}
-  m_Name: new MoveToTargetPosition
+  m_Name: MoveToTargetPosition
   m_EditorClassIdentifier: 

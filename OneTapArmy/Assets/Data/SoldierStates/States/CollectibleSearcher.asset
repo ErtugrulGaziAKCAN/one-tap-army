@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 499f9dc307232184ca30934e3fc72ee2, type: 3}
-  m_Name: Movement
+  m_Name: CollectibleSearcher
   m_EditorClassIdentifier: 
   _entryActions: []
   _exitActions: []
   _physicsActions: []
   _stateActions:
-  - {fileID: 11400000, guid: 467324c26d3054e0280d7d313365a4ca, type: 2}
+  - {fileID: 11400000, guid: 709c04343063b427b9e5a63f1d6e45c6, type: 2}
   - {fileID: 11400000, guid: 8e60a9b468a284705832e1e337c728f0, type: 2}

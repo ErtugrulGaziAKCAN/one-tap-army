@@ -155,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 8014373728331360515, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
       propertyPath: m_Name
-      value: Warrior
+      value: Ally Warrior
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1383879945633614730, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f, type: 3}
@@ -189,12 +189,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d7a4b83dba4cc4a07548470fa2a7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectibleSensorRange: 1
+  ClosestCollectible: {fileID: 0}
+  RivalSensorRange: 2
+  RivalLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  ClosestRivalHealth: {fileID: 0}
   AITransform: {fileID: 4427339639779559611}
   Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
   StateComponentAccess: {fileID: 790807468145476608}
   AnimationController: {fileID: 2321723434327497260}
   TargetPosition: {x: 0, y: 0, z: 0}
+  IsAllyAI: 0
+  AgentStoppingDistance: 0
 --- !u!114 &790807468145476608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7119492671945705153, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
