@@ -28,6 +28,8 @@ namespace AI_Controllers.Spawning
         private List<SoldierUpgradeCardSo> SoliderUpgradeCards;
         [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList))]
         private List<AIDataHolderCore> TargetSoldiers;
+        [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList)),InfoBox("Total weight is 10"),SuffixLabel("Spawn Chance")]
+        private List<float> SpawnWeights;
         [SerializeField, BoxGroup("Design")] private bool IsAllySpawner;
         [SerializeField, BoxGroup("References"), ShowIf(nameof(IsAllySpawner))]
         private ScriptableListAIDataHolderCore SpawnedAllySoldiers;
@@ -90,7 +92,7 @@ namespace AI_Controllers.Spawning
             var targetSoldier = SpawnFromUpgradableList
                 ? SoliderUpgradeCards.Where((s => s.CurrentCardLevel >= 1)).ToList().ConvertAll(c => c.SoldierPrefab)
                     .GetRandom()
-                : TargetSoldiers.GetRandom();
+                : TargetSoldiers.GetWeightedRandom(SpawnWeights,10f);
             if (targetSoldier == null)
             {
                 EditorDebug.Log("Soldier Not Found");

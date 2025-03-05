@@ -590,8 +590,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: SpawnWeights.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: TargetSoldiers.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SpawnWeights.Array.data[0]'
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SpawnWeights.Array.data[1]'
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SpawnWeights.Array.data[2]'
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
@@ -602,6 +622,12 @@ PrefabInstance:
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'TargetSoldiers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7688285558677321597, guid: 61ec11519364b48c48cff05bd0bf5898,
+        type: 3}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'TargetSoldiers.Array.data[2]'
       value: 
       objectReference: {fileID: 3753110510082793937, guid: 0cc145e336bb9416cbefd8bae6a0c98d,
         type: 3}
