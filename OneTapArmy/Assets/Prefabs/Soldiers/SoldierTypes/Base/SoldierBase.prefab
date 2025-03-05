@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6144341578779101818}
   - component: {fileID: 7119492671945705153}
-  - component: {fileID: 1383879945633614730}
   - component: {fileID: 6679170837843764329}
   - component: {fileID: 4436600002538376847}
   - component: {fileID: 2516939115960923039}
@@ -95,23 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stateMachine: {fileID: 11400000, guid: 59aa0daac33144a6d831ef99b2bc47e4, type: 2}
---- !u!114 &1383879945633614730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014373728331360515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d37b04a4148a4bf1bcede978afe31a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AITransform: {fileID: 6144341578779101818}
-  Agent: {fileID: 4072340738818018427}
-  AIHealth: {fileID: 6679170837843764329}
-  AnimationController: {fileID: 5191644072490686701}
-  TargetPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &6679170837843764329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +173,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8014373728331360515}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.05
+  m_Radius: 0.15
   m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50

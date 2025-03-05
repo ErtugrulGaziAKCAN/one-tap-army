@@ -52,6 +52,7 @@ namespace QuickTools.Scripts.Collectibles
                 if (spawned.IsAllyAI)
                     SpawnedAllies.Add(spawned);
             }
+            Destroy(gameObject);
         }
     }
 }
