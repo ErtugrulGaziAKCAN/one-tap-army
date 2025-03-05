@@ -1797,6 +1797,7 @@ MonoBehaviour:
   IsAllySpawner: 0
   SpawnedAllySoldiers: {fileID: 0}
   ProgressBar: {fileID: 3846484868669396559}
+  CastleHealth: {fileID: 750369942493834313}
 --- !u!114 &6364399289462960423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3994,8 +3995,8 @@ Transform:
   m_GameObject: {fileID: 6826500164797066918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.275}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1.561}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2045886026131269270}
@@ -4095,12 +4096,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.47595608}
-  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.26252657}
+  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.33499873}
+  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.47364652}
 --- !u!1 &6899225304118248278
 GameObject:
   m_ObjectHideFlags: 0

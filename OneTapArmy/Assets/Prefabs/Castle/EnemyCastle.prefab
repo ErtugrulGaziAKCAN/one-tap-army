@@ -590,9 +590,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: TargetSoldiers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: 'TargetSoldiers.Array.data[0]'
       value: 
       objectReference: {fileID: 7222742699301131315, guid: c7bfb085a7b7649f197a064709e6e9bb,
+        type: 3}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'TargetSoldiers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3753110510082793937, guid: 0cc145e336bb9416cbefd8bae6a0c98d,
         type: 3}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}

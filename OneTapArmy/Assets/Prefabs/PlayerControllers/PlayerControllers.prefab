@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8705693644473559855}
   - component: {fileID: 9141466717218378628}
   - component: {fileID: 6011038169142641965}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AllyTargetDirector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,8 +174,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.364421, y: 1, z: 6.899378}
-  m_Center: {x: -0.2613063, y: 0, z: 5.0780087}
+  m_Size: {x: 8.364421, y: 1, z: 7.110358}
+  m_Center: {x: -0.2613063, y: 0, z: 5.183499}
 --- !u!1 &4212473135256624767
 GameObject:
   m_ObjectHideFlags: 0

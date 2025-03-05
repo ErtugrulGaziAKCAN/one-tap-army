@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Obvious.Soap.Attributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace AnimationControllers
@@ -7,6 +9,9 @@ namespace AnimationControllers
 //-------Public Variables-------//
 
 //------Serialized Fields-------//
+        [SerializeField] private bool UseConnectedAnimations;
+        [SerializeField, Sirenix.OdinInspector.ShowIf(nameof(HasConnectedAnimations))]
+        private List<Animator> ConnectedAnimators;
 
 //------Private Variables-------//
         private Animator _animator;
@@ -38,6 +43,17 @@ namespace AnimationControllers
         public void SetAnimationImmediately(AnimationClip clip) => _animator.CrossFade(clip.name, 0f);
 
         public Animator GetAnimator() => _animator;
+
+        public bool HasConnectedAnimations(out List<Animator> connectedAnimators)
+        {
+            if (UseConnectedAnimations)
+            {
+                connectedAnimators = this.ConnectedAnimators;
+                return true;
+            }
+            connectedAnimators = null;
+            return false;
+        }
 
 #endregion
 

@@ -3,6 +3,7 @@ using System.Linq;
 using AI_Controllers.DataHolder.Core;
 using MonKey.Extensions;
 using Plugins.CW.LeanPool.Required.Scripts;
+using QuickTools.Scripts.HealthSystem;
 using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UI;
@@ -20,10 +21,10 @@ namespace AI_Controllers.Spawning
         [SerializeField, BoxGroup("Design")] private bool IsSpawnIntervalDependsOnUpgradable;
         [SerializeField, BoxGroup("Design"), HideIf(nameof(IsSpawnIntervalDependsOnUpgradable))]
         private float SpawnInterval;
-        [SerializeField, BoxGroup("Design"), Sirenix.OdinInspector.ShowIf(nameof(IsSpawnIntervalDependsOnUpgradable))]
+        [SerializeField, BoxGroup("Design"), ShowIf(nameof(IsSpawnIntervalDependsOnUpgradable))]
         private CastleUpgradeCardSo CastleUpgradeCard;
         [SerializeField, BoxGroup("Design")] private bool SpawnFromUpgradableList;
-        [SerializeField, BoxGroup("Design"), Sirenix.OdinInspector.ShowIf(nameof(SpawnFromUpgradableList))]
+        [SerializeField, BoxGroup("Design"), ShowIf(nameof(SpawnFromUpgradableList))]
         private List<SoldierUpgradeCardSo> SoliderUpgradeCards;
         [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList))]
         private List<AIDataHolderCore> TargetSoldiers;
@@ -31,6 +32,7 @@ namespace AI_Controllers.Spawning
         [SerializeField, BoxGroup("References"), ShowIf(nameof(IsAllySpawner))]
         private ScriptableListAIDataHolderCore SpawnedAllySoldiers;
         [SerializeField, BoxGroup("References")] private ProgressBarController ProgressBar;
+        [SerializeField, BoxGroup("References")] private HealthCore CastleHealth;
         
 //------Private Variables-------//
         private AIWaitingPoints _waitingPoints;
@@ -97,6 +99,7 @@ namespace AI_Controllers.Spawning
             var spawned = LeanPool.Spawn(targetSoldier, SpawnPoint.position, SpawnPoint.rotation);
             spawned.TargetPosition = _waitingPoints.GetPoint();
             spawned.IsAllyAI = IsAllySpawner;
+            spawned.AIHealth.HealthID = CastleHealth.HealthID;
             if (IsAllySpawner)
             {
                 SpawnedAllySoldiers.Add(spawned);

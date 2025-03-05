@@ -9,7 +9,7 @@ namespace Touchables
 
 
 //------Serialized Fields-------//
-
+        [SerializeField] private LayerMask TouchableLayer;
 
 //------Private Variables-------//
         private InputActionRaiser _inputActionRaiser;
@@ -41,7 +41,7 @@ namespace Touchables
 
         private void OnClicked()
         {
-            if (!VisualPhysics.Raycast(_camera.ScreenPointToRay(_inputActionRaiser.InputPosition), out var hit))
+            if (!VisualPhysics.Raycast(_camera.ScreenPointToRay(_inputActionRaiser.InputPosition), out var hit,Mathf.Infinity,TouchableLayer))
                 return;
             hit.collider.TryGetComponent(out ITouchable touchable);
             touchable?.OnTouched(hit.point);

@@ -136,11 +136,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2895908093989664759, guid: 74ad9c49a37f54722a4b2241e5e15e96,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a411cfda1438f4ed3a37693c7d72abab, type: 2}
+    - target: {fileID: -301024944411435851, guid: 74ad9c49a37f54722a4b2241e5e15e96,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a411cfda1438f4ed3a37693c7d72abab, type: 2}
     - target: {fileID: 919132149155446097, guid: 74ad9c49a37f54722a4b2241e5e15e96,
         type: 3}
       propertyPath: m_Name
       value: Warrior_Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 1529763866839775115, guid: 74ad9c49a37f54722a4b2241e5e15e96,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a411cfda1438f4ed3a37693c7d72abab, type: 2}
+    - target: {fileID: 2101931642186146361, guid: 74ad9c49a37f54722a4b2241e5e15e96,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a411cfda1438f4ed3a37693c7d72abab, type: 2}
     - target: {fileID: 5866666021909216657, guid: 74ad9c49a37f54722a4b2241e5e15e96,
         type: 3}
       propertyPath: m_Controller

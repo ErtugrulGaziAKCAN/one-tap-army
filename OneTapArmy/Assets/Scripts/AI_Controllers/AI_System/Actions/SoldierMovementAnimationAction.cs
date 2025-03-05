@@ -28,6 +28,9 @@ namespace AI_Controllers.AI_System.Actions
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             var isMoving = dataHolder.Agent.velocity.magnitude >= .1f;
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking, isMoving);
+            if (!dataHolder.AnimationController.HasConnectedAnimations(out var connectedAnimators))
+                return;
+            connectedAnimators.ForEach((c) => c.SetBool(IsWalking, isMoving));
         }
 
 #endregion
