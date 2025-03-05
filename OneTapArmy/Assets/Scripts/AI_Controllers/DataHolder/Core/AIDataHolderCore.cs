@@ -1,4 +1,6 @@
 using AnimationControllers;
+using QuickTools.Scripts.Collectibles.Core;
+using QuickTools.Scripts.ColliderSystem;
 using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,12 +11,18 @@ namespace AI_Controllers.DataHolder.Core
     {
 
 //-------Public Variables-------//
+        [BoxGroup("Design")] public float CollectibleSensorRange;
+        [HideInInspector] public CollectibleCore ClosestCollectible;
+        [BoxGroup("Design")] public float RivalSensorRange;
+        [BoxGroup("Design")] public LayerMask RivalLayer;
+        [HideInInspector] public AIHealthController ClosestRivalHealth;
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public AIHealthController AIHealth;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
+        [HideInInspector] public bool IsAllyAI;
         
 //------Serialized Fields-------//
 

@@ -1,4 +1,5 @@
 using QuickTools.Scripts.Collectibles.Core;
+using UnityEngine;
 namespace QuickTools.Scripts.Collectibles
 {
     public class BasicCollectible : CollectibleCore
@@ -21,10 +22,6 @@ namespace QuickTools.Scripts.Collectibles
 
 
 #region PRIVATE_METHODS
-
-        protected override void AfterCollected()
-        {
-        }
 
 #endregion
 

@@ -49,7 +49,7 @@ namespace QuickTools.Scripts.Collectibles.Core
 
 #region UNITY_METHODS
 
-        private void Start()
+        protected virtual void Start()
         {
             HoverFx();
             RotationFx();
@@ -60,7 +60,7 @@ namespace QuickTools.Scripts.Collectibles.Core
 
 #region PUBLIC_METHODS
 
-        public void OnCollide()
+        public virtual void OnCollide(GameObject collidedObject)
         {
             if (_isCollected)
                 return;
@@ -73,16 +73,15 @@ namespace QuickTools.Scripts.Collectibles.Core
                 CollectedUnityEvent?.Invoke();
             if (DisableOnCollect)
                 gameObject.SetActive(false);
-            AfterCollected();
         }
+
+        public bool IsCollected() => _isCollected;
 
 #endregion
 
 
 #region PRIVATE_METHODS
-
-        protected abstract void AfterCollected();
-
+        
         private void HoverFx()
         {
             if (!HoverEffect)

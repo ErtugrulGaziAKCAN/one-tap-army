@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
 using MonKey.Extensions;
-using Obvious.Soap;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
@@ -97,8 +96,11 @@ namespace AI_Controllers.Spawning
             }
             var spawned = LeanPool.Spawn(targetSoldier, SpawnPoint.position, SpawnPoint.rotation);
             spawned.TargetPosition = _waitingPoints.GetPoint();
+            spawned.IsAllyAI = IsAllySpawner;
             if (IsAllySpawner)
+            {
                 SpawnedAllySoldiers.Add(spawned);
+            }
         }
 
         private float TargetInterval()

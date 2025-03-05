@@ -26,7 +26,7 @@ namespace QuickTools.Scripts.Obstacles.Core
 
 #region PUBLIC_METHODS
 
-        public void OnCollide()
+        public void OnCollide(GameObject collidedObject)
         {
             if (_isHarmless)
                 return;

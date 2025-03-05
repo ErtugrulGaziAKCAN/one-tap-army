@@ -1,7 +1,8 @@
+using UnityEngine;
 namespace QuickTools.Scripts.ColliderSystem
 {
     public interface ICollidable
     {
-        void OnCollide();
+        void OnCollide(GameObject collidedObject);
     }
 }

@@ -65,6 +65,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: AllySpawnerRef
+      value: 
+      objectReference: {fileID: 11400000, guid: e57292af73b10449a9c0c448dd553cce,
+        type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: CastleUpgradeCard
       value: 
       objectReference: {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c,
