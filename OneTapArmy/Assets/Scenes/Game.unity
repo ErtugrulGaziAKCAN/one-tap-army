@@ -225,6 +225,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144660437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3095021583023257175, guid: 13babb1e968c7426c97ec43dea661230,
+    type: 3}
+  m_PrefabInstance: {fileID: 468713799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c395591f6f08fb41897eb437d91b587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &172873549
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +496,36 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.b
+      value: 0.023584902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0.12941237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583023257172, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583023257172, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583023257172, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: ColorImage
+      value: 
+      objectReference: {fileID: 144660437}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,6 +717,36 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.b
+      value: 0.023584902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0.12941237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 0.8156863
+      objectReference: {fileID: 0}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,6 +829,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.b
+      value: 0.023584902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0.12941237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582940441829, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021583345494991, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 0.8156863
       objectReference: {fileID: 0}
     - target: {fileID: 4427339639779559611, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}

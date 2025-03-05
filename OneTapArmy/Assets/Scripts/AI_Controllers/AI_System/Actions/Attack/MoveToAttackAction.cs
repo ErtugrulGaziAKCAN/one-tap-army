@@ -27,6 +27,7 @@ namespace AI_Controllers.AI_System.Actions.Attack
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             var collectiblePosition = dataHolder.ClosestRivalHealth.transform.position;
             dataHolder.Agent.SetDestination(collectiblePosition);
+            dataHolder.Agent.stoppingDistance = 0f;
         }
 
 #endregion

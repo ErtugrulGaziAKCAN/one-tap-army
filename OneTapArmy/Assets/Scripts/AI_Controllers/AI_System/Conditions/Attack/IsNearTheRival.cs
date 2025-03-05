@@ -25,11 +25,15 @@ namespace AI_Controllers.AI_System.Conditions.Attack
         public override bool Verify(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            if (dataHolder.IsAttacking)
+                return true;
+            if (dataHolder.ClosestRivalHealth == null)
+                return false;
+            if (dataHolder.ClosestRivalHealth.IsDead)
+                return false;
             var distance = Vector3.Distance(dataHolder.AITransform.position,
                 dataHolder.ClosestRivalHealth.transform.position);
             var isNear = distance <= dataHolder.AttackDistance;
-            if(isNear)
-                EditorDebug.Log("Found Attackable");
             return isNear;
         }
 

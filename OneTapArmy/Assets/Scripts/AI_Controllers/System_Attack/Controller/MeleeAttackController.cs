@@ -21,7 +21,15 @@ namespace AI_Controllers.System_Attack.Controller
 
         protected override void OnAttacked()
         {
-
+            var targetEnemy = DataHolder.ClosestRivalHealth;
+            if (targetEnemy == null)
+                return;
+            if (targetEnemy.IsDead)
+                return;
+            var distance = Vector3.Distance(targetEnemy.transform.position, transform.position);
+            if (distance > DataHolder.AttackDistance)
+                return;
+            targetEnemy.TakeDamage(DataHolder.AttackDamage);
         }
 
 #endregion

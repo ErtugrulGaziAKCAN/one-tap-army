@@ -1,7 +1,6 @@
 using System.Collections;
 using AI_Controllers.DataHolder.Core;
 using AnimationControllers;
-using QuickTools.Scripts.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
 namespace AI_Controllers.System_Attack.Controller.Core
@@ -13,7 +12,7 @@ namespace AI_Controllers.System_Attack.Controller.Core
 
 //------Serialized Fields-------//
         [SerializeField] protected FastAnimationController AnimatorAccess;
-        [SerializeField] private AIDataHolderCore DataHolder;
+        [SerializeField] protected AIDataHolderCore DataHolder;
 
 //------Private Variables-------//
         private static readonly int Attack = Animator.StringToHash("Attack");
@@ -51,7 +50,6 @@ namespace AI_Controllers.System_Attack.Controller.Core
         public void StartAttacking()
         {
             AnimatorAccess.GetAnimator().SetTrigger(Attack);
-            EditorDebug.Log("AttackStarted");
         }
 
         protected abstract void OnAttacked();

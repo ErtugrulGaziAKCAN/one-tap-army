@@ -97,15 +97,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    - target: {fileID: 4812024002833714724, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
-      propertyPath: m_Radius
-      value: 0.12
+      propertyPath: UiColor.b
+      value: 0.8156863
       objectReference: {fileID: 0}
-    - target: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    - target: {fileID: 4812024002833714724, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
-      propertyPath: m_StoppingDistance
-      value: 0.5
+      propertyPath: UiColor.g
+      value: 0.5376794
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812024002833714724, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+        type: 3}
+      propertyPath: UiColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144341578779101818, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
@@ -175,10 +180,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8102571336875657052}
-    - targetCorrespondingSourceObject: {fileID: 8014373728331360515, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    - targetCorrespondingSourceObject: {fileID: 2741476968712061465, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8981184898457306580}
+      addedObject: {fileID: 4216829922482598315}
   m_SourcePrefab: {fileID: 100100000, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f, type: 3}
 --- !u!1 &507993747614755778 stripped
 GameObject:
@@ -198,10 +203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d7a4b83dba4cc4a07548470fa2a7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectibleSensorRange: 1
+  AI_ID: 0
+  CollectibleSensorRange: 1.2
   ClosestCollectible: {fileID: 0}
-  RivalSensorRange: 1.5
-  AttackDistance: 0.15
+  RivalSensorRange: 2.3
+  AttackDistance: 0.35
+  AttackDamage: 50
   IsAttacking: 0
   RivalLayer:
     serializedVersion: 2
@@ -211,25 +218,11 @@ MonoBehaviour:
   Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
   StateComponentAccess: {fileID: 790807468145476608}
-  AIAttackController: {fileID: 0}
+  AIAttackController: {fileID: 4216829922482598315}
   AnimationController: {fileID: 2321723434327497260}
   TargetPosition: {x: 0, y: 0, z: 0}
   IsAllyAI: 0
   AgentStoppingDistance: 0
---- !u!114 &8981184898457306580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507993747614755778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88d523b968f4f63929fd260349ad242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimatorAccess: {fileID: 2321723434327497260}
-  DataHolder: {fileID: 8102571336875657052}
 --- !u!114 &790807468145476608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7119492671945705153, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
@@ -248,7 +241,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7508635200148701889}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5638411255055433944}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 132700cbe66d4a8ea4e71ccca6770002, type: 3}
@@ -278,6 +271,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7508635200148701889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5638411255055433944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2741476968712061465, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7508635200148701889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4216829922482598315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638411255055433944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88d523b968f4f63929fd260349ad242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorAccess: {fileID: 2321723434327497260}
+  DataHolder: {fileID: 8102571336875657052}
 --- !u!195 &5816359052749442746 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,

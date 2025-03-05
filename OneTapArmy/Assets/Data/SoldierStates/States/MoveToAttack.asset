@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MoveToAttack
   m_EditorClassIdentifier: 
   _entryActions: []
-  _exitActions: []
+  _exitActions:
+  - {fileID: 11400000, guid: 3b6110300a4604fa39f1cad88e3b5f7c, type: 2}
   _physicsActions: []
   _stateActions:
   - {fileID: 11400000, guid: 447b7b7e6a6914acca5c03104920968d, type: 2}

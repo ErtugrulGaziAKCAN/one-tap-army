@@ -16,6 +16,7 @@ namespace AI_Controllers.DataHolder.Core
         [HideInInspector] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
         [BoxGroup("Design")] public float AttackDistance;
+        [BoxGroup("Design")] public float AttackDamage;
         [ReadOnly] public bool IsAttacking;
         [BoxGroup("Design")] public LayerMask RivalLayer;
         [HideInInspector] public AIHealthController ClosestRivalHealth;
