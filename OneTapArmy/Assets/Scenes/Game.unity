@@ -1892,26 +1892,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8927295543686043404, guid: e51616204a71e4b2b8b7e9770c7f426f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 8927295543686043404, guid: e51616204a71e4b2b8b7e9770c7f426f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 8927295543686043404, guid: e51616204a71e4b2b8b7e9770c7f426f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9129269
-      objectReference: {fileID: 0}
-    - target: {fileID: 8927295543686043404, guid: e51616204a71e4b2b8b7e9770c7f426f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.40812322
-      objectReference: {fileID: 0}
     - target: {fileID: 8927295544655915946, guid: e51616204a71e4b2b8b7e9770c7f426f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1966,11 +1946,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera&Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961436314682122100, guid: e51616204a71e4b2b8b7e9770c7f426f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

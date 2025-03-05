@@ -55,7 +55,9 @@ namespace AI_Controllers.AI_System.Conditions.Attack
                 closestDistance = distance;
                 closestRival = target;
             }
-            var rivalHealth = closestRival.GetComponent<AIHealthController>();
+            var rivalHealth = closestRival.GetComponent<HealthCore>();
+            if (rivalHealth == null)
+                return false;
             if (rivalHealth.IsDead)
                 return false;
             dataHolder.ClosestRivalHealth = rivalHealth;

@@ -4079,7 +4079,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  MaxHealth: 100
+  MaxHealth: 1000
 --- !u!65 &7295794014065193818
 BoxCollider:
   m_ObjectHideFlags: 0

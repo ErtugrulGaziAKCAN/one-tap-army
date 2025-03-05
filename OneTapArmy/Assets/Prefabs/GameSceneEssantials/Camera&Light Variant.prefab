@@ -160,7 +160,7 @@ MonoBehaviour:
   _binding: 0
   _disableAfterSubscribing: 0
   _eventResponses:
-  - Delay: 0
+  - Delay: 1
     ScriptableEvent: {fileID: 11400000, guid: e29860ae21cd845e4bfa2e5d5ccc1b1c, type: 2}
     Response:
       m_PersistentCalls:
