@@ -26,11 +26,15 @@ namespace scriptable_states.Runtime
                             {
                                 if (transition.trueState)
                                 {
+                                    if (transition.trueState == currentState)
+                                        continue;
                                     return transition.trueState;
                                 }
                                 else
                                 {
-                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null true state", this);
+                                    Debug.LogError(
+                                        $"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null true state",
+                                        this);
                                 }
                             }
                         }
@@ -40,18 +44,24 @@ namespace scriptable_states.Runtime
                             {
                                 if (transition.falseState)
                                 {
+                                    if (transition.falseState == currentState)
+                                        continue;
                                     return transition.falseState;
                                 }
                                 else
                                 {
-                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null false state", this);
+                                    Debug.LogError(
+                                        $"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null false state",
+                                        this);
                                 }
                             }
                         }
                     }
                     else
                     {
-                        Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null condition", this);
+                        Debug.LogError(
+                            $"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null condition",
+                            this);
                     }
                 }
             }

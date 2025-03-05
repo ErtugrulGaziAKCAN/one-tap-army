@@ -2,7 +2,6 @@ using System;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
 using QuickTools.Scripts.Collectibles.Core;
-using QuickTools.Scripts.ColliderSystem;
 using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,6 +11,7 @@ namespace AI_Controllers.DataHolder.Core
     public abstract class AIDataHolderCore : MonoBehaviour
     {
 //-------Public Variables-------//
+        [BoxGroup("Design")] public int AI_ID;
         [BoxGroup("Design")] public float CollectibleSensorRange;
         [HideInInspector] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
@@ -36,6 +36,11 @@ namespace AI_Controllers.DataHolder.Core
 
 #region UNITY_METHODS
 
+        private void OnEnable()
+        {
+            IsAttacking = false;
+        }
+        
         private void Start()
         {
             AgentStoppingDistance = Agent.stoppingDistance;

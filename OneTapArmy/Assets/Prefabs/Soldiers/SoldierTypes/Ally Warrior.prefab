@@ -99,6 +99,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
+      propertyPath: m_Radius
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+        type: 3}
       propertyPath: m_StoppingDistance
       value: 0.5
       objectReference: {fileID: 0}
@@ -195,8 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectibleSensorRange: 1
   ClosestCollectible: {fileID: 0}
-  RivalSensorRange: 3
-  AttackDistance: 1
+  RivalSensorRange: 1.5
+  AttackDistance: 0.15
   IsAttacking: 0
   RivalLayer:
     serializedVersion: 2

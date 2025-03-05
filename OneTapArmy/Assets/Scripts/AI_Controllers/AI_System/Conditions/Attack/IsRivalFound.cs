@@ -1,5 +1,5 @@
+using System.Linq;
 using AI_Controllers.DataHolder.Core;
-using QuickTools.Scripts.Utilities;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Conditions.Attack
@@ -24,31 +24,32 @@ namespace AI_Controllers.AI_System.Conditions.Attack
 
         public override bool Verify(StateComponent statesComponent)
         {
-            EditorDebug.Log("Searching");
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
-            var hits = new Collider[5];
+            var hits = new Collider[10];
             var hitCount = Physics.OverlapSphereNonAlloc(dataHolder.AITransform.position,
                 dataHolder.RivalSensorRange,
                 hits, dataHolder.RivalLayer);
             if (hitCount == 0)
                 return false;
+            var targets = hits.Where((h) =>h!=null && h.GetComponent<AIDataHolderCore>().AI_ID != dataHolder.AI_ID).ToList();
+            if (targets.Count == 0)
+                return false;
             var closestDistance = 999f;
             Collider closestRival = null;
-            foreach (var hit in hits)
+            foreach (var target in targets)
             {
-               if(hit==null)
+               if(target==null)
                    continue;
-               var distance= Vector3.Distance(hit.transform.position, dataHolder.AITransform.position);
+               var distance= Vector3.Distance(target.transform.position, dataHolder.AITransform.position);
                if(distance>=closestDistance)
                    continue;
                closestDistance = distance;
-               closestRival = hit;
+               closestRival = target;
             }
             var rivalHealth = closestRival.GetComponent<AIHealthController>();
             if (rivalHealth.IsDead)
                 return false;
             dataHolder.ClosestRivalHealth = rivalHealth;
-            EditorDebug.Log("Found");
             return true;
         }
 

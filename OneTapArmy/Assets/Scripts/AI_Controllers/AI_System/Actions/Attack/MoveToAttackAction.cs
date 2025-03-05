@@ -25,7 +25,7 @@ namespace AI_Controllers.AI_System.Actions.Attack
         public override void Act(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
-            var collectiblePosition = dataHolder.ClosestCollectible.transform.position;
+            var collectiblePosition = dataHolder.ClosestRivalHealth.transform.position;
             dataHolder.Agent.SetDestination(collectiblePosition);
         }
 

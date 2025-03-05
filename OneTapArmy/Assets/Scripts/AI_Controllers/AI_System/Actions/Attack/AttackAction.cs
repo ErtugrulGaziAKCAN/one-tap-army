@@ -27,6 +27,7 @@ namespace AI_Controllers.AI_System.Actions.Attack
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             if (dataHolder.IsAttacking)
                 return;
+            dataHolder.Agent.stoppingDistance = dataHolder.AttackDistance;
             dataHolder.AIAttackController.StartAttacking();
             dataHolder.IsAttacking = true;
         }

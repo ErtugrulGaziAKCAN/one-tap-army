@@ -28,7 +28,6 @@ namespace AI_Controllers.AI_System.Conditions.Attack
             var distance = Vector3.Distance(dataHolder.AITransform.position,
                 dataHolder.ClosestRivalHealth.transform.position);
             var isNear = distance <= dataHolder.AttackDistance;
-            EditorDebug.Log("Searching To Attack");
             if(isNear)
                 EditorDebug.Log("Found Attackable");
             return isNear;
