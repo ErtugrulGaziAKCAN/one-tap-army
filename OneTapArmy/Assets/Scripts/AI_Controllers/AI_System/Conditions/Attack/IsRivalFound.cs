@@ -1,11 +1,13 @@
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
 using QuickTools.Scripts.HealthSystem;
+using QuickTools.Scripts.Utilities.RaycastVisualization._3D;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Conditions.Attack
 {
-    [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/Attack/IsRivalFound", fileName = "new IsRivalFound")]
+    [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/Attack/IsRivalFound",
+        fileName = "new IsRivalFound")]
     public class IsRivalFound : ScriptableCondition
     {
 //-------Public Variables-------//
@@ -26,26 +28,32 @@ namespace AI_Controllers.AI_System.Conditions.Attack
         public override bool Verify(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
-            var hits = new Collider[10];
-            var hitCount = Physics.OverlapSphereNonAlloc(dataHolder.AITransform.position,
+            var hits = new Collider[30];
+            var hitCount = VisualPhysics.OverlapSphereNonAlloc(dataHolder.AITransform.position,
                 dataHolder.RivalSensorRange,
                 hits, dataHolder.RivalLayer);
             if (hitCount == 0)
                 return false;
-            var targets = hits.Where((h) =>h!=null && h.GetComponent<HealthCore>().HealthID != dataHolder.AIHealth.HealthID).ToList();
+            var targets = hits.Where((h) =>
+            {
+                if (h == null)
+                    return false;
+                var rivalData = h.GetComponent<HealthCore>();
+                return rivalData.HealthID != dataHolder.AIHealth.HealthID;
+            }).ToList();
             if (targets.Count == 0)
                 return false;
             var closestDistance = 999f;
             Collider closestRival = null;
             foreach (var target in targets)
             {
-               if(target==null)
-                   continue;
-               var distance= Vector3.Distance(target.transform.position, dataHolder.AITransform.position);
-               if(distance>=closestDistance)
-                   continue;
-               closestDistance = distance;
-               closestRival = target;
+                if (target == null)
+                    continue;
+                var distance = Vector3.Distance(target.transform.position, dataHolder.AITransform.position);
+                if (distance >= closestDistance)
+                    continue;
+                closestDistance = distance;
+                closestRival = target;
             }
             var rivalHealth = closestRival.GetComponent<AIHealthController>();
             if (rivalHealth.IsDead)

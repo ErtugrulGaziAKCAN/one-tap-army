@@ -1,8 +1,12 @@
+using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
+using Player.Points;
 using QuickTools.Scripts.Collectibles.Core;
 using QuickTools.Scripts.HealthSystem;
+using QuickTools.Scripts.UI;
+using QuickTools.Scripts.Utilities;
 using scriptable_states.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -27,27 +31,36 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("References")] public HealthBar AIHealthProgressBar;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
         [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
-        [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
+        [BoxGroup("References")] public UiColorizeGroup CurrentHealthColorize;
+        [BoxGroup("References")] public ScriptableListAIDataHolderCore SpawnedAllies;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
-        [HideInInspector] public bool IsAllyAI;
+        [ReadOnly] public bool IsAllyAI;
+        [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [HideInInspector] public float AgentStoppingDistance;
 
 //------Serialized Fields-------//
 
 
 //------Private Variables-------//
+        private List<SkinnedMeshRenderer> _skinnedMeshes;
 
 #region UNITY_METHODS
+
+        private void Start()
+        {
+            AgentStoppingDistance = Agent.stoppingDistance;
+        }
 
         private void OnEnable()
         {
             IsAttacking = false;
             SetAIColor();
+            AIHealth.OnDeath += OnDeath;
         }
 
-        private void Start()
+        private void OnDisable()
         {
-            AgentStoppingDistance = Agent.stoppingDistance;
+            AIHealth.OnDeath -= OnDeath;
         }
 
 #endregion
@@ -62,11 +75,19 @@ namespace AI_Controllers.DataHolder.Core
 
         private void SetAIColor()
         {
-            var skinnedMeshes = AnimationController.GetComponentsInChildren<SkinnedMeshRenderer>().ToList();
-            foreach (var mesh in skinnedMeshes)
-            {
-                mesh.materials[0].color = TargetAIColor;
-            }
+            _skinnedMeshes = AnimationController.GetComponentsInChildren<SkinnedMeshRenderer>().ToList();
+            _skinnedMeshes.ForEach((s) => s.materials[0].color = TargetAIColor);
+            CurrentHealthColorize.UiColor = TargetAIColor;
+            CurrentHealthColorize.ApplyColors();
+        }
+
+        private void OnDeath(HealthCore health)
+        {
+            _skinnedMeshes.ForEach((s) => s.materials[0].color = QuickColors.LightGrey);
+            if (IsAllyAI)
+                SpawnedAllies.Remove(this);
+            else
+                PlayerXpController.Instance.AddXp(1);
         }
 
 #endregion

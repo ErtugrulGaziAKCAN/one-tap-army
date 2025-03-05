@@ -1,7 +1,7 @@
 using AI_Controllers.DataHolder.Core;
 namespace AI_Controllers.DataHolder
 {
-    public class ArcherDataHolder : AIDataHolderCore
+    public class RangedAIDataHolder : AIDataHolderCore
     {
 
 //-------Public Variables-------//

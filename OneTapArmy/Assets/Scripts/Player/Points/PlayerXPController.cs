@@ -1,11 +1,12 @@
 using Obvious.Soap;
 using QuickTools.QuickUpgradables.Scripts;
+using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 namespace Player.Points
 {
-    public class PlayerXpController : MonoBehaviour
+    public class PlayerXpController : QuickSingleton<PlayerXpController>
     {
 //-------Public Variables-------//
 

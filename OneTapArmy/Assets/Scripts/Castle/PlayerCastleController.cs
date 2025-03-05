@@ -10,17 +10,16 @@ namespace Castle
 
 //------Serialized Fields-------//
         [SerializeField] private CastleUpgradeCardSo CastleUpgradeCard;
+        [SerializeField ]private HealthCore HealthCore;
 
 //------Private Variables-------//
         private CastleUpgradeManager _castleUpgradeManager;
-        private HealthCore _healthCore;
 
 #region UNITY_METHODS
 
         private void OnEnable()
         {
             TryGetComponent(out _castleUpgradeManager);
-            TryGetComponent(out _healthCore);
             CastleUpgradeCard.OnUpgraded += OnUpgraded;
         }
 
@@ -42,8 +41,8 @@ namespace Castle
         private void OnUpgraded()
         {
             _castleUpgradeManager.UpgradeTower(false);
-            _healthCore.SetMaxHealth(CastleUpgradeCard.Health.GetValueOnLevel(CastleUpgradeCard.CurrentCardLevel));
-            _healthCore.ResetHealth();
+            HealthCore.SetMaxHealth(CastleUpgradeCard.Health.GetValueOnLevel(CastleUpgradeCard.CurrentCardLevel));
+            HealthCore.ResetHealth();
         }
 
 #endregion

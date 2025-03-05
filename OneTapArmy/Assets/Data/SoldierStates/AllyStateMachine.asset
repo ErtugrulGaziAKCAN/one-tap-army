@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 718ecb92f024ea14e8d2f2450ca5def2, type: 3}
-  m_Name: SoldierStateMachine
+  m_Name: AllyStateMachine
   m_EditorClassIdentifier: 
   _initialState: {fileID: 11400000, guid: e6f01802cdf4f4f0a902dd559cbfcf64, type: 2}
   _emptyState: {fileID: 11400000, guid: 20352fc7a011e8748b8ba85265763ede, type: 2}
@@ -28,7 +28,7 @@ MonoBehaviour:
     trueState: {fileID: 11400000, guid: 24a473ee4ae2742f2a0952a0c0c90225, type: 2}
     falseState: {fileID: 11400000, guid: e6f01802cdf4f4f0a902dd559cbfcf64, type: 2}
   - originState: {fileID: 11400000, guid: 24a473ee4ae2742f2a0952a0c0c90225, type: 2}
-    condition: {fileID: 11400000, guid: 669a770d667184ede8fda2f69e49cffa, type: 2}
+    condition: {fileID: 11400000, guid: 82814fcdc60854696a1e94c4712ff5ad, type: 2}
     trueState: {fileID: 11400000, guid: 24a473ee4ae2742f2a0952a0c0c90225, type: 2}
     falseState: {fileID: 11400000, guid: e6f01802cdf4f4f0a902dd559cbfcf64, type: 2}
   - originState: {fileID: 11400000, guid: 24a473ee4ae2742f2a0952a0c0c90225, type: 2}
