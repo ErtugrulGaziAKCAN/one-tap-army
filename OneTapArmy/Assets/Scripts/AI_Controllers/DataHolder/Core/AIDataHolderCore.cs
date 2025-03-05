@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
 using QuickTools.Scripts.Collectibles.Core;
@@ -12,6 +12,7 @@ namespace AI_Controllers.DataHolder.Core
     public abstract class AIDataHolderCore : MonoBehaviour
     {
 //-------Public Variables-------//
+        [BoxGroup("Design")] public Color TargetAIColor;
         [BoxGroup("Design")] public float CollectibleSensorRange;
         [HideInInspector] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
@@ -23,6 +24,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public HealthCore AIHealth;
+        [BoxGroup("References")] public HealthBar AIHealthProgressBar;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
         [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
@@ -40,8 +42,9 @@ namespace AI_Controllers.DataHolder.Core
         private void OnEnable()
         {
             IsAttacking = false;
+            SetAIColor();
         }
-        
+
         private void Start()
         {
             AgentStoppingDistance = Agent.stoppingDistance;
@@ -56,6 +59,15 @@ namespace AI_Controllers.DataHolder.Core
 
 
 #region PRIVATE_METHODS
+
+        private void SetAIColor()
+        {
+            var skinnedMeshes = AnimationController.GetComponentsInChildren<SkinnedMeshRenderer>().ToList();
+            foreach (var mesh in skinnedMeshes)
+            {
+                mesh.materials[0].color = TargetAIColor;
+            }
+        }
 
 #endregion
     }

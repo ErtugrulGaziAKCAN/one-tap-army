@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d7a4b83dba4cc4a07548470fa2a7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AI_ID: 0
+  TargetAIColor: {r: 0.13679248, g: 0.6699382, b: 1, a: 1}
   CollectibleSensorRange: 1.2
   ClosestCollectible: {fileID: 0}
   RivalSensorRange: 2.3
@@ -217,6 +217,7 @@ MonoBehaviour:
   AITransform: {fileID: 4427339639779559611}
   Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
+  AIHealthProgressBar: {fileID: 3779444643833113541}
   StateComponentAccess: {fileID: 790807468145476608}
   AIAttackController: {fileID: 4216829922482598315}
   AnimationController: {fileID: 2321723434327497260}
@@ -245,6 +246,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 132700cbe66d4a8ea4e71ccca6770002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3779444643833113541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6649370303081703684, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7508635200148701889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d289de59f7134001abffb0b274b89190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3784476775946970792 stripped

@@ -13,7 +13,7 @@ namespace scriptable_states.Runtime
         /// </summary>
         public Action<ScriptableState, ScriptableState> OnStateChanged;
         
-        private void Start()
+        private void OnEnable()
         {
             if (!_stateMachine.InitialState)
             {

@@ -55,6 +55,16 @@ namespace QuickTools.Scripts.HealthSystem
             UpdateHealth(0f);
         }
 
+        public void OnReset(HealthCore _)
+        {
+            _currentHealth = Mathf.CeilToInt(HealthController.CurrentHealth);
+            UpdateHealthText();
+            CurrentHealthBar.Progress = 1f;
+            HealDelayedBar.Progress = 0f;
+            DamageDelayedBar.Progress = 0f;
+            BarsParent.SetActive(true);
+        }
+
 #endregion
 
 
@@ -144,16 +154,6 @@ namespace QuickTools.Scripts.HealthSystem
             _isTweening = false;
             if (HealthController.IsDead)
                 BarsParent.SetActive(false);
-        }
-
-        private void OnReset(HealthCore _)
-        {
-            _currentHealth = Mathf.CeilToInt(HealthController.CurrentHealth);
-            UpdateHealthText();
-            CurrentHealthBar.Progress = 1f;
-            HealDelayedBar.Progress = 0f;
-            DamageDelayedBar.Progress = 0f;
-            BarsParent.SetActive(true);
         }
 
 #endregion
