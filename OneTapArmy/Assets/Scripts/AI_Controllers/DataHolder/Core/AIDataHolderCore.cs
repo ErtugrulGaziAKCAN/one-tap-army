@@ -34,6 +34,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [BoxGroup("References")] public UiColorizeGroup CurrentHealthColorize;
         [BoxGroup("References")] public ScriptableListAIDataHolderCore SpawnedAllies;
+        [BoxGroup("References")] public AIUpgradeController UpgradeController;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
         [BoxGroup("Config"), ReadOnly] public CastleDataHolder SpawnedCastle;
         [ReadOnly] public bool IsAllyAI;

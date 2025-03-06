@@ -3411,6 +3411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnedAIList: []
+  CurrentCastleLevel: 1
 --- !u!114 &1261842223210130647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3484,6 +3485,7 @@ MonoBehaviour:
   Spawner: {fileID: 4579396465476900818}
   CastleUpgradeCard: {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c, type: 2}
   HealthCore: {fileID: 750369942493834313}
+  DataHolder: {fileID: 3972966541733303973}
   OnUpgradedEvent:
     m_PersistentCalls:
       m_Calls:

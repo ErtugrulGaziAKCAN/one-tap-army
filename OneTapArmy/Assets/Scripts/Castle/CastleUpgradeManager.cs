@@ -77,6 +77,7 @@ namespace Castle
             HealthCore.ResetHealth();
         }
 
+        public int GetCurrentLevel() => _currentLevel;
 #endregion
 
 

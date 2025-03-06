@@ -54,6 +54,8 @@ namespace AI_Controllers.System_Attack.Controller.Core
 
         protected virtual void OnAttacked()
         {
+            if(DataHolder.ClosestRivalHealth==null)
+                return;
             if(!DataHolder.ClosestRivalHealth.IsDead)
                 return;
             DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>().SpawnedCastle.OnMemberKilledRival?.Invoke();

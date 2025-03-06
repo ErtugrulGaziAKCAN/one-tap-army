@@ -228,6 +228,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimatorAccess: {fileID: 8177209275658928316}
   DataHolder: {fileID: 4427463632623605690}
+--- !u!114 &2890887658245548015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8745247933872291199, guid: 13babb1e968c7426c97ec43dea661230,
+    type: 3}
+  m_PrefabInstance: {fileID: 5855563159609563792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219438324777890130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42d803681624fd28faf787a09057bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6219438324777890130 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 507993747614755778, guid: 13babb1e968c7426c97ec43dea661230,
@@ -265,6 +277,7 @@ MonoBehaviour:
   AIAttackController: {fileID: 5454166254813581159}
   CurrentHealthColorize: {fileID: 8912793056868128373}
   SpawnedAllies: {fileID: 11400000, guid: 8b58c641a18764dd8a6fcbefc0fa65d9, type: 2}
+  UpgradeController: {fileID: 2890887658245548015}
   TargetPosition: {x: 0, y: 0, z: 0}
   SpawnedCastle: {fileID: 0}
   IsAllyAI: 0

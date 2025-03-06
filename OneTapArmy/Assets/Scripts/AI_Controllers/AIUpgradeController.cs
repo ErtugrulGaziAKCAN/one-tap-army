@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
+using Enemy_Controllers.Upgrades;
 using QuickTools.Scripts.HealthSystem;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,10 +14,9 @@ namespace AI_Controllers
     public class AIUpgradeController : MonoBehaviour
     {
 //-------Public Variables-------//
-
+        [SerializeField, BoxGroup("Design")] public SoldierUpgradeCardSo TargetSoldierSo;
 
 //------Serialized Fields-------//
-        [SerializeField, BoxGroup("Design")] private SoldierUpgradeCardSo TargetSoldierSo;
         [SerializeField, BoxGroup("References")] private HealthCore AIHealth;
         [SerializeField, BoxGroup("References")] private AIDataHolderCore AIDataHolder;
         [SerializeField, BoxGroup("Events")] private UnityEvent OnUpgradedEvent;
@@ -35,7 +35,7 @@ namespace AI_Controllers
             {
                 ApplyUpgrades(AIDataHolder.IsAllyAI
                     ? TargetSoldierSo.CurrentCardLevel
-                    : 1);
+                    : AIDataHolder.SpawnedCastle.GetComponentInChildren<EnemyAIUpgrade>().GetSoldierLevel(TargetSoldierSo));
                 StartCoroutine(WaitForOneFrame(() => _isInit = true));
             }));
         }
