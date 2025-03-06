@@ -110,14 +110,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradesData:
   - SampleUpgrade: {fileID: 11400000, guid: 4ad79de1db4af4dc9a0a57af9e2f9d2e, type: 2}
+    EnemyPrefab: {fileID: 4687834874057641539, guid: f30a6f3f479c04076a2ee252ad80579f,
+      type: 3}
     CurrentLevel: 0
   - SampleUpgrade: {fileID: 11400000, guid: d192c926689fe45f4b2d1c99e9ad2968, type: 2}
+    EnemyPrefab: {fileID: 2171903387745984395, guid: 48aba0059be6d408d981e9a5cec252b5,
+      type: 3}
     CurrentLevel: 0
   - SampleUpgrade: {fileID: 11400000, guid: 7fcfe0686dbbf4f2f88421f448f556a5, type: 2}
+    EnemyPrefab: {fileID: 3753110510082793937, guid: 0cc145e336bb9416cbefd8bae6a0c98d,
+      type: 3}
     CurrentLevel: 0
   - SampleUpgrade: {fileID: 11400000, guid: de07e6f9d8cc94fdda5aa82c69c3b3f2, type: 2}
+    EnemyPrefab: {fileID: 7688285558677321597, guid: 61ec11519364b48c48cff05bd0bf5898,
+      type: 3}
     CurrentLevel: 0
   - SampleUpgrade: {fileID: 11400000, guid: fcf376c4ebb514dbebd0f1b13d552e39, type: 2}
+    EnemyPrefab: {fileID: 7222742699301131315, guid: c7bfb085a7b7649f197a064709e6e9bb,
+      type: 3}
     CurrentLevel: 0
   MaxUpgradeLevel: 5
   DataHolder: {fileID: 2410384995147486294}
@@ -763,6 +773,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8b58c641a18764dd8a6fcbefc0fa65d9,
         type: 2}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: EnemyAIUpgradeAccess
+      value: 
+      objectReference: {fileID: 8357543168567129421}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: SpawnFromUpgradableList

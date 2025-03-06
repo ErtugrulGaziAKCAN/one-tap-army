@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using AI_Controllers.DataHolder.Core;
 using Castle;
+using Enemy_Controllers.Upgrades;
 using MonKey.Extensions;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.HealthSystem;
@@ -27,16 +27,12 @@ namespace AI_Controllers.Spawning
         [SerializeField, BoxGroup("Design")] private bool SpawnFromUpgradableList;
         [SerializeField, BoxGroup("Design"), ShowIf(nameof(SpawnFromUpgradableList))]
         private List<SoldierUpgradeCardSo> SoliderUpgradeCards;
-        [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList))]
-        private List<AIDataHolderCore> TargetSoldiers;
-        [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList)),InfoBox("Total weight is 10"),SuffixLabel("Spawn Chance")]
-        private List<float> SpawnWeights;
         [SerializeField, BoxGroup("References"), ShowIf(nameof(IsAllySpawner))]
         private ScriptableListAIDataHolderCore SpawnedAllySoldiers;
         [SerializeField, BoxGroup("References")] private ProgressBarController ProgressBar;
         [SerializeField, BoxGroup("References")] private HealthCore CastleHealth;
         [SerializeField, BoxGroup("References")] private CastleDataHolder CastleData;
-        
+        [SerializeField, BoxGroup("References"),HideIf(nameof(IsAllySpawner))] private EnemyAIUpgrade EnemyAIUpgradeAccess;
 //------Private Variables-------//
         private AIWaitingPoints _waitingPoints;
         private bool _isActivate;
@@ -93,7 +89,7 @@ namespace AI_Controllers.Spawning
             var targetSoldier = SpawnFromUpgradableList
                 ? SoliderUpgradeCards.Where((s => s.CurrentCardLevel >= 1)).ToList().ConvertAll(c => c.SoldierPrefab)
                     .GetRandom()
-                : TargetSoldiers.GetWeightedRandom(SpawnWeights,10f);
+                : EnemyAIUpgradeAccess.GetSpawnableSoldierPrefab();
             if (targetSoldier == null)
             {
                 EditorDebug.Log("Soldier Not Found");
