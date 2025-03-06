@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 3707853769938318130, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}
       propertyPath: HealthID
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4215590504149933345, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}
@@ -81,17 +81,17 @@ PrefabInstance:
     - target: {fileID: 8611944048475804358, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}
       propertyPath: TargetAIColor.b
-      value: 0
+      value: 0.8113208
       objectReference: {fileID: 0}
     - target: {fileID: 8611944048475804358, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}
       propertyPath: TargetAIColor.g
-      value: 0.047058824
+      value: 0.19517621
       objectReference: {fileID: 0}
     - target: {fileID: 8611944048475804358, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}
       propertyPath: TargetAIColor.r
-      value: 1
+      value: 0.46262762
       objectReference: {fileID: 0}
     - target: {fileID: 8611944048475804358, guid: 9a305c5dccada46b38186fa441298219,
         type: 3}

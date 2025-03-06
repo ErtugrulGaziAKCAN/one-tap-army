@@ -234,6 +234,9 @@ MonoBehaviour:
   SetActiveAnimation: 1
   AnimatorAccess: {fileID: 8177209275658928316}
   DataHolder: {fileID: 4427463632623605690}
+  OnStartAttacking:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2890887658245548015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8745247933872291199, guid: 13babb1e968c7426c97ec43dea661230,
@@ -264,14 +267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe477b0b754b404b93e8270ca6a93b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 2.5
+  AttackDistance: 1.9
   AttackDamage: 50
   RivalLayer:
     serializedVersion: 2
     m_Bits: 128
-  RivalSensorRange: 3.2
+  RivalSensorRange: 2.6
   AITransform: {fileID: 7796349264534524459}
   AIHealth: {fileID: 7333560282266778680}
+  AIAttackController: {fileID: 5454166254813581159}
   IsAttacking: 0
   ClosestRivalHealth: {fileID: 0}
   TargetAIColor: {r: 0.13725491, g: 0.67058825, b: 1, a: 1}
@@ -280,7 +284,6 @@ MonoBehaviour:
   Agent: {fileID: 141010264163505194}
   AIHealthProgressBar: {fileID: 7291445764357140821}
   StateComponentAccess: {fileID: 6609771980917694096}
-  AIAttackController: {fileID: 5454166254813581159}
   CurrentHealthColorize: {fileID: 8912793056868128373}
   SpawnedAllies: {fileID: 11400000, guid: 8b58c641a18764dd8a6fcbefc0fa65d9, type: 2}
   UpgradeController: {fileID: 2890887658245548015}

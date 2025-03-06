@@ -96,7 +96,7 @@ PrefabInstance:
     - target: {fileID: 8611944048475804358, guid: ce7f38e71087c43498262dc32c1a06c0,
         type: 3}
       propertyPath: RivalLayer.m_Bits
-      value: 64
+      value: 192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
