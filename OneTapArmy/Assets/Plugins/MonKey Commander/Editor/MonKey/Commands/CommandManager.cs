@@ -352,7 +352,7 @@ namespace MonKey.Editor.Internal
             }
             catch (Exception e)
             {
-                Debug.LogError("MonKey: An Exception (" + e + ") \n \n was raised when reading commands ");
+                //Debug.LogError("MonKey: An Exception (" + e + ") \n \n was raised when reading commands ");
 
                 //  RetrieveAllCommands(true);
             }
@@ -375,8 +375,8 @@ namespace MonKey.Editor.Internal
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("MonKey: An Exception (" + e + ") \n \n was raised when reading commands " +
-                                   "from assembly '" + assembly + "'");
+                    //Debug.LogError("MonKey: An Exception (" + e + ") \n \n was raised when reading commands " +
+                                  // "from assembly '" + assembly + "'");
 
 
                     //  RetrieveAllCommands(true);
@@ -433,8 +433,8 @@ namespace MonKey.Editor.Internal
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("MonKey: An Exception \n(" + e + ") \n \n was raised when reading commands " +
-                                   "from type '" + type + "'");
+                    //Debug.LogError("MonKey: An Exception \n(" + e + ") \n \n was raised when reading commands " +
+                                   //"from type '" + type + "'");
 
 
                     //  RetrieveAllCommands(true);

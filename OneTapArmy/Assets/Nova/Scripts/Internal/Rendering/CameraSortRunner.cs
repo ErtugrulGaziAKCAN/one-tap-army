@@ -188,7 +188,7 @@ namespace Nova.Internal.Rendering
 
                         if (!Math.ValidAndFinite(ref center))
                         {
-                            Debug.LogError($"BoundCenter for drawcall was invalid: {center}");
+                            //Debug.LogError($"BoundCenter for drawcall was invalid: {center}");
                         }
 
                         perCameraInfo = new ProcessedDrawCall()
@@ -267,7 +267,7 @@ namespace Nova.Internal.Rendering
 
                     if (!Math.ValidAndFinite(ref centerInWorldSpace))
                     {
-                        Debug.LogError($"BoundCenter for CoplanarSet was invalid: {centerInWorldSpace}");
+                        //Debug.LogError($"BoundCenter for CoplanarSet was invalid: {centerInWorldSpace}");
                     }
 
                     if (!Math.ValidAndFinite(ref offsetDirection))

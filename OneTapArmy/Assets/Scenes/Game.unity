@@ -313,6 +313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBase
       objectReference: {fileID: 0}
+    - target: {fileID: 931907937719969498, guid: a3dc05ba7a4a040e79a9e8c81a399d22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6405352439090605254, guid: a3dc05ba7a4a040e79a9e8c81a399d22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1380,6 +1385,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1518450842}
+    - target: {fileID: 5461240479345164336, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
+        type: 3}
+      propertyPath: layout.Size.Y.Raw
+      value: 3413.3333
+      objectReference: {fileID: 0}
     - target: {fileID: 6662510539869202255, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
         type: 3}
       propertyPath: m_LocalPosition.x
