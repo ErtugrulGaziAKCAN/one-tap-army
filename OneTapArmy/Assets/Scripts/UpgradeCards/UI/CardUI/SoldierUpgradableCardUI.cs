@@ -40,7 +40,7 @@ namespace UpgradeCards.UI.CardUI
                                  card.AttackValue.GetValueOnLevel(currentCardLevel));
             SpeedText.Text = currentCardLevel == 0
                 ? string.Empty
-                : "Speed  +" + MoneyFormat.Default(Mathf.RoundToInt((card.SpeedValue.GetValueOnLevel(currentCardLevel + 1) -
+                : "Speed  +" + MoneyFormat.DefaultWithoutIcon(Mathf.RoundToInt((card.SpeedValue.GetValueOnLevel(currentCardLevel + 1) -
                                                                card.SpeedValue.GetValueOnLevel(currentCardLevel)) *
                                                    100));
         }
