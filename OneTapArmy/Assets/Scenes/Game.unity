@@ -95,7 +95,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 740cbdeb6be6242c78fba9537cca6639,
     type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: f57bcee5c506747bcaaa5c40cc67663a,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 060da00e1dc454484aa33cab64120d55,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1296,31 +1296,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1518450842}
-    - target: {fileID: 5461240479345164336, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: layout.Size.Y.Raw
-      value: 3413.3333
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662510539869202255, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -640.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6725833840442168081, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0029296875
-      objectReference: {fileID: 0}
-    - target: {fileID: 6725833840442168081, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0029296875
-      objectReference: {fileID: 0}
-    - target: {fileID: 6725833840442168081, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0029296875
-      objectReference: {fileID: 0}
     - target: {fileID: 6725833840442168081, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1376,25 +1351,27 @@ PrefabInstance:
       propertyPath: targetCamera
       value: 
       objectReference: {fileID: 1518450842}
-    - target: {fileID: 8847143413408490104, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1388.3999
-      objectReference: {fileID: 0}
     - target: {fileID: 9010461993593626718, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
         type: 3}
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
-    - target: {fileID: 9010461993593626718, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5156641059397778913, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 976835767665580723, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 910001841870026706, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 4514355138991401853, guid: f7825e8340e7f4dabb7fdb2f199b2c49,
         type: 3}
       insertIndex: -1
