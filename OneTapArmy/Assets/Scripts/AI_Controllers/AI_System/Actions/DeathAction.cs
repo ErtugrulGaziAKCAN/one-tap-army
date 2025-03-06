@@ -30,6 +30,11 @@ namespace AI_Controllers.AI_System.Actions
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             dataHolder.Agent.isStopped = true;
             dataHolder.AnimationController.GetAnimator().SetTrigger(Death);
+
+            if (dataHolder.AnimationController.HasConnectedAnimations(out var connectedAnimations))
+            {
+                connectedAnimations.ForEach((a) => a.enabled = false);
+            }
             DOVirtual.DelayedCall(3f, () => dataHolder.AITransform.DOMoveY(-.3f, 1.5f).SetEase(Ease.Linear).OnComplete(
                 () =>
                 {

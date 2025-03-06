@@ -25,7 +25,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("Design")] public float AttackDamage;
         [ReadOnly] public bool IsAttacking;
         [BoxGroup("Design")] public LayerMask RivalLayer;
-        [HideInInspector] public HealthCore ClosestRivalHealth;
+        [ReadOnly] public HealthCore ClosestRivalHealth;
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public HealthCore AIHealth;

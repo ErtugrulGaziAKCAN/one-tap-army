@@ -25,7 +25,6 @@ namespace AI_Controllers.AI_System.Actions.Attack
         public override void Act(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
-            dataHolder.ClosestRivalHealth = null;
             dataHolder.IsAttacking = false;
             dataHolder.Agent.stoppingDistance = dataHolder.AgentStoppingDistance;
             dataHolder.Agent.isStopped = false;
