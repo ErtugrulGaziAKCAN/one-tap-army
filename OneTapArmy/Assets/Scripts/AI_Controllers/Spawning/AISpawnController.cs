@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
+using Castle;
 using MonKey.Extensions;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.HealthSystem;
@@ -35,6 +36,7 @@ namespace AI_Controllers.Spawning
         private ScriptableListAIDataHolderCore SpawnedAllySoldiers;
         [SerializeField, BoxGroup("References")] private ProgressBarController ProgressBar;
         [SerializeField, BoxGroup("References")] private HealthCore CastleHealth;
+        [SerializeField, BoxGroup("References")] private CastleDataHolder CastleData;
         
 //------Private Variables-------//
         private AIWaitingPoints _waitingPoints;
@@ -102,6 +104,8 @@ namespace AI_Controllers.Spawning
             spawned.TargetPosition = _waitingPoints.GetPoint();
             spawned.IsAllyAI = IsAllySpawner;
             spawned.AIHealth.HealthID = CastleHealth.HealthID;
+            spawned.SpawnedCastle = CastleData;
+            CastleData.SpawnedAIList.Add(spawned);
             if (IsAllySpawner)
             {
                 SpawnedAllySoldiers.Add(spawned);

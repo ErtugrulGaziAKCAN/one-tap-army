@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
+using Castle;
 using Player.Points;
 using QuickTools.Scripts.Collectibles.Core;
 using QuickTools.Scripts.HealthSystem;
@@ -34,6 +35,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("References")] public UiColorizeGroup CurrentHealthColorize;
         [BoxGroup("References")] public ScriptableListAIDataHolderCore SpawnedAllies;
         [BoxGroup("Config"), ReadOnly] public Vector3 TargetPosition;
+        [BoxGroup("Config"), ReadOnly] public CastleDataHolder SpawnedCastle;
         [ReadOnly] public bool IsAllyAI;
         [BoxGroup("AnimationData")] public FastAnimationController AnimationController;
         [HideInInspector] public float AgentStoppingDistance;
@@ -85,6 +87,7 @@ namespace AI_Controllers.DataHolder.Core
         private void OnDeath(HealthCore health)
         {
             _skinnedMeshes.ForEach((s) => s.materials[0].color = QuickColors.LightGrey);
+            SpawnedCastle.SpawnedAIList.Remove(this);
             if (IsAllyAI)
                 SpawnedAllies.Remove(this);
             else

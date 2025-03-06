@@ -187,6 +187,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 4427463632623605690}
+    - targetCorrespondingSourceObject: {fileID: 507993747614755778, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2211390439477766670}
     - targetCorrespondingSourceObject: {fileID: 5638411255055433944, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       insertIndex: -1
@@ -269,6 +273,18 @@ MonoBehaviour:
   Projectile: {fileID: 4147432648423120970, guid: b3620030e04104c54bc78466e3366b44,
     type: 3}
   LastProjectilePosition: {x: 0, y: 0, z: 0}
+--- !u!114 &-2211390439477766670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219438324777890130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852b98aea14d4e708da72dc71edbe66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6609771980917694096 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 790807468145476608, guid: 13babb1e968c7426c97ec43dea661230,

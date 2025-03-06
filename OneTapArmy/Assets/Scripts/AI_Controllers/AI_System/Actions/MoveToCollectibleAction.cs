@@ -25,6 +25,8 @@ namespace AI_Controllers.AI_System.Actions
         public override void Act(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            if(dataHolder.ClosestCollectible==null)
+                return;
             var collectiblePosition = dataHolder.ClosestCollectible.transform.position;
             dataHolder.Agent.SetDestination(collectiblePosition);
             var distance = Vector3.Distance(dataHolder.AITransform.position,

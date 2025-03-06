@@ -1794,10 +1794,12 @@ MonoBehaviour:
   SoliderUpgradeCards: []
   TargetSoldiers:
   - {fileID: 8863225443694463307, guid: 13babb1e968c7426c97ec43dea661230, type: 3}
+  SpawnWeights: []
   IsAllySpawner: 0
   SpawnedAllySoldiers: {fileID: 0}
   ProgressBar: {fileID: 3846484868669396559}
   CastleHealth: {fileID: 750369942493834313}
+  CastleData: {fileID: 3972966541733303973}
 --- !u!114 &6364399289462960423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,6 +3367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2045886026131269270}
+  - component: {fileID: 3972966541733303973}
   - component: {fileID: 1261842223210130647}
   - component: {fileID: 3248111861777627153}
   m_Layer: 0
@@ -3395,6 +3398,19 @@ Transform:
   - {fileID: 210260921508102034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3972966541733303973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887393897324159180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ae4cba98c940058a55e9ebc855ce21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnedAIList: []
 --- !u!114 &1261842223210130647
 MonoBehaviour:
   m_ObjectHideFlags: 0
