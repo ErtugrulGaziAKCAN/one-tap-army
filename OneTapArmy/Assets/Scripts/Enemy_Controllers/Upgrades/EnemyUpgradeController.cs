@@ -1,6 +1,5 @@
 using Castle;
 using PowerPoints;
-using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Enemy_Controllers.Upgrades
@@ -73,7 +72,6 @@ namespace Enemy_Controllers.Upgrades
         private void OnMemberKilledRival()
         {
             _killCount++;
-            EditorDebug.Log("KillCount" + _killCount, gameObject);
         }
 
 #endregion
