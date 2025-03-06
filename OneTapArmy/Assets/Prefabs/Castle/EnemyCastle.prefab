@@ -591,26 +591,36 @@ PrefabInstance:
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: SpawnWeights.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: TargetSoldiers.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'SpawnWeights.Array.data[0]'
-      value: 4.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'SpawnWeights.Array.data[1]'
-      value: 4.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'SpawnWeights.Array.data[2]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SpawnWeights.Array.data[3]'
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'SpawnWeights.Array.data[4]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
@@ -629,13 +639,19 @@ PrefabInstance:
         type: 3}
       propertyPath: 'TargetSoldiers.Array.data[2]'
       value: 
-      objectReference: {fileID: 3753110510082793937, guid: 0cc145e336bb9416cbefd8bae6a0c98d,
+      objectReference: {fileID: 4687834874057641539, guid: f30a6f3f479c04076a2ee252ad80579f,
         type: 3}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'TargetSoldiers.Array.data[3]'
       value: 
       objectReference: {fileID: 2171903387745984395, guid: 48aba0059be6d408d981e9a5cec252b5,
+        type: 3}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: 'TargetSoldiers.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3753110510082793937, guid: 0cc145e336bb9416cbefd8bae6a0c98d,
         type: 3}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}

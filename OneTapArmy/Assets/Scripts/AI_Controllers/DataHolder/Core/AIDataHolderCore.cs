@@ -75,7 +75,8 @@ namespace AI_Controllers.DataHolder.Core
 
         private void SetAIColor()
         {
-            _skinnedMeshes = AnimationController.transform.GetChild(0).GetComponentsInChildren<SkinnedMeshRenderer>().ToList();
+            _skinnedMeshes = AnimationController.transform.GetChild(0).GetComponentsInChildren<SkinnedMeshRenderer>()
+                .ToList();
             _skinnedMeshes.ForEach((s) => s.materials[0].color = TargetAIColor);
             CurrentHealthColorize.UiColor = TargetAIColor;
             CurrentHealthColorize.ApplyColors();
@@ -89,6 +90,10 @@ namespace AI_Controllers.DataHolder.Core
             else
                 PlayerXpController.Instance.AddXp(1);
         }
+
+        public void SetAttackDamage(float damage) => AttackDamage = damage;
+
+        public void SetAgentSpeed(float speed) => Agent.speed = speed;
 
 #endregion
     }

@@ -92,6 +92,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 8102571336875657052}
+    - targetCorrespondingSourceObject: {fileID: 8014373728331360515, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8745247933872291199}
     - targetCorrespondingSourceObject: {fileID: 2741476968712061465, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
         type: 3}
       insertIndex: -1
@@ -138,6 +142,37 @@ MonoBehaviour:
   IsAllyAI: 0
   AnimationController: {fileID: 2321723434327497260}
   AgentStoppingDistance: 0
+--- !u!114 &8745247933872291199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507993747614755778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42d803681624fd28faf787a09057bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetSoldierSo: {fileID: 0}
+  AIHealth: {fileID: 3784476775946970792}
+  AIDataHolder: {fileID: 8102571336875657052}
+  OnUpgradedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8458321370349392159}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  UpgradeSkins: []
 --- !u!114 &790807468145476608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7119492671945705153, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
@@ -227,6 +262,12 @@ MonoBehaviour:
 --- !u!195 &5816359052749442746 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 4072340738818018427, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7508635200148701889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8458321370349392159 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2113870024893453278, guid: 1db8fdbb5d7c74a44bb5a82f8be3217f,
     type: 3}
   m_PrefabInstance: {fileID: 7508635200148701889}
   m_PrefabAsset: {fileID: 0}

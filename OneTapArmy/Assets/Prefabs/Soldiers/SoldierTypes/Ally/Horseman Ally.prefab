@@ -222,6 +222,12 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 8745247933872291199, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: TargetSoldierSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fcfe0686dbbf4f2f88421f448f556a5,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

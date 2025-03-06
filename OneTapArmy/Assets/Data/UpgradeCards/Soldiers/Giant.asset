@@ -23,27 +23,27 @@ MonoBehaviour:
   BackgroundImage: {fileID: 21300000, guid: cde9c91a55224473d9c74eb93d5e85ff, type: 3}
   CardNameSprite: {fileID: 21300000, guid: bc8b916bc1a21442a9e19fec15839609, type: 3}
   CardUI: {fileID: 3372426638001697963, guid: 52a521dcace6540d98e6e19ef21af43b, type: 3}
-  CurrentCardLevel: 0
+  CurrentCardLevel: 5
   HealthValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 300
+    IncrementLinear: 150
     BaseValueExpo: 0
     IncrementExpo: 0
   AttackValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 60
+    IncrementLinear: 60
     BaseValueExpo: 0
     IncrementExpo: 0
   SpeedValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 0.3
+    IncrementLinear: 0.05
     BaseValueExpo: 0
     IncrementExpo: 0
-  SoldierPrefab: {fileID: 2171903387745984395, guid: 48aba0059be6d408d981e9a5cec252b5,
+  SoldierPrefab: {fileID: 8611944048475804358, guid: 7bcb1884b4cad4797b3359a0d0b9eae1,
     type: 3}

@@ -1,12 +1,16 @@
 using AI_Controllers.DataHolder.Core;
+using Sirenix.OdinInspector;
+using UnityEngine;
 namespace AI_Controllers.DataHolder
 {
     public class RangedAIDataHolder : AIDataHolderCore
     {
 
 //-------Public Variables-------//
-
-
+        public Transform ProjectileSpawnPoint;
+        public GameObject Projectile;
+        [HideInInspector] public Vector3 LastProjectilePosition;
+        
 //------Serialized Fields-------//
 
 
@@ -25,6 +29,6 @@ namespace AI_Controllers.DataHolder
 #region PRIVATE_METHODS
 
 #endregion
-        
+
     }
 }

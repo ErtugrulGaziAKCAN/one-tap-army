@@ -25,24 +25,24 @@ MonoBehaviour:
   CardUI: {fileID: 3372426638001697963, guid: 52a521dcace6540d98e6e19ef21af43b, type: 3}
   CurrentCardLevel: 0
   HealthValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 100
+    IncrementLinear: 50
     BaseValueExpo: 0
     IncrementExpo: 0
   AttackValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 50
+    IncrementLinear: 50
     BaseValueExpo: 0
     IncrementExpo: 0
   SpeedValue:
-    Type: 0
+    Type: 1
     ManualValues: []
-    BaseValueLinear: 0
-    IncrementLinear: 0
+    BaseValueLinear: 0.45
+    IncrementLinear: 0.05
     BaseValueExpo: 0
     IncrementExpo: 0
   SoldierPrefab: {fileID: 8611944048475804358, guid: 9a305c5dccada46b38186fa441298219,
