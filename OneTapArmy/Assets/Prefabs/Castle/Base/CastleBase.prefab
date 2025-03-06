@@ -1786,6 +1786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860e0a9ceeb94d15ab7deeb7ea30dcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAllySpawner: 0
   SpawnPoint: {fileID: 535404047211197596}
   IsSpawnIntervalDependsOnUpgradable: 0
   SpawnInterval: 2
@@ -1795,7 +1796,6 @@ MonoBehaviour:
   TargetSoldiers:
   - {fileID: 8863225443694463307, guid: 13babb1e968c7426c97ec43dea661230, type: 3}
   SpawnWeights: []
-  IsAllySpawner: 0
   SpawnedAllySoldiers: {fileID: 0}
   ProgressBar: {fileID: 3846484868669396559}
   CastleHealth: {fileID: 750369942493834313}
@@ -3481,21 +3481,12 @@ MonoBehaviour:
   - {fileID: 6175934559257104132}
   - {fileID: 8157903153860147191}
   LevelText: {fileID: 5490325812615072825}
-  OnUpgraded:
+  Spawner: {fileID: 4579396465476900818}
+  CastleUpgradeCard: {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c, type: 2}
+  HealthCore: {fileID: 750369942493834313}
+  OnUpgradedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8188034668576229555}
-        m_TargetAssemblyTypeName: QuickTools.Scripts.Utilities.PunchScaleFx, Assembly-CSharp
-        m_MethodName: TriggerFx
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4260381001184710655}
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
@@ -4138,8 +4129,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.33499873}
-  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.47364652}
+  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.38961682}
+  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.6580483}
 --- !u!1 &6899225304118248278
 GameObject:
   m_ObjectHideFlags: 0

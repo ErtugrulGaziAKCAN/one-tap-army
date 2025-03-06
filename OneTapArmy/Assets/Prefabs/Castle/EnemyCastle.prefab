@@ -555,6 +555,46 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 45a9b9c1c2d314bb0a9733ce93ffbba7, type: 2}
+    - target: {fileID: 4259595869840913735, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259851942016279335, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260045713871901689, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260174401663532485, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260262599261120201, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260309006314994163, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260381001184710655, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278439419070144325, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4498598098211609758, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -564,6 +604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IsAllySpawner
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: SpawnInterval
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
@@ -691,7 +736,7 @@ PrefabInstance:
     - target: {fileID: 4579396465476900818, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: IsSpawnIntervalDependsOnUpgradable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4877588002599618775, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
@@ -1001,7 +1046,23 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 1706367110022098298}
+    - targetCorrespondingSourceObject: {fileID: 4887393897324159180, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 4280003059661784837}
   m_SourcePrefab: {fileID: 100100000, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f, type: 3}
+--- !u!114 &563880921845165604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1261842223210130647, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608269285865816819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161551828323344959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386de02ef42b46b781f337da3ca13197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2410384995147486294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3972966541733303973, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
@@ -1032,5 +1093,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd4ca5fa0b847288148e27537482ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectingTargetInterval: {x: 3, y: 10}
+  SelectingTargetInterval: {x: 15, y: 25}
   DataHolder: {fileID: 2410384995147486294}
+--- !u!114 &4280003059661784837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161551828323344959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e886ec7fd2467580c60e0e6e082772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeManager: {fileID: 563880921845165604}
+  DataHolder: {fileID: 2410384995147486294}
+  MaxLevel: 5

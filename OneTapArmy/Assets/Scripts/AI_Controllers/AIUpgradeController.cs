@@ -29,10 +29,13 @@ namespace AI_Controllers
 
         private void OnEnable()
         {
-            TargetSoldierSo.OnUpgraded += ApplyUpgrades;
+            if (AIDataHolder.IsAllyAI)
+                TargetSoldierSo.OnUpgraded += CardUpgraded;
             StartCoroutine(WaitForOneFrame(() =>
             {
-                ApplyUpgrades();
+                ApplyUpgrades(AIDataHolder.IsAllyAI
+                    ? TargetSoldierSo.CurrentCardLevel
+                    : 1);
                 StartCoroutine(WaitForOneFrame(() => _isInit = true));
             }));
         }
@@ -40,7 +43,8 @@ namespace AI_Controllers
         private void OnDisable()
         {
             _isInit = false;
-            TargetSoldierSo.OnUpgraded -= ApplyUpgrades;
+            if (AIDataHolder.IsAllyAI)
+                TargetSoldierSo.OnUpgraded -= CardUpgraded;
         }
 
 #endregion
@@ -48,20 +52,24 @@ namespace AI_Controllers
 
 #region PUBLIC_METHODS
 
+        public void ApplyUpgrades(int level)
+        {
+            AIHealth.SetMaxHealth(TargetSoldierSo.HealthValue.GetValueOnLevel(level));
+            AIDataHolder.SetAgentSpeed(TargetSoldierSo.SpeedValue.GetValueOnLevel(level));
+            AIDataHolder.SetAttackDamage(TargetSoldierSo.AttackValue.GetValueOnLevel(level));
+            UpdateSkin(level);
+            if (_isInit)
+                OnUpgradedEvent?.Invoke();
+        }
+
 #endregion
 
 
 #region PRIVATE_METHODS
 
-        private void ApplyUpgrades()
+        private void CardUpgraded()
         {
-            var cardLevel = TargetSoldierSo.CurrentCardLevel;
-            AIHealth.SetMaxHealth(TargetSoldierSo.HealthValue.GetValueOnLevel(cardLevel));
-            AIDataHolder.SetAgentSpeed(TargetSoldierSo.SpeedValue.GetValueOnLevel(cardLevel));
-            AIDataHolder.SetAttackDamage(TargetSoldierSo.AttackValue.GetValueOnLevel(cardLevel));
-            UpdateSkin(cardLevel);
-            if (_isInit)
-                OnUpgradedEvent?.Invoke();
+            ApplyUpgrades(TargetSoldierSo.CurrentCardLevel);
         }
 
         private IEnumerator WaitForOneFrame(Action action)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using AI_Controllers.DataHolder.Core;
 using Sirenix.OdinInspector;
@@ -6,9 +7,10 @@ namespace Castle
 {
     public class CastleDataHolder : MonoBehaviour
     {
-
 //-------Public Variables-------//
         [ReadOnly] public List<AIDataHolderCore> SpawnedAIList;
+        public Action OnMemberKilledRival;
+        [ReadOnly] public int CurrentCastleLevel = 1;
 
 //------Serialized Fields-------//
 
@@ -28,6 +30,5 @@ namespace Castle
 #region PRIVATE_METHODS
 
 #endregion
-
     }
 }

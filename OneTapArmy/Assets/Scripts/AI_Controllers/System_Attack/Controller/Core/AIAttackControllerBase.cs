@@ -52,7 +52,12 @@ namespace AI_Controllers.System_Attack.Controller.Core
             AnimatorAccess.GetAnimator().SetTrigger(Attack);
         }
 
-        protected abstract void OnAttacked();
+        protected virtual void OnAttacked()
+        {
+            if(!DataHolder.ClosestRivalHealth.IsDead)
+                return;
+            DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>().SpawnedCastle.OnMemberKilledRival?.Invoke();
+        }
 
 #endregion
 

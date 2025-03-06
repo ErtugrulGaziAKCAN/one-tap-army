@@ -1,4 +1,5 @@
 using Nova;
+using QuickTools.Scripts.Utilities;
 using UnityEngine;
 using UpgradeCards.Data;
 using UpgradeCards.Data.Base;
@@ -28,9 +29,20 @@ namespace UpgradeCards.UI.CardUI
         {
             base.InitCard(cardSo);
             var card = cardSo as SoldierUpgradeCardSo;
-            HealthText.Text = "Health  +" + (card.HealthValue.GetValueOnLevel(card.CurrentCardLevel + 1)-card.HealthValue.GetValueOnLevel(card.CurrentCardLevel));
-            AttackText.Text = "Attack  +" + (card.AttackValue.GetValueOnLevel(card.CurrentCardLevel + 1)-card.AttackValue.GetValueOnLevel(card.CurrentCardLevel));
-            SpeedText.Text = "Speed  +" + (card.SpeedValue.GetValueOnLevel(card.CurrentCardLevel + 1)-card.SpeedValue.GetValueOnLevel(card.CurrentCardLevel));
+            var currentCardLevel = card.CurrentCardLevel;
+            HealthText.Text = currentCardLevel == 0
+                ? string.Empty
+                : "Health  +" + (card.HealthValue.GetValueOnLevel(currentCardLevel + 1) -
+                                 card.HealthValue.GetValueOnLevel(currentCardLevel));
+            AttackText.Text = currentCardLevel == 0
+                ? string.Empty
+                : "Attack  +" + (card.AttackValue.GetValueOnLevel(currentCardLevel + 1) -
+                                 card.AttackValue.GetValueOnLevel(currentCardLevel));
+            SpeedText.Text = currentCardLevel == 0
+                ? string.Empty
+                : "Speed  +" + MoneyFormat.Default(Mathf.RoundToInt((card.SpeedValue.GetValueOnLevel(currentCardLevel + 1) -
+                                                               card.SpeedValue.GetValueOnLevel(currentCardLevel)) *
+                                                   100));
         }
 
 #endregion

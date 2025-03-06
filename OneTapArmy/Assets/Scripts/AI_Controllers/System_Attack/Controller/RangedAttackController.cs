@@ -37,6 +37,7 @@ namespace AI_Controllers.System_Attack.Controller
             if (rangedData == null)
                 return;
             SpawnProjectile(rangedData, targetPos, targetEnemy);
+            base.OnAttacked();
         }
 
 #endregion

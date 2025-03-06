@@ -30,6 +30,7 @@ namespace AI_Controllers.System_Attack.Controller
             if (distance > DataHolder.AttackDistance)
                 return;
             targetEnemy.TakeDamage(DataHolder.AttackDamage);
+            base.OnAttacked();
         }
 
 #endregion

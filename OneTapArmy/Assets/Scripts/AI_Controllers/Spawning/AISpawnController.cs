@@ -15,7 +15,7 @@ namespace AI_Controllers.Spawning
     public class AISpawnController : MonoBehaviour
     {
 //-------Public Variables-------//
-
+        [BoxGroup("Design")] public bool IsAllySpawner;
 
 //------Serialized Fields-------//
         [SerializeField, BoxGroup("Design")] private Transform SpawnPoint;
@@ -31,7 +31,6 @@ namespace AI_Controllers.Spawning
         private List<AIDataHolderCore> TargetSoldiers;
         [SerializeField, BoxGroup("Design"), HideIf(nameof(SpawnFromUpgradableList)),InfoBox("Total weight is 10"),SuffixLabel("Spawn Chance")]
         private List<float> SpawnWeights;
-        [SerializeField, BoxGroup("Design")] private bool IsAllySpawner;
         [SerializeField, BoxGroup("References"), ShowIf(nameof(IsAllySpawner))]
         private ScriptableListAIDataHolderCore SpawnedAllySoldiers;
         [SerializeField, BoxGroup("References")] private ProgressBarController ProgressBar;

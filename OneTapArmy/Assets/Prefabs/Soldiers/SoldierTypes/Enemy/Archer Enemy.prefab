@@ -10,6 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4427463632623605690, guid: ba5154d147af24f63ae99cbd6e915c87,
         type: 3}
+      propertyPath: AttackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427463632623605690, guid: ba5154d147af24f63ae99cbd6e915c87,
+        type: 3}
       propertyPath: TargetAIColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -93,8 +98,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2890887658245548015, guid: ba5154d147af24f63ae99cbd6e915c87, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

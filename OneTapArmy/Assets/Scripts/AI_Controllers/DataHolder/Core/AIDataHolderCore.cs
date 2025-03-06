@@ -3,7 +3,7 @@ using System.Linq;
 using AI_Controllers.System_Attack.Controller.Core;
 using AnimationControllers;
 using Castle;
-using Player.Points;
+using PowerPoints;
 using QuickTools.Scripts.Collectibles.Core;
 using QuickTools.Scripts.HealthSystem;
 using QuickTools.Scripts.UI;
@@ -91,7 +91,7 @@ namespace AI_Controllers.DataHolder.Core
             if (IsAllyAI)
                 SpawnedAllies.Remove(this);
             else
-                PlayerXpController.Instance.AddXp(1);
+                XpController.Instance.AddXp(1);
         }
 
         public void SetAttackDamage(float damage) => AttackDamage = damage;

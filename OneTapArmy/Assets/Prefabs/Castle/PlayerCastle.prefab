@@ -304,44 +304,8 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6713110721238188886}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4887393897324159180, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6573527924703090913}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f, type: 3}
---- !u!114 &2033481988795379386 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1608269285865816819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b25320b92e4c94ba828c19ae355cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6161551828323344959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4887393897324159180, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1608269285865816819}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6573527924703090913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161551828323344959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28de61c937ad4f9e923e313b99ae6a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CastleUpgradeCard: {fileID: 11400000, guid: e3f28660fed764c42adf62dbcba2301c, type: 2}
-  HealthCore: {fileID: 2033481988795379386}
 --- !u!4 &8505885275615580600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6943215764308415307, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,

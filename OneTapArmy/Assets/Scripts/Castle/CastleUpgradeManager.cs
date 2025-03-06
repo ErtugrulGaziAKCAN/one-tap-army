@@ -1,8 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
+using AI_Controllers.Spawning;
 using Nova;
+using QuickTools.Scripts.HealthSystem;
+using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using UpgradeCards.Data;
 namespace Castle
 {
     public class CastleUpgradeManager : MonoBehaviour
@@ -16,16 +21,35 @@ namespace Castle
         [SerializeField, BoxGroup("References")] private List<MeshRenderer> TowerMeshes;
         [SerializeField, BoxGroup("References")] private List<GameObject> Towers;
         [SerializeField, BoxGroup("References")] private TextBlock LevelText;
-        [SerializeField, BoxGroup("Events")] private UnityEvent OnUpgraded;
+        [SerializeField, BoxGroup("References")] private AISpawnController Spawner;
+        [SerializeField, BoxGroup("References")] private CastleUpgradeCardSo CastleUpgradeCard;
+        [SerializeField, BoxGroup("References")] private HealthCore HealthCore;
+        [SerializeField, BoxGroup("References")] private CastleDataHolder DataHolder;
+        [SerializeField, BoxGroup("Events")] private UnityEvent OnUpgradedEvent;
 
 //------Private Variables-------//
-        private int _currentLevel;
+        private int _currentLevel = 0;
+        private bool _isInitialized;
 
 #region UNITY_METHODS
 
-        private void Start()
+        private void OnEnable()
         {
-            UpgradeTower(true);
+            if (Spawner.IsAllySpawner)
+                CastleUpgradeCard.OnUpgraded += UpdateTheCastle;
+        }
+
+        private void OnDisable()
+        {
+            if (Spawner.IsAllySpawner)
+                CastleUpgradeCard.OnUpgraded -= UpdateTheCastle;
+        }
+
+        private IEnumerator Start()
+        {
+            UpdateTheCastle();
+            yield return new WaitForEndOfFrame();
+            _isInitialized = true;
         }
 
 #endregion
@@ -34,14 +58,23 @@ namespace Castle
 #region PUBLIC_METHODS
 
         [Button]
-        public void UpgradeTower(bool initializing)
+        public void SetVisuals()
         {
-            _currentLevel++;
             LevelText.Text = _currentLevel.ToString();
-            if (initializing)
-                return;
-            OnUpgraded?.Invoke();
             ActivateTargetBuild();
+            if (!_isInitialized)
+                return;
+            OnUpgradedEvent?.Invoke();
+        }
+
+        public void UpdateTheCastle()
+        {
+            EditorDebug.Log("CastleUpgraded", gameObject);
+            _currentLevel++;
+            DataHolder.CurrentCastleLevel = _currentLevel;
+            SetVisuals();
+            HealthCore.SetMaxHealth(CastleUpgradeCard.Health.GetValueOnLevel(_currentLevel));
+            HealthCore.ResetHealth();
         }
 
 #endregion
@@ -59,9 +92,10 @@ namespace Castle
 
         private void ActivateTargetBuild()
         {
-            Towers.ForEach((t)=>t.SetActive(false));
-            Towers[_currentLevel-1].SetActive(true);
+            Towers.ForEach((t) => t.SetActive(false));
+            Towers[_currentLevel - 1].SetActive(true);
         }
+
 #endregion
     }
 }

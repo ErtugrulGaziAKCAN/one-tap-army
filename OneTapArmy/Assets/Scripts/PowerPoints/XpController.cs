@@ -4,15 +4,14 @@ using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
-namespace Player.Points
+namespace PowerPoints
 {
-    public class PlayerXpController : QuickSingleton<PlayerXpController>
+    public class XpController : QuickSingleton<XpController>
     {
 //-------Public Variables-------//
-
+        public IncrementalValue TargetXpPoints;
 
 //------Serialized Fields-------//
-        [SerializeField] private IncrementalValue TargetXpPoints;
         [SerializeField] private FloatReference XpProgress;
         [SerializeField] private UnityEvent OnReachedTargetXp;
         [SerializeField] private IntReference CurrentXpStep;

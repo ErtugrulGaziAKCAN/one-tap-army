@@ -81,6 +81,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8611944048475804358, guid: 64ff28932764747a3b9a23f119ae8f5a,
         type: 3}
+      propertyPath: AttackDamage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611944048475804358, guid: 64ff28932764747a3b9a23f119ae8f5a,
+        type: 3}
       propertyPath: TargetAIColor.b
       value: 0
       objectReference: {fileID: 0}
