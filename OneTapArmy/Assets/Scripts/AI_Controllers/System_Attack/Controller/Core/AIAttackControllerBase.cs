@@ -59,8 +59,6 @@ namespace AI_Controllers.System_Attack.Controller.Core
             if (!DataHolder.ClosestRivalHealth.IsDead)
                 return;
             var rivalData = DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>();
-            if(rivalData==null)
-                return;
             rivalData.SpawnedCastle.OnMemberKilledRival?.Invoke();
         }
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using AI_Controllers.DataHolder.Core;
 using QuickTools.Scripts.HealthSystem;
@@ -28,21 +29,43 @@ namespace AI_Controllers.AI_System.Conditions.Attack
         public override bool Verify(StateComponent statesComponent)
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            if (!CheckHits(dataHolder, out var targets))
+                return false;
+            if (targets.Count == 0)
+                return false;
+            var closestRival = FindClosestRival(targets, dataHolder);
+            var rivalHealth = closestRival.GetComponent<HealthCore>();
+            if (rivalHealth == null)
+                return false;
+            if (rivalHealth.IsDead)
+                return false;
+            dataHolder.ClosestRivalHealth = rivalHealth;
+            return true;
+        }
+       
+        private static bool CheckHits(AIDataHolderCore dataHolder, out List<Collider> targets)
+        {
             var hits = new Collider[30];
             var hitCount = VisualPhysics.OverlapSphereNonAlloc(dataHolder.AITransform.position,
                 dataHolder.RivalSensorRange,
                 hits, dataHolder.RivalLayer);
             if (hitCount == 0)
+            {
+                targets = null;
                 return false;
-            var targets = hits.Where((h) =>
+            }
+            targets = hits.Where((h) =>
             {
                 if (h == null)
                     return false;
                 var rivalData = h.GetComponent<HealthCore>();
                 return rivalData.HealthID != dataHolder.AIHealth.HealthID;
             }).ToList();
-            if (targets.Count == 0)
-                return false;
+            return true;
+        }
+
+        private static Collider FindClosestRival(List<Collider> targets, AIDataHolderCore dataHolder)
+        {
             var closestDistance = 999f;
             Collider closestRival = null;
             foreach (var target in targets)
@@ -55,15 +78,8 @@ namespace AI_Controllers.AI_System.Conditions.Attack
                 closestDistance = distance;
                 closestRival = target;
             }
-            var rivalHealth = closestRival.GetComponent<HealthCore>();
-            if (rivalHealth == null)
-                return false;
-            if (rivalHealth.IsDead)
-                return false;
-            dataHolder.ClosestRivalHealth = rivalHealth;
-            return true;
+            return closestRival;
         }
-
 #endregion
 
 
