@@ -122,6 +122,16 @@ PrefabInstance:
       propertyPath: 'ConnectedAnimators.Array.data[0]'
       value: 
       objectReference: {fileID: 4259256280519637196}
+    - target: {fileID: 3095021582230171120, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: layout.Position.Y.Raw
+      value: 0.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095021582230171121, guid: 13babb1e968c7426c97ec43dea661230,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.917
+      objectReference: {fileID: 0}
     - target: {fileID: 3784476775946970792, guid: 13babb1e968c7426c97ec43dea661230,
         type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.size

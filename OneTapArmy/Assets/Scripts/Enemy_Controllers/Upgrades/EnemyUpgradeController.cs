@@ -1,6 +1,5 @@
 using Castle;
 using PowerPoints;
-using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Enemy_Controllers.Upgrades
@@ -54,7 +53,6 @@ namespace Enemy_Controllers.Upgrades
                 CastleUpgrade.UpdateCastle();
             _killCount = 0;
             _currentXpPhase++;
-            EditorDebug.Log("Worked");
         }
         
 #endregion

@@ -4,7 +4,6 @@ using System.Linq;
 using AI_Controllers.DataHolder.Core;
 using Castle;
 using MonKey.Extensions;
-using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UpgradeCards.Data;
@@ -43,7 +42,6 @@ namespace Enemy_Controllers.Upgrades
 
         public void UpgradeAI()
         {
-            EditorDebug.Log("AI is Upgraded");
             var selectUpgradeIndex =
                 UpgradesData.IndexOf(UpgradesData.Where((u) => u.CurrentLevel < MaxUpgradeLevel).ToList().GetRandom());
             UpgradesData[selectUpgradeIndex].CurrentLevel++;

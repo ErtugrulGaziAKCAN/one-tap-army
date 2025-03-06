@@ -54,11 +54,14 @@ namespace AI_Controllers.System_Attack.Controller.Core
 
         protected virtual void OnAttacked()
         {
-            if(DataHolder.ClosestRivalHealth==null)
+            if (DataHolder.ClosestRivalHealth == null)
                 return;
-            if(!DataHolder.ClosestRivalHealth.IsDead)
+            if (!DataHolder.ClosestRivalHealth.IsDead)
                 return;
-            DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>().SpawnedCastle.OnMemberKilledRival?.Invoke();
+            var rivalData = DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>();
+            if(rivalData==null)
+                return;
+            rivalData.SpawnedCastle.OnMemberKilledRival?.Invoke();
         }
 
 #endregion

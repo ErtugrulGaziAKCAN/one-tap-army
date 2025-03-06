@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using AI_Controllers.Spawning;
 using Nova;
 using QuickTools.Scripts.HealthSystem;
-using QuickTools.Scripts.Utilities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -69,7 +68,6 @@ namespace Castle
 
         public void UpdateTheCastle()
         {
-            EditorDebug.Log("CastleUpgraded", gameObject);
             _currentLevel++;
             DataHolder.CurrentCastleLevel = _currentLevel;
             SetVisuals();

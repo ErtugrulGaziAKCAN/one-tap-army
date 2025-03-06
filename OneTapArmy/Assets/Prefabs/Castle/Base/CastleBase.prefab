@@ -1793,13 +1793,11 @@ MonoBehaviour:
   CastleUpgradeCard: {fileID: 0}
   SpawnFromUpgradableList: 0
   SoliderUpgradeCards: []
-  TargetSoldiers:
-  - {fileID: 8863225443694463307, guid: 13babb1e968c7426c97ec43dea661230, type: 3}
-  SpawnWeights: []
   SpawnedAllySoldiers: {fileID: 0}
   ProgressBar: {fileID: 3846484868669396559}
   CastleHealth: {fileID: 750369942493834313}
   CastleData: {fileID: 3972966541733303973}
+  EnemyAIUpgradeAccess: {fileID: 0}
 --- !u!114 &6364399289462960423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4026,7 +4024,7 @@ Transform:
   m_GameObject: {fileID: 6826500164797066918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.117}
+  m_LocalPosition: {x: 0, y: 0, z: 0.323}
   m_LocalScale: {x: 1, y: 1, z: 1.561}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4131,8 +4129,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.38961682}
-  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.6580483}
+  m_Size: {x: 1.3847803, y: 0.5299611, z: 0.38673028}
+  m_Center: {x: -0.006041348, y: 0.23501945, z: -0.1822343}
 --- !u!1 &6899225304118248278
 GameObject:
   m_ObjectHideFlags: 0
