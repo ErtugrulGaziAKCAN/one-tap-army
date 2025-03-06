@@ -33,10 +33,7 @@ namespace AI_Controllers.System_Attack.Controller
             var distance = Vector3.Distance(targetPos, transform.position);
             if (distance > DataHolder.AttackDistance)
                 return;
-            var rangedData = DataHolder as RangedSoldierAIDataHolder;
-            if (rangedData == null)
-                return;
-            SpawnProjectile(rangedData, targetPos, targetEnemy);
+            SpawnProjectile(targetPos, targetEnemy);
             base.OnAttacked();
         }
 
@@ -45,17 +42,24 @@ namespace AI_Controllers.System_Attack.Controller
 
 #region PRIVATE_METHODS
 
-        private void SpawnProjectile(RangedSoldierAIDataHolder rangedSoldierData, Vector3 targetPos, HealthCore targetEnemy)
+        private void SpawnProjectile(Vector3 targetPos, HealthCore targetEnemy)
         {
-            var projectile = rangedSoldierData.Projectile;
-            var spawnPoint = rangedSoldierData.ProjectileSpawnPoint;
-            rangedSoldierData.LastProjectilePosition = spawnPoint.position;
+            var projectile = InitProperties(out var spawnPoint);
             var spawned = LeanPool.Spawn(projectile, spawnPoint.position, spawnPoint.rotation);
+            Vector3 direction=Vector3.zero;
             spawned.transform.DOJump(targetPos, .65f, 1, 1f).SetEase(Ease.Linear).SetSpeedBased().OnUpdate(() =>
             {
                 var spawnedPos = spawned.transform.position;
-                var direction = rangedSoldierData.LastProjectilePosition.DirectionTo(spawnedPos);
-                rangedSoldierData.LastProjectilePosition = spawnedPos;
+                if (DataHolder is RangedSoldierAIDataHolder ranged)
+                {
+                     direction = ranged.LastProjectilePosition.DirectionTo(spawnedPos);
+                     ranged.LastProjectilePosition = spawnedPos;
+                }
+                else if (DataHolder is CastleAIDataHolder castle)
+                {
+                    direction = castle.LastProjectilePosition.DirectionTo(spawnedPos);
+                    castle.LastProjectilePosition = spawnedPos;
+                }
                 if (direction != Vector3.zero)
                     spawned.transform.rotation = Quaternion.LookRotation(direction);
             }).OnComplete(() =>
@@ -65,6 +69,26 @@ namespace AI_Controllers.System_Attack.Controller
                     return;
                 targetEnemy.TakeDamage(DataHolder.AttackDamage);
             });
+        }
+        
+        private GameObject InitProperties(out Transform spawnPoint)
+        {
+            GameObject projectile = null;
+            spawnPoint = null;
+
+            if (DataHolder is RangedSoldierAIDataHolder rangedHolder)
+            {
+                projectile = rangedHolder.Projectile;
+                spawnPoint = rangedHolder.ProjectileSpawnPoint;
+                rangedHolder.LastProjectilePosition = spawnPoint.position;
+            }
+            else if (DataHolder is CastleAIDataHolder castleHolder)
+            {
+                projectile = castleHolder.Projectile;
+                spawnPoint = castleHolder.ProjectileSpawnPoint;
+                castleHolder.LastProjectilePosition = spawnPoint.position;
+            }
+            return projectile;
         }
 
         private bool CanEnemyTakeAttack(HealthCore targetEnemy)

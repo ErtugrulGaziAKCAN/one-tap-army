@@ -4,14 +4,15 @@ using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Conditions.Attack
 {
-    [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/Attack/IsNearTheRival", fileName = "new IsNearTheRival")]
+    [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/Attack/IsNearTheRival",
+        fileName = "new IsNearTheRival")]
     public class IsNearTheRival : ScriptableCondition
     {
 //-------Public Variables-------//
-        
+
 
 //------Serialized Fields-------//
-        
+
 
 //------Private Variables-------//
 
@@ -24,9 +25,9 @@ namespace AI_Controllers.AI_System.Conditions.Attack
 
         public override bool Verify(StateComponent statesComponent)
         {
-            if (Time.frameCount % 10 != 0)
-                return false;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            if (Time.frameCount % 10 != 0)
+                return dataHolder.IsAttacking;
             if (dataHolder.IsAttacking)
                 return true;
             if (dataHolder.ClosestRivalHealth == null)

@@ -24,7 +24,6 @@ namespace AI_Controllers.DataHolder
         [BoxGroup("References")] public NavMeshAgent Agent;
         [BoxGroup("References")] public HealthBar AIHealthProgressBar;
         [BoxGroup("References")] public StateComponent StateComponentAccess;
-        [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [BoxGroup("References")] public UiColorizeGroup CurrentHealthColorize;
         [BoxGroup("References")] public ScriptableListAIDataHolderCore SpawnedAllies;
         [BoxGroup("References")] public AIUpgradeController UpgradeController;

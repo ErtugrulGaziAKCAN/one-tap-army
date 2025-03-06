@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Obvious.Soap.Attributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace AnimationControllers
@@ -21,6 +20,12 @@ namespace AnimationControllers
         private void Awake()
         {
             _animator = GetComponentInChildren<Animator>();
+        }
+
+        private void OnEnable()
+        {
+            if (UseConnectedAnimations)
+                ConnectedAnimators.ForEach((c) => c.enabled = true);
         }
 
 #endregion

@@ -30,6 +30,8 @@ namespace Player.TargetDirector
 
         public void OnTouched(Vector3 touchPoint)
         {
+            if(Time.timeScale!=1f)
+                return;
             SpawnedAllySoldiers.ForEach((a) =>
             {
                 if (a.StateComponentAccess.CurrentState == MovementState)

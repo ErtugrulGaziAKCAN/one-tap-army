@@ -1,3 +1,4 @@
+using AI_Controllers.System_Attack.Controller.Core;
 using QuickTools.Scripts.HealthSystem;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace AI_Controllers.DataHolder.Core
         [BoxGroup("Design")] public float RivalSensorRange;
         [BoxGroup("References")] public Transform AITransform;
         [BoxGroup("References")] public HealthCore AIHealth;
+        [BoxGroup("References")] public AIAttackControllerBase AIAttackController;
         [ReadOnly] public bool IsAttacking;
         [ReadOnly] public HealthCore ClosestRivalHealth;
         

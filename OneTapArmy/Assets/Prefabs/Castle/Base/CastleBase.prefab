@@ -3977,8 +3977,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4173577236918298233}
   - component: {fileID: 813484116029966967}
-  - component: {fileID: 486760459822138810}
   - component: {fileID: 5718109189070709182}
+  - component: {fileID: 8018338548758217573}
+  - component: {fileID: 8663573138491716039}
   m_Layer: 0
   m_Name: CastleDefense
   m_TagString: Untagged
@@ -4015,22 +4016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stateMachine: {fileID: 11400000, guid: b8bce2f50d12a49fcb01bccc7dc338d1, type: 2}
---- !u!114 &486760459822138810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6748156336038731056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c994d585362140abbfc2de737df0e10f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetActiveAnimation: 0
-  AnimatorAccess: {fileID: 0}
-  DataHolder: {fileID: 5718109189070709182}
-  AttackInterval: 1.5
 --- !u!114 &5718109189070709182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4043,35 +4028,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a63781c02fb4cb9b93025d17720202c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 2
+  AttackDistance: 1
   AttackDamage: 50
   RivalLayer:
     serializedVersion: 2
     m_Bits: 0
-  RivalSensorRange: 2
+  RivalSensorRange: 1
   AITransform: {fileID: 4173577236918298233}
   AIHealth: {fileID: 750369942493834313}
+  AIAttackController: {fileID: 8018338548758217573}
   IsAttacking: 0
   ClosestRivalHealth: {fileID: 0}
-  TargetAIColor: {r: 0, g: 0, b: 0, a: 0}
-  CollectibleSensorRange: 0
-  ClosestCollectible: {fileID: 0}
-  Agent: {fileID: 0}
-  AIHealthProgressBar: {fileID: 0}
-  StateComponentAccess: {fileID: 0}
-  AIAttackController: {fileID: 0}
-  CurrentHealthColorize: {fileID: 0}
-  SpawnedAllies: {fileID: 0}
-  UpgradeController: {fileID: 0}
-  TargetPosition: {x: 0, y: 0, z: 0}
-  SpawnedCastle: {fileID: 0}
-  IsAllyAI: 0
-  AnimationController: {fileID: 0}
-  AgentStoppingDistance: 0
   ProjectileSpawnPoint: {fileID: 3425681795919475765}
-  Projectile: {fileID: 4147432648423120970, guid: b3620030e04104c54bc78466e3366b44,
+  Projectile: {fileID: 4147432648423120970, guid: 28624380013d4483cbc5b7c42deb5e71,
     type: 3}
   LastProjectilePosition: {x: 0, y: 0, z: 0}
+--- !u!114 &8018338548758217573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748156336038731056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248c6162983b4958983c27fe7a9e5f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SetActiveAnimation: 0
+  AnimatorAccess: {fileID: 0}
+  DataHolder: {fileID: 5718109189070709182}
+  OnStartAttacking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8663573138491716039}
+        m_TargetAssemblyTypeName: QuickTools.Scripts.Utilities.EventRaiser, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8663573138491716039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748156336038731056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46731dbf8db40619ca876266eac1e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaiseExecutionTime: 0
+  UseDelayWithRef: 0
+  DelayRef:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 0}
+  RandomDelay: 0
+  Delay: 1.2
+  RandomDelayDurations: {x: 0, y: 0}
+  UseUnScaledTime: 0
+  Type: 1
+  Event: {fileID: 0}
+  UnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5718109189070709182}
+        m_TargetAssemblyTypeName: AI_Controllers.DataHolder.CastleAIDataHolder, Assembly-CSharp
+        m_MethodName: SetAttacking
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6755827650129513481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4867,7 @@ Transform:
   m_GameObject: {fileID: 8401429563257069003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.476, z: -0.698}
+  m_LocalPosition: {x: 0, y: 0.785, z: -0.933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

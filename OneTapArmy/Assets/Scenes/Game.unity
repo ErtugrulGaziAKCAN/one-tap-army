@@ -313,16 +313,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBase
       objectReference: {fileID: 0}
-    - target: {fileID: 931907937719969498, guid: a3dc05ba7a4a040e79a9e8c81a399d22,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052986283473500198, guid: a3dc05ba7a4a040e79a9e8c81a399d22,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6405352439090605254, guid: a3dc05ba7a4a040e79a9e8c81a399d22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -373,7 +363,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5980003959258179395, guid: a3dc05ba7a4a040e79a9e8c81a399d22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

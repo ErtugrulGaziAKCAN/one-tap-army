@@ -5,6 +5,7 @@ using AnimationControllers;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 namespace AI_Controllers.System_Attack.Controller.Core
 {
     public abstract class AIAttackControllerBase : MonoBehaviour
@@ -16,7 +17,8 @@ namespace AI_Controllers.System_Attack.Controller.Core
         [SerializeField] private bool SetActiveAnimation = true;
         [SerializeField, ShowIf(nameof(SetActiveAnimation))] protected FastAnimationController AnimatorAccess;
         [SerializeField] protected AIDataHolderCore DataHolder;
-
+        [SerializeField] private UnityEvent OnStartAttacking;
+        
 //------Private Variables-------//
         private static readonly int Attack = Animator.StringToHash("Attack");
         private bool _isInit;
@@ -54,6 +56,7 @@ namespace AI_Controllers.System_Attack.Controller.Core
         {
             if (SetActiveAnimation)
                 AnimatorAccess.GetAnimator().SetTrigger(Attack);
+            OnStartAttacking?.Invoke();
         }
 
         protected virtual void OnAttacked()
