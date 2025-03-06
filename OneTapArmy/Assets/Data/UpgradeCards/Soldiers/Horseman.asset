@@ -27,21 +27,21 @@ MonoBehaviour:
   HealthValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 135
+    BaseValueLinear: 120
     IncrementLinear: 20
     BaseValueExpo: 0
     IncrementExpo: 0
   AttackValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 70
+    BaseValueLinear: 55
     IncrementLinear: 20
     BaseValueExpo: 0
     IncrementExpo: 0
   SpeedValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 0.5
+    BaseValueLinear: 0.6
     IncrementLinear: 0.05
     BaseValueExpo: 0
     IncrementExpo: 0

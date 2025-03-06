@@ -34,7 +34,7 @@ MonoBehaviour:
   AttackValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 35
+    BaseValueLinear: 30
     IncrementLinear: 20
     BaseValueExpo: 0
     IncrementExpo: 0

@@ -25,6 +25,10 @@ namespace AI_Controllers.AI_System.Actions
         {
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking,false);
+            if (dataHolder.AnimationController.HasConnectedAnimations(out var connectedAnimations))
+            {
+                connectedAnimations.ForEach((a) => a.SetBool(IsWalking,false));
+            }
             dataHolder.Agent.SetDestination(dataHolder.AITransform.position);
         }
 

@@ -262,7 +262,7 @@ MonoBehaviour:
   CollectibleSensorRange: 1.2
   ClosestCollectible: {fileID: 0}
   RivalSensorRange: 2.5
-  AttackDistance: 1.7
+  AttackDistance: 1.9
   AttackDamage: 50
   IsAttacking: 0
   RivalLayer:

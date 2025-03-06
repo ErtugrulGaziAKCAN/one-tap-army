@@ -23,11 +23,11 @@ MonoBehaviour:
   BackgroundImage: {fileID: 21300000, guid: ba2e96fdc009c45d4b01cc66b7471eb3, type: 3}
   CardNameSprite: {fileID: 21300000, guid: d1dbb380c525a480c8ea489991420157, type: 3}
   CardUI: {fileID: 3372426638001697963, guid: 52a521dcace6540d98e6e19ef21af43b, type: 3}
-  CurrentCardLevel: 2
+  CurrentCardLevel: 0
   HealthValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 100
+    BaseValueLinear: 80
     IncrementLinear: 20
     BaseValueExpo: 0
     IncrementExpo: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   SpeedValue:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 0.5
+    BaseValueLinear: 0.6
     IncrementLinear: 0.05
     BaseValueExpo: 0
     IncrementExpo: 0
