@@ -297,6 +297,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5718109189070709182, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: RivalLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6826500164797066918, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: m_Layer

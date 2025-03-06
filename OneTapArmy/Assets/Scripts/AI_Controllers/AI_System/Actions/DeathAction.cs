@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using DG.Tweening;
 using Plugins.CW.LeanPool.Required.Scripts;
 using scriptable_states.Runtime;
@@ -27,7 +27,7 @@ namespace AI_Controllers.AI_System.Actions
 
         public override void Act(StateComponent statesComponent)
         {
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             dataHolder.Agent.isStopped = true;
             dataHolder.AnimationController.GetAnimator().SetTrigger(Death);
 

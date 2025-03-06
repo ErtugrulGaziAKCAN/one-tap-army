@@ -1,6 +1,8 @@
 using System.Collections;
+using AI_Controllers.DataHolder;
 using AI_Controllers.DataHolder.Core;
 using AnimationControllers;
+using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 namespace AI_Controllers.System_Attack.Controller.Core
@@ -11,7 +13,8 @@ namespace AI_Controllers.System_Attack.Controller.Core
 
 
 //------Serialized Fields-------//
-        [SerializeField] protected FastAnimationController AnimatorAccess;
+        [SerializeField] private bool SetActiveAnimation = true;
+        [SerializeField, ShowIf(nameof(SetActiveAnimation))] protected FastAnimationController AnimatorAccess;
         [SerializeField] protected AIDataHolderCore DataHolder;
 
 //------Private Variables-------//
@@ -49,7 +52,8 @@ namespace AI_Controllers.System_Attack.Controller.Core
 
         public void StartAttacking()
         {
-            AnimatorAccess.GetAnimator().SetTrigger(Attack);
+            if (SetActiveAnimation)
+                AnimatorAccess.GetAnimator().SetTrigger(Attack);
         }
 
         protected virtual void OnAttacked()
@@ -58,8 +62,8 @@ namespace AI_Controllers.System_Attack.Controller.Core
                 return;
             if (!DataHolder.ClosestRivalHealth.IsDead)
                 return;
-            var rivalData = DataHolder.ClosestRivalHealth.GetComponent<AIDataHolderCore>();
-            if(rivalData==null)
+            var rivalData = DataHolder.ClosestRivalHealth.GetComponent<SoldierAIDataHolderCore>();
+            if (rivalData == null)
                 return;
             rivalData.SpawnedCastle.OnMemberKilledRival?.Invoke();
         }

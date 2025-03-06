@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using Nova;
 using Plugins.CW.LeanPool.Required.Scripts;
 using QuickTools.Scripts.Collectibles.Core;
@@ -46,7 +46,7 @@ namespace QuickTools.Scripts.Collectibles
             base.OnCollide(collidedObject);
             for (var i = 0; i < _multiplyValue; i++)
             {
-                var clonedObject = collidedObject.GetComponent<AIDataHolderCore>();
+                var clonedObject = collidedObject.GetComponent<SoldierAIDataHolderCore>();
                 var spawned = LeanPool.Spawn(clonedObject, clonedObject.transform.position.WithAddedZ(-.3f * i),
                     Quaternion.identity);
                 if (spawned.IsAllyAI)

@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using QuickTools.Scripts.Extensions;
 using scriptable_states.Runtime;
 using UnityEngine;
@@ -25,7 +25,7 @@ namespace AI_Controllers.AI_System.Actions.Attack
 
         public override void Act(StateComponent statesComponent)
         {
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             var aiTransform = dataHolder.AITransform;
             aiTransform.rotation = Quaternion.Slerp(aiTransform.rotation, Quaternion.LookRotation(aiTransform.position
                 .WithY(0f)

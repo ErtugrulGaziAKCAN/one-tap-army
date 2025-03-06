@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Actions
@@ -23,7 +23,7 @@ namespace AI_Controllers.AI_System.Actions
 
         public override void Act(StateComponent statesComponent)
         {
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking,false);
             if (dataHolder.AnimationController.HasConnectedAnimations(out var connectedAnimations))
             {

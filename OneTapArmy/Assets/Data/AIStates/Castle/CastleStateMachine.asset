@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718ecb92f024ea14e8d2f2450ca5def2, type: 3}
+  m_Name: CastleStateMachine
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 11400000, guid: 91734ae72953742bfbbf1fddd138c797, type: 2}
+  _emptyState: {fileID: 11400000, guid: 20352fc7a011e8748b8ba85265763ede, type: 2}
+  _transitions:
+  - originState: {fileID: 11400000, guid: 91734ae72953742bfbbf1fddd138c797, type: 2}
+    condition: {fileID: 11400000, guid: 669a770d667184ede8fda2f69e49cffa, type: 2}
+    trueState: {fileID: 11400000, guid: 814cd7ddd442a48e2a65647abf8d2c0e, type: 2}
+    falseState: {fileID: 11400000, guid: 91734ae72953742bfbbf1fddd138c797, type: 2}
+  - originState: {fileID: 11400000, guid: 814cd7ddd442a48e2a65647abf8d2c0e, type: 2}
+    condition: {fileID: 11400000, guid: c6e11fd16d5e5435781c79b8dc544794, type: 2}
+    trueState: {fileID: 11400000, guid: 20352fc7a011e8748b8ba85265763ede, type: 2}
+    falseState: {fileID: 11400000, guid: 814cd7ddd442a48e2a65647abf8d2c0e, type: 2}
+  - originState: {fileID: 11400000, guid: 814cd7ddd442a48e2a65647abf8d2c0e, type: 2}
+    condition: {fileID: 11400000, guid: 7e4baa07eb520489aa3863c0ec7fdd32, type: 2}
+    trueState: {fileID: 11400000, guid: 20352fc7a011e8748b8ba85265763ede, type: 2}
+    falseState: {fileID: 11400000, guid: 814cd7ddd442a48e2a65647abf8d2c0e, type: 2}

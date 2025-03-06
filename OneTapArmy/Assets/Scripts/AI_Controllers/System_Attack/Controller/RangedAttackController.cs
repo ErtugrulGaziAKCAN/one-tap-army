@@ -33,7 +33,7 @@ namespace AI_Controllers.System_Attack.Controller
             var distance = Vector3.Distance(targetPos, transform.position);
             if (distance > DataHolder.AttackDistance)
                 return;
-            var rangedData = DataHolder as RangedAIDataHolder;
+            var rangedData = DataHolder as RangedSoldierAIDataHolder;
             if (rangedData == null)
                 return;
             SpawnProjectile(rangedData, targetPos, targetEnemy);
@@ -45,17 +45,17 @@ namespace AI_Controllers.System_Attack.Controller
 
 #region PRIVATE_METHODS
 
-        private void SpawnProjectile(RangedAIDataHolder rangedData, Vector3 targetPos, HealthCore targetEnemy)
+        private void SpawnProjectile(RangedSoldierAIDataHolder rangedSoldierData, Vector3 targetPos, HealthCore targetEnemy)
         {
-            var projectile = rangedData.Projectile;
-            var spawnPoint = rangedData.ProjectileSpawnPoint;
-            rangedData.LastProjectilePosition = spawnPoint.position;
+            var projectile = rangedSoldierData.Projectile;
+            var spawnPoint = rangedSoldierData.ProjectileSpawnPoint;
+            rangedSoldierData.LastProjectilePosition = spawnPoint.position;
             var spawned = LeanPool.Spawn(projectile, spawnPoint.position, spawnPoint.rotation);
             spawned.transform.DOJump(targetPos, .65f, 1, 1f).SetEase(Ease.Linear).SetSpeedBased().OnUpdate(() =>
             {
                 var spawnedPos = spawned.transform.position;
-                var direction = rangedData.LastProjectilePosition.DirectionTo(spawnedPos);
-                rangedData.LastProjectilePosition = spawnedPos;
+                var direction = rangedSoldierData.LastProjectilePosition.DirectionTo(spawnedPos);
+                rangedSoldierData.LastProjectilePosition = spawnedPos;
                 if (direction != Vector3.zero)
                     spawned.transform.rotation = Quaternion.LookRotation(direction);
             }).OnComplete(() =>

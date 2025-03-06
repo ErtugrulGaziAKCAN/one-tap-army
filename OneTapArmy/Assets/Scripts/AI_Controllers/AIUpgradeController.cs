@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using Enemy_Controllers.Upgrades;
 using QuickTools.Scripts.HealthSystem;
 using Sirenix.OdinInspector;
@@ -18,7 +18,7 @@ namespace AI_Controllers
 
 //------Serialized Fields-------//
         [SerializeField, BoxGroup("References")] private HealthCore AIHealth;
-        [SerializeField, BoxGroup("References")] private AIDataHolderCore AIDataHolder;
+        [SerializeField, BoxGroup("References")] private SoldierAIDataHolderCore SoldierAIDataHolder;
         [SerializeField, BoxGroup("Events")] private UnityEvent OnUpgradedEvent;
         [SerializeField, BoxGroup("Events")] private List<AIUpgradeSkins> UpgradeSkins;
 
@@ -29,13 +29,13 @@ namespace AI_Controllers
 
         private void OnEnable()
         {
-            if (AIDataHolder.IsAllyAI)
+            if (SoldierAIDataHolder.IsAllyAI)
                 TargetSoldierSo.OnUpgraded += CardUpgraded;
             StartCoroutine(WaitForOneFrame(() =>
             {
-                ApplyUpgrades(AIDataHolder.IsAllyAI
+                ApplyUpgrades(SoldierAIDataHolder.IsAllyAI
                     ? TargetSoldierSo.CurrentCardLevel
-                    : AIDataHolder.SpawnedCastle.GetComponentInChildren<EnemyAIUpgrade>().GetSoldierLevel(TargetSoldierSo));
+                    : SoldierAIDataHolder.SpawnedCastle.GetComponentInChildren<EnemyAIUpgrade>().GetSoldierLevel(TargetSoldierSo));
                 StartCoroutine(WaitForOneFrame(() => _isInit = true));
             }));
         }
@@ -43,7 +43,7 @@ namespace AI_Controllers
         private void OnDisable()
         {
             _isInit = false;
-            if (AIDataHolder.IsAllyAI)
+            if (SoldierAIDataHolder.IsAllyAI)
                 TargetSoldierSo.OnUpgraded -= CardUpgraded;
         }
 
@@ -55,8 +55,8 @@ namespace AI_Controllers
         public void ApplyUpgrades(int level)
         {
             AIHealth.SetMaxHealth(TargetSoldierSo.HealthValue.GetValueOnLevel(level));
-            AIDataHolder.SetAgentSpeed(TargetSoldierSo.SpeedValue.GetValueOnLevel(level));
-            AIDataHolder.SetAttackDamage(TargetSoldierSo.AttackValue.GetValueOnLevel(level));
+            SoldierAIDataHolder.SetAgentSpeed(TargetSoldierSo.SpeedValue.GetValueOnLevel(level));
+            SoldierAIDataHolder.SetAttackDamage(TargetSoldierSo.AttackValue.GetValueOnLevel(level));
             UpdateSkin(level);
             if (_isInit)
                 OnUpgradedEvent?.Invoke();

@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Actions.Attack
@@ -26,7 +26,7 @@ namespace AI_Controllers.AI_System.Actions.Attack
         {
             if (Time.frameCount % 10 != 0)
                 return;
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             var rivalPosition = dataHolder.ClosestRivalHealth.transform.position;
             dataHolder.Agent.SetDestination(rivalPosition);
             dataHolder.Agent.stoppingDistance = 0f;

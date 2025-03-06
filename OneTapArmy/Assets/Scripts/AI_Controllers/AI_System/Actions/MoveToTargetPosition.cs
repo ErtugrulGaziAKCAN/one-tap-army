@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using QuickTools.Scripts.Extensions;
 using scriptable_states.Runtime;
 using UnityEngine;
@@ -27,7 +27,7 @@ namespace AI_Controllers.AI_System.Actions
         {
             if (Time.frameCount % 10 != 0)
                 return;
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             var targetPos = dataHolder.TargetPosition.WithY(0f);
             dataHolder.Agent.isStopped = false;
             dataHolder.Agent.SetDestination(targetPos);

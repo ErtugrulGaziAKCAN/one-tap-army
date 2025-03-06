@@ -968,6 +968,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 45a9b9c1c2d314bb0a9733ce93ffbba7, type: 2}
+    - target: {fileID: 5718109189070709182, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: RivalLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6106620898451409586, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

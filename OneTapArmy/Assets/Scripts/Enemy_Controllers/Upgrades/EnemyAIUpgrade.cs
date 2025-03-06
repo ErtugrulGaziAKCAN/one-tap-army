@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using Castle;
 using MonKey.Extensions;
 using Sirenix.OdinInspector;
@@ -35,7 +35,7 @@ namespace Enemy_Controllers.Upgrades
 
 #region PUBLIC_METHODS
 
-        public AIDataHolderCore GetSpawnableSoldierPrefab() =>
+        public SoldierAIDataHolderCore GetSpawnableSoldierPrefab() =>
             UpgradesData.Where((u) => u.CurrentLevel > 0).ToList().GetRandom().EnemyPrefab;
 
         public bool CanUpgrade() => UpgradesData.Any((u) => u.CurrentLevel < MaxUpgradeLevel);
@@ -68,7 +68,7 @@ namespace Enemy_Controllers.Upgrades
     public class EnemyAIUpgradesData
     {
         public SoldierUpgradeCardSo SampleUpgrade;
-        public AIDataHolderCore EnemyPrefab;
+        public SoldierAIDataHolderCore EnemyPrefab;
         [ReadOnly] public int CurrentLevel;
     }
 }

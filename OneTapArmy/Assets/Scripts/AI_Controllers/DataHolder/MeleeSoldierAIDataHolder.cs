@@ -1,7 +1,6 @@
-using AI_Controllers.DataHolder.Core;
 namespace AI_Controllers.DataHolder
 {
-    public class MeleeAIDataHolder : AIDataHolderCore
+    public class MeleeSoldierAIDataHolder : SoldierAIDataHolderCore
     {
 
 //-------Public Variables-------//

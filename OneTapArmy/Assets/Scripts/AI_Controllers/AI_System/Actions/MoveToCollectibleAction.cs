@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Actions
@@ -26,7 +26,7 @@ namespace AI_Controllers.AI_System.Actions
         {
             if (Time.frameCount % 30 != 0)
                 return;
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             if(dataHolder.ClosestCollectible==null)
                 return;
             var collectiblePosition = dataHolder.ClosestCollectible.transform.position;

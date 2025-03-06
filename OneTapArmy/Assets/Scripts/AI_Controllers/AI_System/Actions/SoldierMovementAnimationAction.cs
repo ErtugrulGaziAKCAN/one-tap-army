@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Actions
@@ -27,7 +27,7 @@ namespace AI_Controllers.AI_System.Actions
         {
             if (Time.frameCount % 5 != 0)
                 return;
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             var isMoving = dataHolder.Agent.velocity.magnitude >= .1f;
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking, isMoving);
             if (!dataHolder.AnimationController.HasConnectedAnimations(out var connectedAnimators))

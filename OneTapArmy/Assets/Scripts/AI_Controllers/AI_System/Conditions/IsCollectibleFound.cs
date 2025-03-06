@@ -1,4 +1,4 @@
-using AI_Controllers.DataHolder.Core;
+using AI_Controllers.DataHolder;
 using QuickTools.Scripts.Collectibles.Core;
 using scriptable_states.Runtime;
 using UnityEngine;
@@ -25,7 +25,7 @@ namespace AI_Controllers.AI_System.Conditions
 
         public override bool Verify(StateComponent statesComponent)
         {
-            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
             var hits = new Collider[1];
             var hitCount = Physics.OverlapSphereNonAlloc(dataHolder.AITransform.position,
                 dataHolder.CollectibleSensorRange,
@@ -45,7 +45,7 @@ namespace AI_Controllers.AI_System.Conditions
 
 #region PRIVATE_METHODS
 
-        private bool OnNotFound(AIDataHolderCore dataHolder)
+        private bool OnNotFound(SoldierAIDataHolderCore dataHolder)
         {
             dataHolder.Agent.stoppingDistance = dataHolder.AgentStoppingDistance;
             return false;

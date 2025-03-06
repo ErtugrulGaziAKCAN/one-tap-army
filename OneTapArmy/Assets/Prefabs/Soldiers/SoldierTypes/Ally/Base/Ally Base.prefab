@@ -119,20 +119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d7a4b83dba4cc4a07548470fa2a7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetAIColor: {r: 0.13679248, g: 0.6699382, b: 1, a: 1}
-  CollectibleSensorRange: 1.2
-  ClosestCollectible: {fileID: 0}
-  RivalSensorRange: 2.3
   AttackDistance: 0.4
   AttackDamage: 50
-  IsAttacking: 0
   RivalLayer:
     serializedVersion: 2
     m_Bits: 128
-  ClosestRivalHealth: {fileID: 0}
+  RivalSensorRange: 2.3
   AITransform: {fileID: 4427339639779559611}
-  Agent: {fileID: 5816359052749442746}
   AIHealth: {fileID: 3784476775946970792}
+  IsAttacking: 0
+  ClosestRivalHealth: {fileID: 0}
+  TargetAIColor: {r: 0.13679248, g: 0.6699382, b: 1, a: 1}
+  CollectibleSensorRange: 1.2
+  ClosestCollectible: {fileID: 0}
+  Agent: {fileID: 5816359052749442746}
   AIHealthProgressBar: {fileID: 3779444643833113541}
   StateComponentAccess: {fileID: 790807468145476608}
   AIAttackController: {fileID: 4216829922482598315}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetSoldierSo: {fileID: 0}
   AIHealth: {fileID: 3784476775946970792}
-  AIDataHolder: {fileID: 8102571336875657052}
+  SoldierAIDataHolder: {fileID: 8102571336875657052}
   OnUpgradedEvent:
     m_PersistentCalls:
       m_Calls:
