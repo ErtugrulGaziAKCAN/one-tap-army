@@ -24,6 +24,8 @@ namespace AI_Controllers.AI_System.Actions
 
         public override void Act(StateComponent statesComponent)
         {
+            if (Time.frameCount % 30 != 0)
+                return;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             if(dataHolder.ClosestCollectible==null)
                 return;

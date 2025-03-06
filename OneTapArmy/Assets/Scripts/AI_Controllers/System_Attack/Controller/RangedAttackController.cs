@@ -54,9 +54,10 @@ namespace AI_Controllers.System_Attack.Controller
             spawned.transform.DOJump(targetPos, .65f, 1, 1f).SetEase(Ease.Linear).SetSpeedBased().OnUpdate(() =>
             {
                 var spawnedPos = spawned.transform.position;
-                spawned.transform.rotation =
-                    Quaternion.LookRotation(rangedData.LastProjectilePosition.DirectionTo(spawnedPos));
+                var direction = rangedData.LastProjectilePosition.DirectionTo(spawnedPos);
                 rangedData.LastProjectilePosition = spawnedPos;
+                if (direction != Vector3.zero)
+                    spawned.transform.rotation = Quaternion.LookRotation(direction);
             }).OnComplete(() =>
             {
                 LeanPool.Despawn(spawned);

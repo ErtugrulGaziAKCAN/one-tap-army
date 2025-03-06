@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using MonKey.Extensions;
@@ -19,12 +20,18 @@ namespace Utilities
 
 //------Private Variables-------//
         private int _currentSpawnIndex;
+        private Tween _delay;
 
 #region UNITY_METHODS
 
         private void Start()
         {
             StartSpawning(true);
+        }
+
+        private void OnDisable()
+        {
+            _delay.Kill();
         }
 
 #endregion
@@ -38,7 +45,7 @@ namespace Utilities
             if (_currentSpawnIndex >= SpawnPoints.Count)
                 return;
             if (loop)
-                DOVirtual.DelayedCall(SpawnInterval, () => SpawnObject(true));
+                _delay = DOVirtual.DelayedCall(SpawnInterval, () => SpawnObject(true));
             else
                 SpawnObject(false);
         }
@@ -52,7 +59,7 @@ namespace Utilities
         {
             var targetPrefab = Prefabs.GetWeightedRandom(Weights, 10);
             var targetPos = SpawnPoints[_currentSpawnIndex];
-            var spawned= Instantiate(targetPrefab, targetPos);
+            var spawned = Instantiate(targetPrefab, targetPos);
             spawned.transform.localPosition = Vector3.zero;
             _currentSpawnIndex++;
             if (loop)

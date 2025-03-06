@@ -24,9 +24,11 @@ namespace AI_Controllers.AI_System.Actions.Attack
 
         public override void Act(StateComponent statesComponent)
         {
+            if (Time.frameCount % 10 != 0)
+                return;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
-            var collectiblePosition = dataHolder.ClosestRivalHealth.transform.position;
-            dataHolder.Agent.SetDestination(collectiblePosition);
+            var rivalPosition = dataHolder.ClosestRivalHealth.transform.position;
+            dataHolder.Agent.SetDestination(rivalPosition);
             dataHolder.Agent.stoppingDistance = 0f;
         }
 

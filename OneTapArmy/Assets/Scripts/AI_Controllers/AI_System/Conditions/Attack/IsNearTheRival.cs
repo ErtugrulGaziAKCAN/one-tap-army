@@ -23,6 +23,8 @@ namespace AI_Controllers.AI_System.Conditions.Attack
 
         public override bool Verify(StateComponent statesComponent)
         {
+            if (Time.frameCount % 10 != 0)
+                return false;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             if (dataHolder.IsAttacking)
                 return true;

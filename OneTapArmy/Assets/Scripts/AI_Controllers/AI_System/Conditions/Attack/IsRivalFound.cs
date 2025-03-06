@@ -28,6 +28,8 @@ namespace AI_Controllers.AI_System.Conditions.Attack
 
         public override bool Verify(StateComponent statesComponent)
         {
+            if (Time.frameCount % 10 != 0)
+                return false;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             if (!CheckHits(dataHolder, out var targets))
                 return false;
@@ -42,7 +44,7 @@ namespace AI_Controllers.AI_System.Conditions.Attack
             dataHolder.ClosestRivalHealth = rivalHealth;
             return true;
         }
-       
+
         private static bool CheckHits(AIDataHolderCore dataHolder, out List<Collider> targets)
         {
             var hits = new Collider[30];
@@ -80,6 +82,7 @@ namespace AI_Controllers.AI_System.Conditions.Attack
             }
             return closestRival;
         }
+
 #endregion
 
 

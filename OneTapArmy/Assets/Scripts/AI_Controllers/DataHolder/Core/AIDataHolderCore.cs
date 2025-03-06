@@ -19,7 +19,7 @@ namespace AI_Controllers.DataHolder.Core
 //-------Public Variables-------//
         [BoxGroup("Design")] public Color TargetAIColor;
         [BoxGroup("Design")] public float CollectibleSensorRange;
-        [HideInInspector] public CollectibleCore ClosestCollectible;
+        [ReadOnly] public CollectibleCore ClosestCollectible;
         [BoxGroup("Design")] public float RivalSensorRange;
         [BoxGroup("Design")] public float AttackDistance;
         [BoxGroup("Design")] public float AttackDamage;

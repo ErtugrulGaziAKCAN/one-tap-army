@@ -579,10 +579,10 @@ namespace MonKey.Editor.Internal
                 }
                 catch (Exception e)
                 {
-                    Debug.LogErrorFormat("MonKey: An Exception was raised when " +
-                                         "trying to retrieve a command " +
-                                         "from method {0} in type {1}, assemble {2}: {3}",
-                        methodInfo.Name, type.Name, type.Assembly.GetName().Name, e);
+                    // Debug.LogErrorFormat("MonKey: An Exception was raised when " +
+                    //                      "trying to retrieve a command " +
+                    //                      "from method {0} in type {1}, assemble {2}: {3}",
+                    //     methodInfo.Name, type.Name, type.Assembly.GetName().Name, e);
 
 
                     //  RetrieveAllCommands(true);
@@ -852,10 +852,10 @@ namespace MonKey.Editor.Internal
 
                     if (validation == null)
                     {
-                        Debug.LogWarningFormat("The command '{0}' was associated with " +
-                                               "a validation method named '{1}', " +
-                                               "but no static method of such name could be found",
-                            methodInfo.Name, command.ValidationMethodName);
+                        // Debug.LogWarningFormat("The command '{0}' was associated with " +
+                        //                        "a validation method named '{1}', " +
+                        //                        "but no static method of such name could be found",
+                        //     methodInfo.Name, command.ValidationMethodName);
                     }
                 }
             }
@@ -965,17 +965,17 @@ namespace MonKey.Editor.Internal
 
             if (attribute == null || methodInfo == null)
             {
-                Debug.LogWarning("MonKey | Error when parsing a command : no attribute or method info found");
+                //Debug.LogWarning("MonKey | Error when parsing a command : no attribute or method info found");
                 return;
             }
 
             if (parameterInfos == null || attribute.Order >= parameterInfos.Length)
             {
-                Debug.LogWarningFormat("Monkey Commander Warning:" +
-                                       " A command Parameter for the Command '{0}'" +
-                                       " was associated with the order '{1}', " +
-                                       "but the method does not have that many" +
-                                       " parameters", methodInfo.Name, attribute.Order);
+                // Debug.LogWarningFormat("Monkey Commander Warning:" +
+                //                        " A command Parameter for the Command '{0}'" +
+                //                        " was associated with the order '{1}', " +
+                //                        "but the method does not have that many" +
+                //                        " parameters", methodInfo.Name, attribute.Order);
                 return;
             }
 
@@ -1002,11 +1002,11 @@ namespace MonKey.Editor.Internal
 
                 if (autoCompleteMethod == null)
                 {
-                    Debug.LogWarningFormat("Monkey Commander Warning:A parameter for the " +
-                                           "command '{0}' was linked to an auto complete method named '{1}'," +
-                                           " but no static method of such name could be found, " +
-                                           "or the method does not return a CommandParameterAutoComplete",
-                        methodInfo.Name, attribute.AutoCompleteMethodName);
+                    // Debug.LogWarningFormat("Monkey Commander Warning:A parameter for the " +
+                    //                        "command '{0}' was linked to an auto complete method named '{1}'," +
+                    //                        " but no static method of such name could be found, " +
+                    //                        "or the method does not return a CommandParameterAutoComplete",
+                    //     methodInfo.Name, attribute.AutoCompleteMethodName);
                 }
             }
 
@@ -1041,11 +1041,11 @@ namespace MonKey.Editor.Internal
 
                 if (defaultValueMethod == null)
                 {
-                    Debug.LogWarningFormat("Monkey Commander Warning:A parameter for the " +
-                                           "command '{0}' was linked to a default value method named '{1}'," +
-                                           " but no static method of such name could be found, " +
-                                           "or the method does not return the same type than the specified parameter",
-                        methodInfo.Name, attribute.DefaultValueMethod);
+                    // Debug.LogWarningFormat("Monkey Commander Warning:A parameter for the " +
+                    //                        "command '{0}' was linked to a default value method named '{1}'," +
+                    //                        " but no static method of such name could be found, " +
+                    //                        "or the method does not return the same type than the specified parameter",
+                    //     methodInfo.Name, attribute.DefaultValueMethod);
                 }
             }
 

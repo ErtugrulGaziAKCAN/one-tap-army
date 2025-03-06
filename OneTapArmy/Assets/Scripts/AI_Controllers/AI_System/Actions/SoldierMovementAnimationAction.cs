@@ -25,6 +25,8 @@ namespace AI_Controllers.AI_System.Actions
 
         public override void Act(StateComponent statesComponent)
         {
+            if (Time.frameCount % 5 != 0)
+                return;
             statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             var isMoving = dataHolder.Agent.velocity.magnitude >= .1f;
             dataHolder.AnimationController.GetAnimator().SetBool(IsWalking, isMoving);
