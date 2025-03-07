@@ -20,7 +20,7 @@ namespace QuickTools.Scripts.Manager
 
 #region UNITY_METHODS
 
-        private void Awake()
+        private void Start()
         {
             Load();
             InstantiateCurrentLevel();

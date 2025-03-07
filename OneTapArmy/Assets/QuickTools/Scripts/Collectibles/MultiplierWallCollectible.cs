@@ -20,7 +20,7 @@ namespace QuickTools.Scripts.Collectibles
 
 //------Private Variables-------//
         private int _multiplyValue;
-
+        
 #region UNITY_METHODS
 
         protected override void Start()

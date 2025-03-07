@@ -21,7 +21,8 @@ namespace Utilities
 //------Private Variables-------//
         private int _currentSpawnIndex;
         private Tween _delay;
-
+        private bool _canSpawn = true;
+        
 #region UNITY_METHODS
 
         private void Start()
@@ -42,7 +43,7 @@ namespace Utilities
         [Button]
         public void StartSpawning(bool loop)
         {
-            if (_currentSpawnIndex >= SpawnPoints.Count)
+            if(!_canSpawn)
                 return;
             if (loop)
                 _delay = DOVirtual.DelayedCall(SpawnInterval, () => SpawnObject(true));
@@ -50,6 +51,7 @@ namespace Utilities
                 SpawnObject(false);
         }
 
+        public void CanSpawn(bool canSpawn) => _canSpawn = canSpawn;
 #endregion
 
 
@@ -58,7 +60,7 @@ namespace Utilities
         private void SpawnObject(bool loop)
         {
             var targetPrefab = Prefabs.GetWeightedRandom(Weights, 10);
-            var targetPos = SpawnPoints[_currentSpawnIndex];
+            var targetPos = SpawnPoints[_currentSpawnIndex % SpawnPoints.Count];
             var spawned = Instantiate(targetPrefab, targetPos);
             spawned.transform.localPosition = Vector3.zero;
             _currentSpawnIndex++;
