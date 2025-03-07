@@ -90,12 +90,17 @@ PrefabInstance:
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
@@ -105,7 +110,17 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 5474120999712055235}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
@@ -115,8 +130,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: Obvious.Soap.ScriptableEventNoParam, Obvious.Soap
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
@@ -125,7 +150,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
         type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
       propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 750369942493834313, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+        type: 3}
+      propertyPath: OnDeathUnityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1138423388628654724, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
@@ -316,6 +351,12 @@ PrefabInstance:
       addedObject: {fileID: 6713110721238188886}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f, type: 3}
+--- !u!1 &5474120999712055235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6748156336038731056, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608269285865816819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8505885275615580600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6943215764308415307, guid: 5b933f93c2bde46c5ba6d62b3cb48e8f,

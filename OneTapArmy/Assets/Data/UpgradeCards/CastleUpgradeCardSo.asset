@@ -26,8 +26,8 @@ MonoBehaviour:
   Health:
     Type: 1
     ManualValues: []
-    BaseValueLinear: 300
-    IncrementLinear: 125
+    BaseValueLinear: 450
+    IncrementLinear: 175
     BaseValueExpo: 0
     IncrementExpo: 0
   SpawnInterval:

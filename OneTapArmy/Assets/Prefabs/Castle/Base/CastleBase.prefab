@@ -3979,7 +3979,6 @@ GameObject:
   - component: {fileID: 813484116029966967}
   - component: {fileID: 5718109189070709182}
   - component: {fileID: 8018338548758217573}
-  - component: {fileID: 8663573138491716039}
   m_Layer: 0
   m_Name: CastleDefense
   m_TagString: Untagged
@@ -4029,7 +4028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackDistance: 1
-  AttackDamage: 50
+  AttackDamage: 25
   RivalLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -4060,58 +4059,11 @@ MonoBehaviour:
   DataHolder: {fileID: 5718109189070709182}
   OnStartAttacking:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8663573138491716039}
-        m_TargetAssemblyTypeName: QuickTools.Scripts.Utilities.EventRaiser, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8663573138491716039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6748156336038731056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46731dbf8db40619ca876266eac1e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RaiseExecutionTime: 0
-  UseDelayWithRef: 0
-  DelayRef:
-    UseLocal: 0
-    LocalValue: 0
-    Variable: {fileID: 0}
-  RandomDelay: 0
-  Delay: 1.2
-  RandomDelayDurations: {x: 0, y: 0}
-  UseUnScaledTime: 0
-  Type: 1
-  Event: {fileID: 0}
-  UnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5718109189070709182}
-        m_TargetAssemblyTypeName: AI_Controllers.DataHolder.CastleAIDataHolder, Assembly-CSharp
-        m_MethodName: SetAttacking
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  StopAttackingWithDelay: 1
+  StopAttackDelay: 1.25
+  AttackWithDelay: 1
+  AttackDelay: 0
 --- !u!1 &6755827650129513481
 GameObject:
   m_ObjectHideFlags: 0

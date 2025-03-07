@@ -14,7 +14,6 @@ namespace AI_Controllers.System_Attack.Controller
 
 //------Serialized Fields-------//
 
-
 //------Private Variables-------//
 
 #region UNITY_METHODS
@@ -46,14 +45,14 @@ namespace AI_Controllers.System_Attack.Controller
         {
             var projectile = InitProperties(out var spawnPoint);
             var spawned = LeanPool.Spawn(projectile, spawnPoint.position, spawnPoint.rotation);
-            Vector3 direction=Vector3.zero;
+            Vector3 direction = Vector3.zero;
             spawned.transform.DOJump(targetPos, .65f, 1, 1f).SetEase(Ease.Linear).SetSpeedBased().OnUpdate(() =>
             {
                 var spawnedPos = spawned.transform.position;
                 if (DataHolder is RangedSoldierAIDataHolder ranged)
                 {
-                     direction = ranged.LastProjectilePosition.DirectionTo(spawnedPos);
-                     ranged.LastProjectilePosition = spawnedPos;
+                    direction = ranged.LastProjectilePosition.DirectionTo(spawnedPos);
+                    ranged.LastProjectilePosition = spawnedPos;
                 }
                 else if (DataHolder is CastleAIDataHolder castle)
                 {
@@ -70,19 +69,21 @@ namespace AI_Controllers.System_Attack.Controller
                 targetEnemy.TakeDamage(DataHolder.AttackDamage);
             });
         }
-        
+
         private GameObject InitProperties(out Transform spawnPoint)
         {
             GameObject projectile = null;
             spawnPoint = null;
 
-            if (DataHolder is RangedSoldierAIDataHolder rangedHolder)
+            var rangedHolder = DataHolder as RangedSoldierAIDataHolder;
+            if (rangedHolder != null)
             {
                 projectile = rangedHolder.Projectile;
                 spawnPoint = rangedHolder.ProjectileSpawnPoint;
                 rangedHolder.LastProjectilePosition = spawnPoint.position;
             }
-            else if (DataHolder is CastleAIDataHolder castleHolder)
+            var castleHolder = DataHolder as CastleAIDataHolder;
+            if (castleHolder!=null)
             {
                 projectile = castleHolder.Projectile;
                 spawnPoint = castleHolder.ProjectileSpawnPoint;

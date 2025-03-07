@@ -21,9 +21,7 @@ namespace AI_Controllers.DataHolder
 
 
 #region PUBLIC_METHODS
-
-        public void SetAttacking(bool isAttacking) => IsAttacking = isAttacking;
-
+        
 #endregion
 
 

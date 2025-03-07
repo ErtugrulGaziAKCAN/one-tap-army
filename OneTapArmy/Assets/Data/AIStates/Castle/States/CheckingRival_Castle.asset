@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 499f9dc307232184ca30934e3fc72ee2, type: 3}
-  m_Name: Attack_Castle State
+  m_Name: CheckingRival_Castle
   m_EditorClassIdentifier: 
   _entryActions: []
-  _exitActions:
-  - {fileID: 11400000, guid: 3b6110300a4604fa39f1cad88e3b5f7c, type: 2}
+  _exitActions: []
   _physicsActions: []
-  _stateActions:
-  - {fileID: 11400000, guid: aa9d3ecfe5a8c48af82d2a205c3135fd, type: 2}
+  _stateActions: []

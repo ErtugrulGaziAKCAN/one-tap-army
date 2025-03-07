@@ -2,6 +2,7 @@ using System.Collections;
 using AI_Controllers.DataHolder;
 using AI_Controllers.DataHolder.Core;
 using AnimationControllers;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,7 +19,11 @@ namespace AI_Controllers.System_Attack.Controller.Core
         [SerializeField, ShowIf(nameof(SetActiveAnimation))] protected FastAnimationController AnimatorAccess;
         [SerializeField] protected AIDataHolderCore DataHolder;
         [SerializeField] private UnityEvent OnStartAttacking;
-        
+        [SerializeField] private bool StopAttackingWithDelay;
+        [SerializeField, ShowIf(nameof(StopAttackingWithDelay))] private float StopAttackDelay;
+        [SerializeField] private bool AttackWithDelay;
+        [SerializeField, ShowIf(nameof(AttackWithDelay))] private float AttackDelay;
+
 //------Private Variables-------//
         private static readonly int Attack = Animator.StringToHash("Attack");
         private bool _isInit;
@@ -57,6 +62,10 @@ namespace AI_Controllers.System_Attack.Controller.Core
             if (SetActiveAnimation)
                 AnimatorAccess.GetAnimator().SetTrigger(Attack);
             OnStartAttacking?.Invoke();
+            if (StopAttackingWithDelay)
+                DOVirtual.DelayedCall(StopAttackDelay, OnAttackAnimationEnd);
+            if (AttackWithDelay)
+                DOVirtual.DelayedCall(AttackDelay, OnAttacked);
         }
 
         protected virtual void OnAttacked()

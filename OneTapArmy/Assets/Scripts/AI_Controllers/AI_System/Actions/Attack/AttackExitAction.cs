@@ -1,4 +1,5 @@
 using AI_Controllers.DataHolder;
+using AI_Controllers.DataHolder.Core;
 using scriptable_states.Runtime;
 using UnityEngine;
 namespace AI_Controllers.AI_System.Actions.Attack
@@ -24,10 +25,13 @@ namespace AI_Controllers.AI_System.Actions.Attack
 
         public override void Act(StateComponent statesComponent)
         {
-            statesComponent.TryGetComponent(out SoldierAIDataHolderCore dataHolder);
+            statesComponent.TryGetComponent(out AIDataHolderCore dataHolder);
             dataHolder.IsAttacking = false;
-            dataHolder.Agent.stoppingDistance = dataHolder.AgentStoppingDistance;
-            dataHolder.Agent.isStopped = false;
+            var soldierData = dataHolder as SoldierAIDataHolderCore;
+            if(soldierData==null)
+                return;
+            soldierData.Agent.stoppingDistance = soldierData.AgentStoppingDistance;
+            soldierData.Agent.isStopped = false;
         }
 
 #endregion
